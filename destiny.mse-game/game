@@ -17,10 +17,10 @@ card field:
 	type:				choice
 	name:				card color
 	choice:				BlueUnit
+	choice:				RedUnit
 	choice:				uncommon
 	choice:				rare
 	choice:				legendary
-	choice:				RedUnit
 	description:			The frame of the card, used to indicate card rarity.
 
 ####################### Name line
@@ -29,11 +29,15 @@ card field:
 	type:				text
 	name:				name
 	identifying:			true
+	card list visible:		true
+	card list column:		1
 	description:			The name of the card
 
 card field:
 	type:				text
 	name:				casting cost
+	card list visible:		true
+	card list column:		2
 	description:			The casting cost of the card
 
 ####################### Image
@@ -49,6 +53,8 @@ card field:
 card field:
 	type:				image
 	name:				type_or_class
+	card list visible:		true
+	card list column:		3
 	description:			The type of class or item box
 
 ####################### Text box
