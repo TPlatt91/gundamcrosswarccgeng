@@ -7,8 +7,7 @@ position hint:	001
 
 version:		2023-12-04
 depends on:
-package:		Destiny.mse-game
-version:		2023-12-04
+	package:		Destiny.mse-game	version:		2023-12-04
 
 card width:		750
 card height:	1046
