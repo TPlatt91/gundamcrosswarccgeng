@@ -1,4 +1,4 @@
-﻿mse version:	2.0.0
+mse version:	2.0.0
 game:			Destiny
 short name:		Destiny
 full name:		Destiny Trading Card Game
@@ -6,8 +6,7 @@ icon:			card_sample.png
 position hint:	001
 
 version:		2023-12-04
-depends on:
-	package:		Destiny.mse-game	version:		2023-12-04
+depends on:	Destiny.mse-game 2023-12-04
 
 card width:		750
 card height:	1046
