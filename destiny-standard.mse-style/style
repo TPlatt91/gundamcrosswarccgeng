@@ -100,9 +100,9 @@ card style:
 			size:		20
 			scale down to:	16
 			color:		white
-			shadow color:	rgb(0,0,0)
-            		shadow displacement x: 2
-            		shadow displacement y: 2
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 3
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -148,8 +148,8 @@ card style:
 			scale down to:	16
 			color:		white
 			shadow color:	rgb(0,0,0)
-            		shadow displacement x: 2
-            		shadow displacement y: 2
+			shadow displacement x: 3
+			shadow displacement y: 3
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
