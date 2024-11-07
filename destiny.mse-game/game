@@ -1,5 +1,5 @@
-﻿mse version: 2.0.0
-short name: destiny
+mse version: 2.0.0
+short name: Destiny
 full name: Destiny Trading Card Game
 installer group: destiny/game files
 icon: card-back.png
@@ -55,24 +55,24 @@ card field:
 
 card field:
 	type:				text
-	name:				primary-rule-name
+	name:				primary_rule_name
 	description:			Name of first ability
 	
 card field:
 	type:				text
-	name:				secondary-rule-name
+	name:				secondary_rule_name
 	description:			Name of second ability
 
 card field:
 	type:				text
-	name:				primary-rule-text
+	name:				primary_rule_text
 	show statistics:		false
 	multi line:			true
 	description:			The rules text for the card
 
 card field:
 	type:				text
-	name:				secondary-rule-text
+	name:				secondary_rule_text
 	show statistics:		false
 	multi line:			true
 	description:			The rules text of the card
@@ -197,3 +197,271 @@ card field:
 	choice:				season22
 	choice:				season23
 	
+
+####################### Dropshadows
+
+card field:
+	type:				text
+	name:				primary_rule_name2
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_name
+	
+card field:
+	type:				text
+	name:				primary_rule_text2
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_text
+
+
+card field:
+	type:				text
+	name:				secondary_rule_name2
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_name
+
+
+card field:
+	type:				text
+	name:				secondary_rule_text2
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				primary_rule_name3
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_name
+	
+card field:
+	type:				text
+	name:				primary_rule_text3
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_text
+
+
+card field:
+	type:				text
+	name:				secondary_rule_name3
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_name
+
+
+card field:
+	type:				text
+	name:				secondary_rule_text3
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				primary_rule_name4
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_name
+	
+card field:
+	type:				text
+	name:				primary_rule_text4
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_text
+
+
+card field:
+	type:				text
+	name:				secondary_rule_name4
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_name
+
+
+card field:
+	type:				text
+	name:				secondary_rule_text4
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				primary_rule_name5
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_name
+	
+card field:
+	type:				text
+	name:				primary_rule_text5
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_text
+
+
+card field:
+	type:				text
+	name:				secondary_rule_name5
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_name
+
+
+card field:
+	type:				text
+	name:				secondary_rule_text5
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				primary_rule_name6
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_name
+	
+card field:
+	type:				text
+	name:				primary_rule_text6
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_text
+
+
+card field:
+	type:				text
+	name:				secondary_rule_name6
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_name
+
+
+card field:
+	type:				text
+	name:				secondary_rule_text6
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				primary_rule_name7
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_name
+	
+card field:
+	type:				text
+	name:				primary_rule_text7
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_text
+
+
+card field:
+	type:				text
+	name:				secondary_rule_name7
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_name
+
+
+card field:
+	type:				text
+	name:				secondary_rule_text7
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				primary_rule_name8
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_name
+	
+card field:
+	type:				text
+	name:				primary_rule_text8
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.primary_rule_text
+
+
+card field:
+	type:				text
+	name:				secondary_rule_name8
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_name
+
+
+card field:
+	type:				text
+	name:				secondary_rule_text8
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	show statistics: false
+	card list visible: false
+	default: card.secondary_rule_text
