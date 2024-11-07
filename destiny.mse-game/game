@@ -1,0 +1,199 @@
+﻿mse version: 2.0.0
+short name: destiny
+full name: Destiny Trading Card Game
+installer group: destiny/game files
+icon: card-back.png
+position hint: 01
+
+version: 2023-12-04
+
+
+####################### Card Field Definitions
+
+
+####################### Background stuff
+
+card field:
+	type:				choice
+	name:				card color
+	choice:				BlueUnit
+	choice:				uncommon
+	choice:				rare
+	choice:				legendary
+	choice:				RedUnit
+	description:			The frame of the card, used to indicate card rarity.
+
+####################### Name line
+
+card field:
+	type:				text
+	name:				name
+	identifying:			true
+	description:			The name of the card
+
+card field:
+	type:				text
+	name:				casting cost
+	description:			The casting cost of the card
+
+####################### Image
+
+card field:
+	type:				image
+	name:				image
+	show statistics:		false
+	description:			The image of the card
+
+####################### Card type
+
+card field:
+	type:				image
+	name:				type_or_class
+	description:			The type of class or item box
+
+####################### Text box
+
+card field:
+	type:				text
+	name:				primary-rule-name
+	description:			Name of first ability
+	
+card field:
+	type:				text
+	name:				secondary-rule-name
+	description:			Name of second ability
+
+card field:
+	type:				text
+	name:				primary-rule-text
+	show statistics:		false
+	multi line:			true
+	description:			The rules text for the card
+
+card field:
+	type:				text
+	name:				secondary-rule-text
+	show statistics:		false
+	multi line:			true
+	description:			The rules text of the card
+
+card field:
+	type:				text
+	name:				flavor-text
+	show statistics:		false
+	multi line:			true
+	description:			The flavor text for the card
+
+####################### PT
+
+card field:
+	type:				text
+	name:				power
+	icon:				stats/power.png
+	show statistics:		false
+	description:			The power of a creature
+
+card field:
+	type:				text
+	name:				toughness
+	show statistics:		false
+	icon:				stats/toughness.png
+	description:			The toughness of a creature
+
+card field:
+	type:				text
+	name:				pt
+	save value:			false
+	script: 
+		combined_editor(
+			field1: card.power,
+			separator: " ",
+			field2: card.toughness,
+			soft_before_empty: true,
+			hide_when_empty:   true
+		)
+	card list visible:		true
+	card list column:		5
+	card list width:		50
+	card list name:			P/T
+	description:			Power/toughness of a creature
+	show statistics:		false
+
+####################### Copyright stuff
+
+card field:
+	type:				text
+	name:				illustrator
+	icon:				stats/illustrator.png
+	position hint:			210
+	description:			Illustrator of this card, the default value can be changed on the 'set info' tab
+	show statistics:		false
+	
+card field:
+	type:				choice
+	name:				attack_symbol
+	choice:				attack
+	choice:				none
+	description:			Attack icon
+	
+card field:
+	type:				choice
+	name:				defense_symbol
+	choice:				health
+	choice:				attack
+	choice:				none
+	description:			Defense icon
+	
+card field:
+	type:				image
+	name:				destiny_ability
+	description:			First ability icon
+	
+card field:
+	type:				image
+	name:				destiny_ability2
+	description:			Second ability icon
+	
+card field:
+	type:				text
+	name:				destiny_season
+	description:			Set Name 
+	
+card field:
+	type:				text
+	name:				destiny_name2
+	description:			Category of card
+	
+card field:
+	type:				choice
+	name:				season_symbol
+	choice:				year1
+	choice:				season1
+	choice:				season2
+	choice:				season3
+	choice:				year2
+	choice:				season4
+	choice:				season5
+	choice:				season6
+	choice:				season7
+	choice:				year3
+	choice:				season8
+	choice:				season9
+	choice:				season10
+	choice:				season11
+	choice:				year4
+	choice:				season12
+	choice:				season13
+	choice:				season14
+	choice:				season15
+	choice:				year5
+	choice:				season16
+	choice:				season17
+	choice:				season18
+	choice:				season19
+	choice:				year6
+	choice:				season20
+	choice:				season21
+	choice:				season22
+	choice:				season23
+	
