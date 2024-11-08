@@ -19,7 +19,7 @@ card style:
 	color:
 		left:			686
 		top:			26
-		width:			46
+		width:			83
 		height:			56
 		z index: 		3
 		popup style:		in place
@@ -60,9 +60,9 @@ card style:
 
 card style:
 	casting cost:
-		left:			20
-		top:			20
-		width:			100
+		left:			{ if card.type == "Crew" or card.type == "Pilot" then "687" else "20" }
+		top:			{ if card.type == "Crew" or card.type == "Pilot" then "25" else "20" }
+		width:			{ if card.type == "Crew" or card.type == "Pilot" then "45" else "100" }
 		height:			50
 		z index:		22
 		alignment:		center middle
