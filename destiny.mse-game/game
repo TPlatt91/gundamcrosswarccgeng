@@ -48,6 +48,8 @@ card field:
 	choice:			Blue
 	choice:			Red
 	choice:			Green
+	choice:			Black
+	choice:			Brown
 	description:		The color of the card.
 	
 
