@@ -11,18 +11,6 @@ version: 2023-12-04
 ####################### Card Field Definitions
 
 
-####################### Background stuff
-
-card field:
-	type:				choice
-	name:				card_color
-	choice:				BlueUnit
-	choice:				RedUnit
-	choice:				uncommon
-	choice:				rare
-	choice:				legendary
-	description:			The frame of the card, used to indicate card rarity.
-
 ####################### Name line
 
 card field:
@@ -37,7 +25,7 @@ card field:
 	type:				text
 	name:				casting cost
 	card list visible:		true
-	card list column:		2
+	card list column:		5
 	description:			The casting cost of the card
 
 ####################### Image
@@ -51,11 +39,35 @@ card field:
 ####################### Card type
 
 card field:
-	type:				image
-	name:				type_or_class
+	type:			choice
+	name:			color
 	card list visible:		true
 	card list column:		3
-	description:			The type of class or item box
+	choice:			Blue
+	choice:			Red
+	description:		The color of the card.
+	
+
+card field:
+	type:			choice
+	name:			type
+	choice:			Unit
+	choice:			Event
+	choice:			Counter
+	choice:			Crew
+	choice:			Pilot
+	description:		The type and layout of the card.
+	card list visible:	true
+	card list column:	4
+
+card field:
+	type:		choice
+	name:		rarity
+	choice:		Common
+	choice:		Uncommon
+	choice:		Rare
+	choice:		Legendary
+	description:	The rarity of the card.
 
 ####################### Text box
 
@@ -121,8 +133,8 @@ card field:
 	card list visible:		true
 	card list column:		5
 	card list width:		50
-	card list name:			P/T
-	description:			Power/toughness of a creature
+	card list name:			A/D
+	description:			ATT/DEF of a creature
 	show statistics:		false
 
 ####################### Copyright stuff
@@ -151,9 +163,12 @@ card field:
 	description:			Defense icon
 	
 card field:
-	type:				image
-	name:				destiny_ability
-	description:			First ability icon
+	type:				choice
+	name:				size
+	choice:		Small
+	choice:		Medium
+	choice:		Large
+	description:			Size of the Unit
 	
 card field:
 	type:				image
