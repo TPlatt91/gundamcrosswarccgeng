@@ -1,4 +1,4 @@
-﻿mse version:	2.0.0
+mse version:	2.0.0
 game:			Destiny
 short name:		Destiny
 full name:		Destiny Trading Card Game
@@ -34,7 +34,7 @@ card style:
 		z index: 		2
 		popup style:		in place
 		render style:		image
-		image:			{if card.type == "Pilot" then "Pilot.png" else if card.type == "Armament" then "Armament.png" else card.color + input + ".png"}
+		image:			{ if card.type != "Pilot" and card.type != "Armament" then card.color + input + ".png" else if card.type == "Pilot" or card.type == "Armament" then input + ".png"}
 
 card style:
 	size:
