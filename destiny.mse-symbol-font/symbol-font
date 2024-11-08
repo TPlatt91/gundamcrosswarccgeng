@@ -14,10 +14,36 @@ symbol:
 	code: (r)
 	image: RedCastCost.png
 	image font size: 50
+symbol:
+	code: (b)
+	image: BlackCastCost.png
+	image font size: 50
+symbol:
+	code: (u)
+	image: BlueCastCost.png
+	image font size: 50
+symbol:
+	code: (g)
+	image: GreenCastCost.png
+	image font size: 50
+symbol:
+	code: (o)
+	image: BrownCastCost.png
+	image font size: 50
+symbol:
+	code: (1)
+	image: ColorlessCastCost.png
+	image font size: 50
+
 
 ##############################################################
 # Insert-symbol menu
 insert symbol menu:
 	item: 
 		name: CastCosts
+		item: (b)
 		item: (r)
+		item: (u)
+		item: (g)
+		item: (o)
+		item: (1)
