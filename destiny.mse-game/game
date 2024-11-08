@@ -15,7 +15,7 @@ version: 2023-12-04
 
 card field:
 	type:				choice
-	name:				card color
+	name:				card_color
 	choice:				BlueUnit
 	choice:				RedUnit
 	choice:				uncommon
@@ -97,14 +97,14 @@ card field:
 	name:				power
 	icon:				stats/power.png
 	show statistics:		false
-	description:			The power of a creature
+	description:			The ATK of a Unit
 
 card field:
 	type:				text
 	name:				toughness
 	show statistics:		false
 	icon:				stats/toughness.png
-	description:			The toughness of a creature
+	description:			The DEF of a Unit
 
 card field:
 	type:				text
@@ -173,6 +173,7 @@ card field:
 card field:
 	type:				choice
 	name:				season_symbol
+	description:			Season Symbol
 	choice:				year1
 	choice:				season1
 	choice:				season2
