@@ -60,7 +60,7 @@ card style:
 		width:			750
 		height:			{if contains(card.card_color, match: "Unit") then "956" else "526"}
 		z index:		11
-		mask:			{if contains(card.card_color, match: "Unit") then "imagemask2.png" else "imagemask.png"}
+		mask:			{if contains(card.card_color, match: "Unit") then "imagemask2.png" else if contains(card.card_color, match: "legendary") then "imagemask.png" else if contains(card.card_color, match: "rare") then "imagemask.png" else if contains(card.card_color, match: "uncommon") then "imagemask.png" else "imagemask3.png"}
 
 ####################### Text box
 
@@ -189,6 +189,42 @@ card style:
 		line height hard max:	1.3
 		line height line max:	1.6
 		
+
+
+####################### ATT / DEF
+
+card style:
+	power:
+		visible: {if contains(card.card_color, match: "Unit") then "true" else "false"}
+		left:			8
+		top:			865
+		width:			177
+		height:			177
+		alignment:		center middle
+		z index:		22
+		font:
+			name:		Futura BdCn BT
+			italic name:	MPlantin-Italic
+			size:		20
+			scale down to:	16
+			color:		black
+
+card style:
+	toughness:
+		visible: {if contains(card.card_color, match: "Unit") then "true" else "false"}
+		left:			561
+		top:			865
+		width:			177
+		height:			177
+		alignment:		center middle
+		z index:		22
+		font:
+			name:		Futura BdCn BT
+			italic name:	MPlantin-Italic
+			size:		20
+			scale down to:	16
+			color:		black
+
 
 ####################### Lower Area
 
