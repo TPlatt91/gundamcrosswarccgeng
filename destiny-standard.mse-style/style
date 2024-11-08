@@ -34,7 +34,7 @@ card style:
 		z index: 		2
 		popup style:		in place
 		render style:		image
-		image:			{card.color + input + ".png"}
+		image:			{if card.type == "Pilot" then "Pilot.png" else card.color + input + ".png"}
 
 card style:
 	size:
