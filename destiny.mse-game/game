@@ -64,9 +64,11 @@ card field:
 	type:		choice
 	name:		rarity
 	choice:		Common
-	choice:		Uncommon
 	choice:		Rare
-	choice:		Legendary
+	choice:		DoubleRare
+	choice:		CrossRare
+	choice:		SpecialRare
+	choice:		Promo
 	description:	The rarity of the card.
 
 ####################### Text box
@@ -165,10 +167,12 @@ card field:
 card field:
 	type:				choice
 	name:				size
-	choice:		Small
-	choice:		Medium
-	choice:		Large
-	description:			Size of the Unit
+	choice:		Pilot
+	choice:		MediumUnit
+	choice:		LargeUnit
+	choice:		Event
+	choice:		Armament
+	description:			Type of the Unit
 	
 card field:
 	type:				image
