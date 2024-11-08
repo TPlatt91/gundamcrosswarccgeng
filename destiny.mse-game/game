@@ -210,6 +210,7 @@ card field:
 	type:				text
 	name:				primary_rule_name2
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_name
@@ -220,6 +221,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_text
@@ -229,6 +231,7 @@ card field:
 	type:				text
 	name:				secondary_rule_name2
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
@@ -240,6 +243,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
@@ -248,6 +252,7 @@ card field:
 	type:				text
 	name:				primary_rule_name3
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_name
@@ -258,6 +263,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_text
@@ -267,6 +273,7 @@ card field:
 	type:				text
 	name:				secondary_rule_name3
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
@@ -278,6 +285,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
@@ -286,6 +294,7 @@ card field:
 	type:				text
 	name:				primary_rule_name4
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_name
@@ -296,6 +305,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_text
@@ -305,6 +315,7 @@ card field:
 	type:				text
 	name:				secondary_rule_name4
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
@@ -316,6 +327,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
@@ -324,6 +336,7 @@ card field:
 	type:				text
 	name:				primary_rule_name5
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_name
@@ -334,6 +347,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_text
@@ -343,6 +357,7 @@ card field:
 	type:				text
 	name:				secondary_rule_name5
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
@@ -354,6 +369,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
@@ -362,6 +378,7 @@ card field:
 	type:				text
 	name:				primary_rule_name6
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_name
@@ -372,6 +389,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_text
@@ -381,6 +399,7 @@ card field:
 	type:				text
 	name:				secondary_rule_name6
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
@@ -392,6 +411,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
@@ -400,6 +420,7 @@ card field:
 	type:				text
 	name:				primary_rule_name7
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_name
@@ -410,6 +431,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_text
@@ -419,6 +441,7 @@ card field:
 	type:				text
 	name:				secondary_rule_name7
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
@@ -430,6 +453,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
@@ -438,6 +462,7 @@ card field:
 	type:				text
 	name:				primary_rule_name8
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_name
@@ -448,6 +473,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.primary_rule_text
@@ -457,6 +483,7 @@ card field:
 	type:				text
 	name:				secondary_rule_name8
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
@@ -468,6 +495,7 @@ card field:
 	show statistics:		false
 	multi line:			true
 	identifying: false
+	editable: 			false
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
