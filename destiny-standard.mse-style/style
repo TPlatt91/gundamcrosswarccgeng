@@ -42,7 +42,7 @@ card style:
 		top:			731
 		height:			30
 		z index:		21
-		visible:		{ if card.type == "Unit" then "true" else "false"}
+		visible:		{ if card.type == "Crew" then "false" else "true"}
 		popup style:		in place
 		render style:		image
 		image:			{input + ".png"}
@@ -50,10 +50,10 @@ card style:
 card style:
 	rarity:
 		render style: image
-		left:			653
-		top:			775
-		width:			92
-		height:			45
+		left:			639
+		top:			777
+		width:			114
+		height:			69
 		z index: 		30
 		image:			{input + "Rarity.png"}
 
