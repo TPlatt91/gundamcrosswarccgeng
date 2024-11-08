@@ -45,6 +45,7 @@ card field:
 	card list column:		3
 	choice:			Blue
 	choice:			Red
+	choice:			Green
 	description:		The color of the card.
 	
 
@@ -136,7 +137,7 @@ card field:
 	card list column:		5
 	card list width:		50
 	card list name:			A/D
-	description:			ATT/DEF of a creature
+	description:			ATK/DEF of a creature
 	show statistics:		false
 
 ####################### Copyright stuff
@@ -167,11 +168,14 @@ card field:
 card field:
 	type:				choice
 	name:				size
-	choice:		Pilot
+	choice:		SmallUnit
 	choice:		MediumUnit
 	choice:		LargeUnit
+	choice:		Pilot
 	choice:		Event
+	choice:		Counter
 	choice:		Armament
+	choice:		Warship
 	description:			Type of the Unit
 	
 card field:
