@@ -1,4 +1,4 @@
-mse version:	2.0.0
+﻿mse version:	2.0.0
 game:			Destiny
 short name:		Destiny
 full name:		Destiny Trading Card Game
@@ -223,7 +223,7 @@ card style:
 		
 
 
-####################### ATT / DEF
+####################### ATK / DEF
 
 card style:
 	power:
@@ -237,7 +237,7 @@ card style:
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
-			size:		20
+			size:		50
 			scale down to:	16
 			color:		black
 
@@ -253,7 +253,7 @@ card style:
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
-			size:		20
+			size:		50
 			scale down to:	16
 			color:		black
 
