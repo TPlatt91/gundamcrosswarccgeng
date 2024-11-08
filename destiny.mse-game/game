@@ -1,4 +1,4 @@
-mse version: 2.0.0
+﻿mse version: 2.0.0
 short name: Destiny
 full name: Destiny Trading Card Game
 installer group: destiny/game files
@@ -56,10 +56,10 @@ card field:
 	name:			type
 	choice:			Unit
 	choice:			Pilot
-	choice:			Crew
-	choice:			Event
-	choice:			Counter
-#	choice:			Armament
+#	choice:			Crew
+#	choice:			Event
+#	choice:			Counter
+	choice:			Armament
 #	choice:			Warship
 	description:		The type and layout of the card.
 	card list visible:	true
