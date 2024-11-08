@@ -16,7 +16,16 @@ card dpi:		600
 ####################### Card Field Looks
 
 card style:
-	card_color:
+	color:
+		left:			686
+		top:			26
+		width:			46
+		height:			56
+		z index: 		3
+		popup style:		in place
+
+card style:
+	type:
 		left:			0
 		top:			0
 		width:			750
@@ -24,7 +33,30 @@ card style:
 		z index: 		2
 		popup style:		in place
 		render style:		image
+		image:			{card.color + input + ".png"}
+
+card style:
+	size:
+		left:			653
+		width:			30
+		top:			731
+		height:			30
+		z index:		21
+		visible:		{ if card.type == "Unit" then "true" else "false"}
+		popup style:		in place
+		render style:		image
 		image:			{input + ".png"}
+
+card style:
+	rarity:
+		render style: image
+		left:			653
+		top:			775
+		width:			92
+		height:			45
+		z index: 		30
+		image:			{input + "Rarity.png"}
+
 
 card style:
 	casting cost:
@@ -56,11 +88,11 @@ card style:
 card style:
 	image:
 		left:			0
-		top:			{if contains(card.card_color, match: "Unit") then "0" else "79"}
+		top:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Crew" then "0" else "79"}
 		width:			750
-		height:			{if contains(card.card_color, match: "Unit") then "956" else "526"}
+		height:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Crew" then "956" else "526"}
 		z index:		11
-		mask:			{if contains(card.card_color, match: "Unit") then "imagemask2.png" else if contains(card.card_color, match: "legendary") then "imagemask.png" else if contains(card.card_color, match: "rare") then "imagemask.png" else if contains(card.card_color, match: "uncommon") then "imagemask.png" else "imagemask3.png"}
+		mask:			{if card.type == "Unit" then "unitmask.png" else if card.type == "Crew" then "crewmask.png" else if card.type == "Pilot" then "pilotmask.png" else "imagemask.png"}
 
 ####################### Text box
 
@@ -127,7 +159,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		white
+			color:		yellow
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
@@ -195,9 +227,9 @@ card style:
 
 card style:
 	power:
-		visible: {if contains(card.card_color, match: "Unit") then "true" else "false"}
+		visible: {if contains(card.type, match: "Unit") then "true" else "false"}
 		left:			8
-		top:			865
+		top:			869
 		width:			177
 		height:			177
 		alignment:		center middle
@@ -211,9 +243,9 @@ card style:
 
 card style:
 	toughness:
-		visible: {if contains(card.card_color, match: "Unit") then "true" else "false"}
+		visible: {if contains(card.type, match: "Unit") then "true" else "false"}
 		left:			561
-		top:			865
+		top:			869
 		width:			177
 		height:			177
 		alignment:		center middle
@@ -240,15 +272,6 @@ card style:
 			name:				Futura BdCn BT
 			size:				18
 			color:				white
-
-card style:
-	destiny_ability:
-		left:			653
-		width:			30
-		top:			731
-		height:			30
-		z index:		21
-		visible:		true
 		
 card style:
 	season_symbol:
