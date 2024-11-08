@@ -61,12 +61,13 @@ card style:
 
 card style:
 	casting cost:
-		left:			{ if card.type == "Crew" or card.type == "Pilot" then "687" else "20" }
-		top:			{ if card.type == "Crew" or card.type == "Pilot" then "25" else "20" }
-		width:			{ if card.type == "Crew" or card.type == "Pilot" then "45" else "100" }
+		left:			20
+		top:			20
+		width:			100
 		height:			50
 		z index:		22
 		alignment:		left middle
+		visible:		{if card.type == "Pilot" or card.type == "Crew" or card.type == "Armament" then "false" else "true"}
 		font:
 			name:		Marques Free Regular
 			size:		30
