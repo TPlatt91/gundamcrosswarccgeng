@@ -16,7 +16,7 @@ card dpi:		600
 ####################### Card Field Looks
 
 card style:
-	card color:
+	card_color:
 		left:			0
 		top:			0
 		width:			750
@@ -56,11 +56,11 @@ card style:
 card style:
 	image:
 		left:			0
-		top:			0
+		top:			{if contains(card.card_color, match: "Unit") then "0" else "79"}
 		width:			750
-		height:			956
+		height:			{if contains(card.card_color, match: "Unit") then "956" else "526"}
 		z index:		11
-		mask:			imagemask2.png
+		mask:			{if contains(card.card_color, match: "Unit") then "imagemask2.png" else "imagemask.png"}
 
 ####################### Text box
 
@@ -221,8 +221,8 @@ card style:
 		width:			30
 		height:			30
 		z index:		22
-		popup style:	in place
-		render style:	image
+		popup style:		in place
+		render style:		image
 		image:			{input + ".png"}
 		
 card style:
