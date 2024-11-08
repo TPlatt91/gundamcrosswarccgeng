@@ -1,0 +1,23 @@
+﻿mse version: 2.0.0
+version: 2024-09-29
+short name: clans
+depends on:
+	package: Destiny.mse-game
+	version: 2023-12-04
+
+image font size: 15
+scale text: true
+horizontal space: -5
+
+
+symbol:
+	code: (r)
+	image: RedCastCost.png
+	image font size: 50
+
+##############################################################
+# Insert-symbol menu
+insert symbol menu:
+	item: 
+		name: CastCosts
+		item: (r)
