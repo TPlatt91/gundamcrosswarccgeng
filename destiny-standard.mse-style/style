@@ -1,4 +1,4 @@
-﻿mse version:	2.0.0
+mse version:	2.0.0
 game:			Destiny
 short name:		Destiny
 full name:		Destiny Trading Card Game
@@ -7,6 +7,7 @@ position hint:	001
 
 version:		2023-12-04
 depends on:	Destiny.mse-game 2023-12-04
+depends on:	Destiny.mse-symbol-font 2023-12-04
 
 card width:		750
 card height:	1046
@@ -65,11 +66,14 @@ card style:
 		width:			{ if card.type == "Crew" or card.type == "Pilot" then "45" else "100" }
 		height:			50
 		z index:		22
-		alignment:		center middle
+		alignment:		left middle
 		font:
 			name:		Marques Free Regular
-			size:		48
+			size:		30
 			color:		white
+		symbol font:
+			name: Destiny
+			size: 48
 
 card style:
 	name:
