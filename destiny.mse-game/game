@@ -6,6 +6,8 @@ icon: card-back.png
 position hint: 01
 
 version: 2023-12-04
+depends on:	Destiny.mse-symbol-font 2023-12-04
+
 
 
 ####################### Card Field Definitions
@@ -53,10 +55,12 @@ card field:
 	type:			choice
 	name:			type
 	choice:			Unit
+	choice:			Pilot
+	choice:			Crew
 	choice:			Event
 	choice:			Counter
-	choice:			Crew
-	choice:			Pilot
+#	choice:			Armament
+#	choice:			Warship
 	description:		The type and layout of the card.
 	card list visible:	true
 	card list column:	4
@@ -172,6 +176,7 @@ card field:
 	choice:		MediumUnit
 	choice:		LargeUnit
 	choice:		Pilot
+	choice:		Crew
 	choice:		Event
 	choice:		Counter
 	choice:		Armament
