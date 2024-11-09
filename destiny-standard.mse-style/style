@@ -1,4 +1,4 @@
-mse version:	2.0.0
+﻿mse version:	2.0.0
 game:			Destiny
 short name:		Destiny
 full name:		Destiny Trading Card Game
@@ -24,6 +24,7 @@ card style:
 		height:			56
 		z index: 		3
 		popup style:		in place
+		visible:		{if card.type == "Pilot" or card.type== "Armament" then "false" else "true"}
 
 card style:
 	type:
@@ -34,7 +35,7 @@ card style:
 		z index: 		2
 		popup style:		in place
 		render style:		image
-		image:			{ if card.type != "Pilot" and card.type != "Armament" then card.color + input + ".png" else if card.type == "Pilot" or card.type == "Armament" then input + ".png"}
+		image:			{ if card.type == "Pilot" or card.type == "Armament" then input + ".png" else if card.color == "" then "Blue" + input + ".png" else card.color + input + ".png"}
 
 card style:
 	size:
@@ -93,11 +94,11 @@ card style:
 card style:
 	image:
 		left:			0
-		top:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Crew" then "0" else if card.type == "Armament" then "123" else "79"}
+		top:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Crew" then "0" else if card.type == "Armament" then "123" else if card.type == "Event" then "120" else "79"}
 		width:			750
-		height:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Crew" then "956" else if card.type == "Armament" then "831" else "526"}
+		height:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Crew" then "956" else if card.type == "Armament" then "831" else if card.type == "Event" then "541" else "526"}
 		z index:		11
-		mask:			{if card.type == "Unit" then "unitmask.png" else if card.type == "Crew" then "crewmask.png" else if card.type == "Pilot" then "pilotmask.png" else if card.type == "Armament" then "armamentmask.png" else "imagemask.png"}
+		mask:			{card.type +"mask.png"}
 
 ####################### Text box
 
