@@ -94,9 +94,9 @@ card style:
 card style:
 	image:
 		left:			0
-		top:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Crew" then "0" else if card.type == "Armament" then "123" else if card.type == "Event" then "120" else "79"}
+		top:			{if card.type == "Unit" or card.type == "Pilot" then "0" else if card.type == "Armament" then "123" else if card.type == "Event" or card.type == "Counter" then "120" else if card.type == "Crew" then "150" else "79"}
 		width:			750
-		height:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Crew" then "956" else if card.type == "Armament" then "831" else if card.type == "Event" then "541" else "526"}
+		height:			{if card.type == "Unit" or card.type == "Pilot" then "956" else if card.type == "Armament" then "831" else if card.type == "Event" or card.type == "Counter" then "541" else if card.type == "Crew" then "578" else "526"}
 		z index:		11
 		mask:			{card.type +"mask.png"}
 
