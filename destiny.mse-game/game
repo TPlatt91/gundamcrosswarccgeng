@@ -1,4 +1,4 @@
-﻿mse version: 2.0.0
+mse version: 2.0.0
 short name: Destiny
 full name: Destiny Trading Card Game
 installer group: destiny/game files
@@ -8,7 +8,18 @@ position hint: 01
 version: 2023-12-04
 depends on:	Destiny.mse-symbol-font 2023-12-04
 
+####################### Card Function Definitions
 
+init script:
+	defaultsize := {
+			if input  == "Pilot" then "Pilot"
+		else 	if input == "Armament" then "Armament" 
+		else 	if input == "Crew" then "Crew" 
+		else 	if input == "Warship" then "Warship" 
+		else 	if input == "Counter" then "Counter" 
+		else 	if input == "Event" then "Event" 
+		else	"MediumUnit"
+	}
 
 ####################### Card Field Definitions
 
@@ -50,6 +61,7 @@ card field:
 	choice:			Green
 	choice:			Black
 	choice:			Brown
+#	default:		defaultcolor(card.type)
 	description:		The color of the card.
 	
 
@@ -58,10 +70,10 @@ card field:
 	name:			type
 	choice:			Unit
 	choice:			Pilot
-#	choice:			Crew
-#	choice:			Event
-#	choice:			Counter
 	choice:			Armament
+#	choice:			Crew
+	choice:			Event
+#	choice:			Counter
 #	choice:			Warship
 	description:		The type and layout of the card.
 	card list visible:	true
@@ -76,6 +88,7 @@ card field:
 	choice:		CrossRare
 	choice:		SpecialRare
 	choice:		Promo
+	default:	Common
 	description:	The rarity of the card.
 
 ####################### Text box
@@ -183,6 +196,7 @@ card field:
 	choice:		Counter
 	choice:		Armament
 	choice:		Warship
+	default:	defaultsize(card.type)
 	description:			Type of the Unit
 	
 card field:
