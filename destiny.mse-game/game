@@ -71,9 +71,9 @@ card field:
 	choice:			Unit
 	choice:			Pilot
 	choice:			Armament
-#	choice:			Crew
+	choice:			Crew
 	choice:			Event
-#	choice:			Counter
+	choice:			Counter
 #	choice:			Warship
 	description:		The type and layout of the card.
 	card list visible:	true
