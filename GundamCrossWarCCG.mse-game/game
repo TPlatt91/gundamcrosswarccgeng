@@ -38,6 +38,7 @@ card field:
 	type:				text
 	name:				casting cost
 	card list visible:		true
+	multi line:			true
 	card list column:		5
 	description:			The casting cost of the card
 
@@ -60,7 +61,7 @@ card field:
 	choice:			Red
 	choice:			Green
 	choice:			Black
-	choice:			Brown
+	choice:			Yellow
 #	default:		defaultcolor(card.type)
 	description:		The color of the card.
 	
@@ -81,6 +82,14 @@ card field:
 
 card field:
 	type:		choice
+	name:		characteristic
+	choice:		
+	choice:		Engineer
+	editable:	true
+
+
+card field:
+	type:		choice
 	name:		rarity
 	choice:		Common
 	choice:		Rare
@@ -92,6 +101,11 @@ card field:
 	description:	The rarity of the card.
 
 ####################### Text box
+
+card field:
+	type:		text
+	name:		counter_cost
+	description:	Counter Costs
 
 card field:
 	type:				text
@@ -169,21 +183,7 @@ card field:
 	description:			Illustrator of this card, the default value can be changed on the 'set info' tab
 	show statistics:		false
 	
-card field:
-	type:				choice
-	name:				attack_symbol
-	choice:				attack
-	choice:				none
-	description:			Attack icon
-	
-card field:
-	type:				choice
-	name:				defense_symbol
-	choice:				health
-	choice:				attack
-	choice:				none
-	description:			Defense icon
-	
+
 card field:
 	type:				choice
 	name:				size
@@ -199,55 +199,17 @@ card field:
 	default:	defaultsize(card.type)
 	description:			Type of the Unit
 	
-card field:
-	type:				image
-	name:				destiny_ability2
-	description:			Second ability icon
-	
+
 card field:
 	type:				text
 	name:				destiny_season
-	description:			Set Name 
-	
+	description:			Set Name
+
 card field:
 	type:				text
-	name:				destiny_name2
-	description:			Category of card
-	
-#card field:
-#	type:				choice
-#	name:				season_symbol
-#	description:			Season Symbol
-#	choice:				year1
-#	choice:				season1
-#	choice:				season2
-#	choice:				season3
-#	choice:				year2
-#	choice:				season4
-#	choice:				season5
-#	choice:				season6
-#	choice:				season7
-#	choice:				year3
-#	choice:				season8
-#	choice:				season9
-#	choice:				season10
-#	choice:				season11
-#	choice:				year4
-#	choice:				season12
-#	choice:				season13
-#	choice:				season14
-#	choice:				season15
-#	choice:				year5
-#	choice:				season16
-#	choice:				season17
-#	choice:				season18
-#	choice:				season19
-#	choice:				year6
-#	choice:				season20
-#	choice:				season21
-#	choice:				season22
-#	choice:				season23
-	
+	name:				card_number
+	description:			Card Number
+
 
 ####################### Dropshadows
 
