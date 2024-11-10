@@ -1,0 +1,93 @@
+﻿mse version: 2.0.0
+version: 2024-09-29
+short name: Counters
+depends on:
+	package: GundamCrossWarCCG.mse-game
+	version: 2023-12-04
+
+image font size: 15
+scale text: true
+horizontal space: -20
+
+
+symbol:
+	code: (activation)
+	image: ActivationCounter.png
+	image font size: 114
+symbol:
+	code: (cb)
+	image: BlackCounterCost.png
+	image font size: 178
+symbol:
+	code: (cu)
+	image: BlueCounterCost.png
+	image font size: 178
+symbol:
+	code: (cr)
+	image: RedCounterCost.png
+	image font size: 178
+symbol:
+	code: (cy)
+	image: YellowCounterCost.png
+	image font size: 178
+symbol:
+	code: (cg)
+	image: GreenCounterCost.png
+	image font size: 178
+symbol:
+	code: (c0)
+	image: ColorlessCounterCost0.png
+	image font size: 178
+symbol:
+	code: (c1)
+	image: ColorlessCounterCost1.png
+	image font size: 178
+symbol:
+	code: (c2)
+	image: ColorlessCounterCost2.png
+	image font size: 178
+symbol:
+	code: (c3)
+	image: ColorlessCounterCost3.png
+	image font size: 178
+
+symbol:
+	code: (c4)
+	image: ColorlessCounterCost4.png
+	image font size: 178
+
+symbol:
+	code: (c5)
+	image: ColorlessCounterCost5.png
+	image font size: 178
+
+symbol:
+	code: (c6)
+	image: ColorlessCounterCost6.png
+	image font size: 178
+
+symbol:
+	code: (c7)
+	image: ColorlessCounterCost7.png
+	image font size: 178
+
+
+##############################################################
+# Insert-symbol menu
+insert symbol menu:
+	item:
+		name: Counters
+		item: (activation)
+		item: (cb)
+		item: (cr)
+		item: (cu)
+		item: (cg)
+		item: (cy)
+		item: (c0)
+		item: (c1)
+		item: (c2)
+		item: (c3)
+		item: (c4)
+		item: (c5)
+		item: (c6)
+		item: (c7)
