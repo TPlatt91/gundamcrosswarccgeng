@@ -6,7 +6,9 @@ icon: card-back.png
 position hint: 01
 
 version: 2023-12-04
-depends on:	GundamCrossWarCCG.mse-symbol-font 2023-12-04
+depends on:	GundamCrossWarCCG-Cost.mse-symbol-font 2023-12-04
+depends on:	GundamCrossWarCCG-Counter.mse-symbol-font 2023-12-04
+depends on:	GundamCrossWarCCG-Abilities.mse-symbol-font 2023-12-04
 
 ####################### Card Function Definitions
 
