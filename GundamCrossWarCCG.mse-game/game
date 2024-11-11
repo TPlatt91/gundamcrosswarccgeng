@@ -22,6 +22,11 @@ init script:
 		else 	if input == "Event" then "Event" 
 		else	"MediumUnit"
 	}
+	defaultcolor := {
+			if input == "Pilot" then ""
+		else	if input == "Armament" then ""
+		else	"blue"
+	}
 
 ####################### Card Field Definitions
 
@@ -64,7 +69,8 @@ card field:
 	choice:			Green
 	choice:			Black
 	choice:			Yellow
-#	default:		defaultcolor(card.type)
+	choice:	
+	default:		defaultcolor(card.type)
 	description:		The color of the card.
 	
 
@@ -83,11 +89,10 @@ card field:
 	card list column:	4
 
 card field:
-	type:		choice
+	type:		text
 	name:		characteristic
-	choice:		
-	choice:		Engineer
 	editable:	true
+	card list column:	6
 
 
 card field:
@@ -99,6 +104,7 @@ card field:
 	choice:		CrossRare
 	choice:		SpecialRare
 	choice:		Promo
+	choice:		Warship
 #	default:	Common
 	description:	The rarity of the card.
 
