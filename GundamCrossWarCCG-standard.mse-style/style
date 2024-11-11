@@ -47,7 +47,7 @@ card style:
 		top:			731
 		height:			30
 		z index:		21
-		visible:		{ if card.type == "Crew" then "false" else "true"}
+		visible:		true
 		popup style:		in place
 		render style:		image
 		image:			{input + "Icon.png"}
