@@ -61,6 +61,14 @@ symbol:
 	code: (7)
 	image: ColorlessCastCost7.png
 	image font size: 50
+symbol:
+	code: (8)
+	image: ColorlessCastCost8.png
+	image font size: 50
+symbol:
+	code: (9)
+	image: ColorlessCastCost9.png
+	image font size: 50
 
 ##############################################################
 # Insert-symbol menu
@@ -80,3 +88,5 @@ insert symbol menu:
 		item: (5)
 		item: (6)
 		item: (7)
+		item: (8)
+		item: (9)
