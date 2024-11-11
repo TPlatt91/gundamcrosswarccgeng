@@ -138,6 +138,80 @@ symbol:
 	code: (armedintervention)
 	image: AbilityArmedIntervention.png
 	image font size: 30
+symbol:
+	code: (warship)
+	image: AbilityStarship.png
+	image font size: 30
+
+##### Ability Keywords
+symbol:
+	code: (aeug)
+	image: AbilityAEUG.png
+	image font size: 30
+symbol:
+	code: (amphibious)
+	image: AbilityAmphibious.png
+	image font size: 30
+symbol:
+	code: (crossbonevanguard)
+	image: AbilityCrossboneVanguard.png
+	image font size: 30
+symbol:
+	code: (delazfleet)
+	image: AbilityDelazFleet.png
+	image font size: 30
+symbol:
+	code: (federation)
+	image: AbilityFederation.png
+	image font size: 30
+symbol:
+	code: (frostbrothers)
+	image: AbilityFrostBrothers.png
+	image font size: 30
+symbol:
+	code: (gearadoga)
+	image: AbilityGearaDoga.png
+	image font size: 30
+symbol:
+	code: (ginn)
+	image: AbilityGinn.png
+	image font size: 30
+symbol:
+	code: (graze)
+	image: AbilityGraze.png
+	image font size: 30
+symbol:
+	code: (groundtype)
+	image: AbilityGroundType.png
+	image font size: 30
+symbol:
+	code: (gundam)
+	image: AbilityGundam.png
+	image font size: 30
+symbol:
+	code: (gunpla)
+	image: AbilityGunpla.png
+	image font size: 30
+symbol:
+	code: (londobell)
+	image: AbilityLondoBell.png
+	image font size: 30
+symbol:
+	code: (mazellaattack)
+	image: AbilityMazellaAttack.png
+	image font size: 30
+symbol:
+	code: (operationmeteor)
+	image: AbilityOpMeteor.png
+	image font size: 30
+symbol:
+	code: (zaku)
+	image: AbilityZaku.png
+	image font size: 30
+symbol:
+	code: (zeon)
+	image: AbilityZeon.png
+	image font size: 30
 
 ##### Ability Numbers
 
@@ -470,94 +544,118 @@ insert symbol menu:
 		item: (uwa)
 		item: (zeonghead)
 	item:
-		name: Ability Keywords
+		name: Color
 		item: (black)
 		item: (blue)
 		item: (green)
 		item: (red)
 		item: (yellow)
+	item:	
+		name: Compatibility
+		item: (aeug)
+		item: (amphibious)
+		item: (crossbonevanguard)
+		item: (delazfleet)
+		item: (federation)
+		item: (frostbrothers)
+		item: (gearadoga)
+		item: (ginn)
+		item: (graze)
+		item: (groundtype)
+		item: (gundam)
+		item: (gunpla)
+		item: (londobell)
+		item: (mazellaattack)
+		item: (operationmeteor)
+		item: (zaku)
+		item: (zeon)
 	item:
 		name: Ability Numbers
-		item: (a1)
-		item: (a2)
-		item: (a3)
-		item: (a4)
-		item: (a5)
-		item: (a6)
-		item: (a7)
-		item: (a8)
-		item: (a9)
-		item: (ax)
-		item: (+1)
-		item: (+2)
-		item: (+3)
-		item: (+4)
-		item: (+5)
-		item: (+6)
-		item: (+7)
-		item: (+8)
-		item: (+9)
-		item: (+X)
-	item:
-		name: Ability Ranges
 		item:
-			name: 0 to...
-			item: (0to1)
-			item: (0to2)
-			item: (0to3)
-			item: (0to4)
-			item: (0to5)
-			item: (0to6)
-			item: (0to7)
-			item: (0to8)
-			item: (0to9)
-		item:	
-			name: 1 to...
-			item: (1to2)
-			item: (1to3)
-			item: (1to4)
-			item: (1to5)
-			item: (1to6)
-			item: (1to7)
-			item: (1to8)
-			item: (1to9)
-		item:	
-			name: 2 to...
-			item: (2to3)
-			item: (2to4)
-			item: (2to5)
-			item: (2to6)
-			item: (2to7)
-			item: (2to8)
-			item: (2to9)
-		item:	
-			name: 3 to...
-			item: (3to4)
-			item: (3to5)
-			item: (3to6)
-			item: (3to7)
-			item: (3to8)
-			item: (3to9)
-		item:	
-			name: 4 to...
-			item: (4to5)
-			item: (4to6)
-			item: (4to7)
-			item: (4to8)
-			item: (4to9)
-		item:	
-			name: 5 to...
-			item: (5to6)
-			item: (5to7)
-			item: (5to8)
-			item: (5to9)
-		item:	
-			name: 6 to...
-			item: (6to7)
-			item: (6to8)
-			item: (6to9)
-		item:	
-			name: 7 & 8
-			item: (7to8)
-			item: (7to9)
-			item: (8to9)
+			name: Number
+			item: (a1)
+			item: (a2)
+			item: (a3)
+			item: (a4)
+			item: (a5)
+			item: (a6)
+			item: (a7)
+			item: (a8)
+			item: (a9)
+			item: (ax)
+		item:
+			name: Modifier
+			item: (+1)
+			item: (+2)
+			item: (+3)
+			item: (+4)
+			item: (+5)
+			item: (+6)
+			item: (+7)
+			item: (+8)
+			item: (+9)
+			item: (+X)
+		item:
+			name: Range
+			item:
+				name: 0 to...
+				item: (0to1)
+				item: (0to2)
+				item: (0to3)
+				item: (0to4)
+				item: (0to5)
+				item: (0to6)
+				item: (0to7)
+				item: (0to8)
+				item: (0to9)
+			item:	
+				name: 1 to...
+				item: (1to2)
+				item: (1to3)
+				item: (1to4)
+				item: (1to5)
+				item: (1to6)
+				item: (1to7)
+				item: (1to8)
+				item: (1to9)
+			item:	
+				name: 2 to...
+				item: (2to3)
+				item: (2to4)
+				item: (2to5)
+				item: (2to6)
+				item: (2to7)
+				item: (2to8)
+				item: (2to9)
+			item:	
+				name: 3 to...
+				item: (3to4)
+				item: (3to5)
+				item: (3to6)
+				item: (3to7)
+				item: (3to8)
+				item: (3to9)
+			item:	
+				name: 4 to...
+				item: (4to5)
+				item: (4to6)
+				item: (4to7)
+				item: (4to8)
+				item: (4to9)
+			item:	
+				name: 5 to...
+				item: (5to6)
+				item: (5to7)
+				item: (5to8)
+				item: (5to9)
+			item:	
+				name: 6 to...
+				item: (6to7)
+				item: (6to8)
+				item: (6to9)
+			item:	
+				name: 7 & 8
+				item: (7to8)
+				item: (7to9)
+				item: (8to9)
+	item: (warship)
