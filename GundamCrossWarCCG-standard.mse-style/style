@@ -1,4 +1,4 @@
-mse version:	2.0.0
+﻿mse version:	2.0.0
 game:			GundamCrossWarCCG
 short name:		GCW
 full name:		GundamCrossWarCCG
@@ -115,9 +115,9 @@ card style:
 card style:
 	image:
 		left:			0
-		top:			{if card.type == "Unit" or card.type == "Pilot" then "0" else if card.type == "Armament" then "122" else if card.type == "Event" then "120" else if card.type == "Counter" then "121" else if card.type == "Crew" then "149" else "79"}
+		top:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Warship" then "0" else if card.type == "Armament" then "122" else if card.type == "Event" then "120" else if card.type == "Counter" then "121" else if card.type == "Crew" then "149" else "79"}
 		width:			750
-		height:			{if card.type == "Unit" then "954" else if card.type == "Pilot" then "954" else if card.type == "Armament" then "832" else if card.type == "Event" or card.type == "Counter" then "540" else if card.type == "Crew" then "580" else "526"}
+		height:			{if card.type == "Unit" then "954" else if card.type == "Pilot" then "954" else if card.type == "Armament" then "832" else if card.type == "Event" or card.type == "Counter" then "540" else if card.type == "Crew" then "580" else if card.type == "Warship" then "954" else  "526"}
 		z index:		11
 		mask:			{card.type +"mask.png"}
 
@@ -261,32 +261,32 @@ card style:
 card style:
 	power:
 		visible: {if card.type == "Unit" or card.type == "Pilot" or card.type == "Armament" or card.type =="Warship" then "true" else "false"}
-		left:			8
-		top:			870
-		width:			177
-		height:			165
+		left:			{ if card.type == "Warship" then "443" else "38"}
+		top:			{ if card.type == "Warship" then "905" else "900"}
+		width:			{ if card.type == "Warship" then "100" else "117"}
+		height:			{ if card.type == "Warship" then "85" else "105"}
 		alignment:		center middle
 		z index:		22
 		font:
 			name:		Typomoderno bold
-			size:		55
+			size:		{ if card.type == "Warship" then "35" else "55"}
 			scale down to:	16
-			color:		black
+			color:		{ if card.type == "Warship" then "white" else "black"}
 
 card style:
 	toughness:
 		visible: {if card.type == "Unit" or card.type == "Pilot" or card.type == "Armament" or card.type =="Warship" then "true" else "false"}
-		left:			561
-		top:			870
-		width:			177
-		height:			165
+		left:			{ if card.type == "Warship" then "585" else "591"}
+		top:			{ if card.type == "Warship" then "905" else "900"}
+		width:			{ if card.type == "Warship" then "120" else "117"}
+		height:			{ if card.type == "Warship" then "85" else "105"}
 		alignment:		center middle
 		z index:		22
 		font:
 			name:		Typomoderno bold
 			size:		55
 			scale down to:	16
-			color:		black
+			color:		{ if card.type == "Warship" then "white" else "black"}
 
 
 card style:
@@ -309,7 +309,7 @@ card style:
 
 card style:
 	card_number:
-		left:			530
+		left:			{ if card.type == "Warship" then "440" else "530"}
 		bottom:			1040
 		width:			300
 		height:			20
@@ -322,7 +322,7 @@ card style:
 
 card style:
 	illustrator:
-		left:			210
+		left:			{ if card.type == "Warship" then "30" else "210"}
 		top:			1020
 		width:			300
 		height:			20
@@ -335,7 +335,7 @@ card style:
 
 card style:
 	destiny_season:
-		left:			210
+		left:			{ if card.type == "Warship" then "30" else "210"}
 		top:			995
 		width:			300
 		height:			25
