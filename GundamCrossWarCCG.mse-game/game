@@ -65,14 +65,30 @@ card field:
 	card list visible:		true
 	card list column:		3
 	choice:			Blue
-	choice:			Red
 	choice:			Green
-	choice:			Black
 	choice:			Yellow
+	choice:			Black
+	choice:			Red
 	choice:	
 	default:		defaultcolor(card.type)
 	description:		The color of the card.
-	
+
+card field:
+	type:		choice
+	name:		multicolor
+	card list visible:	false
+	choice:
+	choice:		BlueGreen
+	choice:		BlueYellow
+	choice:		BlueBlack
+	choice:		BlueRed
+	choice:		GreenYellow
+	choice:		GreenBlack
+	choice:		GreenRed
+	choice:		YellowBlack
+	choice:		YellowRed
+	choice:		BlackRed
+	description:		Multicolor Crew
 
 card field:
 	type:			choice

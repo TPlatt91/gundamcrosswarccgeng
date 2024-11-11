@@ -1,4 +1,4 @@
-mse version:	2.0.0
+﻿mse version:	2.0.0
 game:			GundamCrossWarCCG
 short name:		GCW
 full name:		GundamCrossWarCCG
@@ -24,10 +24,21 @@ card style:
 		top:			26
 		width:			150
 		alignment:		right
-		height:			56
+		height:			{if card.type=="Crew" then "28" else "56"}
 		z index: 		3
 		popup style:		in place
 		visible:		{if card.type == "Pilot" or card.type== "Armament" then "false" else "true"}
+card style:
+	multicolor:
+		left:			{if card.type=="Crew" then "686" else "760"}
+		top:			55
+		width:			150
+		alignment:		right
+		height:			28
+		z index: 		4
+		popup style:		in place
+		visible:		{if card.type == "Crew" then "true" else "false"}
+
 
 card style:
 	type:
@@ -38,14 +49,14 @@ card style:
 		z index: 		2
 		popup style:		in place
 		render style:		image
-		image:			{ if card.type == "Pilot" or card.type == "Armament" then input + ".png" else if card.color == "" then "Blue" + input + ".png" else card.color + input + ".png"}
+		image:			{ if card.type == "Pilot" or card.type == "Armament" then input + ".png" else if card.multicolor != "" then card.multicolor + input + ".png" else if card.color == "" then "Blue" + input + ".png" else card.color + input + ".png"}
 
 card style:
 	size:
 		left:			653
-		width:			30
-		top:			731
-		height:			30
+		width:			32
+		top:			730
+		height:			32
 		z index:		21
 		visible:		true
 		popup style:		in place
@@ -136,7 +147,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
@@ -192,7 +203,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
@@ -508,7 +519,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
@@ -564,7 +575,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
@@ -621,7 +632,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: -2
@@ -677,7 +688,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: -2
@@ -734,7 +745,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
@@ -790,7 +801,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
@@ -847,7 +858,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
@@ -903,7 +914,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
@@ -960,7 +971,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: -3
@@ -1016,7 +1027,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: -3
@@ -1073,7 +1084,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -3
 			shadow displacement y: 0
@@ -1129,7 +1140,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		{if card.type == "Warship" then "white" else "yellow"}
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -3
 			shadow displacement y: 0
