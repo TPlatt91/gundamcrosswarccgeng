@@ -1,4 +1,4 @@
-﻿mse version:	2.0.0
+mse version:	2.0.0
 game:			GundamCrossWarCCG
 short name:		GCW
 full name:		GundamCrossWarCCG
@@ -83,7 +83,7 @@ card style:
 
 card style:
 	counter_cost:
-		left:			{if card.type == "Counter" then "132" else "760"}
+		left:			{if card.type == "Counter" then "142" else "760"}
 		top:			723
 		width:			144
 		height:			42
@@ -126,9 +126,9 @@ card style:
 card style:
 	primary_rule_name:
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			700
+		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
-		bottom:			730
+		bottom:			{if card.type == "Warship" then "630" else "730"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -136,7 +136,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		yellow
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
@@ -154,9 +154,9 @@ card style:
 card style:
 	primary_rule_text:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else "730"}
+		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else "795"}
+		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -168,6 +168,9 @@ card style:
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -179,9 +182,9 @@ card style:
 card style:
 	secondary_rule_name:
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			795
+		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
-		bottom:			825
+		bottom:			{if card.type == "Warship" then "725" else "825"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -189,7 +192,7 @@ card style:
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		yellow
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
@@ -208,7 +211,7 @@ card style:
 	secondary_rule_text:
 		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			825
+		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
 		z index:		21
@@ -222,6 +225,9 @@ card style:
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: 2
 			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -376,25 +382,23 @@ extra card style:
 
 ####################### Dropsadows
 
-
 card style:
 	primary_rule_name2:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			700
+		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
-		bottom:			730
-		z index:		20
+		bottom:			{if card.type == "Warship" then "630" else "730"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		yellow
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -2
-			shadow displacement y: -2
+			shadow displacement y: 2
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
@@ -409,10 +413,10 @@ card style:
 card style:
 	primary_rule_text2:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else "730"}
+		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else "795"}
-		z index:		20
+		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -422,7 +426,10 @@ card style:
 			color:		white
 			shadow color:	black
 			shadow displacement x: -2
-			shadow displacement y: -2
+			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -433,22 +440,21 @@ card style:
 		
 card style:
 	secondary_rule_name2:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			795
+		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
-		bottom:			825
-		z index:		20
+		bottom:			{if card.type == "Warship" then "725" else "825"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		white
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -2
-			shadow displacement y: -2
+			shadow displacement y: 2
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
@@ -464,10 +470,10 @@ card style:
 	secondary_rule_text2:
 		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			825
+		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
-		z index:		20
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -477,7 +483,10 @@ card style:
 			color:		white
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: -2
-			shadow displacement y: -2
+			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -486,26 +495,23 @@ card style:
 		line height hard max:	1.3
 		line height line max:	1.6
 
-
-
 card style:
 	primary_rule_name3:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			700
+		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
-		bottom:			730
-		z index:		20
+		bottom:			{if card.type == "Warship" then "630" else "730"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		yellow
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
+			shadow displacement x: 2
+			shadow displacement y: -2
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
@@ -520,10 +526,10 @@ card style:
 card style:
 	primary_rule_text3:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else "730"}
+		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else "795"}
-		z index:		20
+		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -532,8 +538,11 @@ card style:
 			scale down to:	16
 			color:		white
 			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
+			shadow displacement x: 2
+			shadow displacement y: -2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -544,22 +553,21 @@ card style:
 		
 card style:
 	secondary_rule_name3:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			795
+		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
-		bottom:			825
-		z index:		20
+		bottom:			{if card.type == "Warship" then "725" else "825"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		white
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
+			shadow displacement x: 2
+			shadow displacement y: -2
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
@@ -575,10 +583,10 @@ card style:
 	secondary_rule_text3:
 		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			825
+		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
-		z index:		20
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -587,8 +595,11 @@ card style:
 			scale down to:	16
 			color:		white
 			shadow color:	rgb(0,0,0)
-			shadow displacement x: -2
-			shadow displacement y: 2
+			shadow displacement x: 2
+			shadow displacement y: -2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -597,24 +608,22 @@ card style:
 		line height hard max:	1.3
 		line height line max:	1.6
 
-
 card style:
 	primary_rule_name4:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			700
+		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
-		bottom:			730
-		z index:		20
+		bottom:			{if card.type == "Warship" then "630" else "730"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		yellow
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
-			shadow displacement x: 2
+			shadow displacement x: -2
 			shadow displacement y: -2
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
@@ -630,10 +639,10 @@ card style:
 card style:
 	primary_rule_text4:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else "730"}
+		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else "795"}
-		z index:		20
+		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -642,8 +651,11 @@ card style:
 			scale down to:	16
 			color:		white
 			shadow color:	black
-			shadow displacement x: 2
+			shadow displacement x: -2
 			shadow displacement y: -2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -654,21 +666,20 @@ card style:
 		
 card style:
 	secondary_rule_name4:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			795
+		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
-		bottom:			825
-		z index:		20
+		bottom:			{if card.type == "Warship" then "725" else "825"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		white
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
-			shadow displacement x: 2
+			shadow displacement x: -2
 			shadow displacement y: -2
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
@@ -685,10 +696,10 @@ card style:
 	secondary_rule_text4:
 		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			825
+		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
-		z index:		20
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -697,8 +708,11 @@ card style:
 			scale down to:	16
 			color:		white
 			shadow color:	rgb(0,0,0)
-			shadow displacement x: 2
+			shadow displacement x: -2
 			shadow displacement y: -2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -707,23 +721,20 @@ card style:
 		line height hard max:	1.3
 		line height line max:	1.6
 
-
-
 card style:
 	primary_rule_name5:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			700
+		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
-		bottom:			730
-		z index:		20
+		bottom:			{if card.type == "Warship" then "630" else "730"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		yellow
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
@@ -741,10 +752,10 @@ card style:
 card style:
 	primary_rule_text5:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else "730"}
+		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else "795"}
-		z index:		20
+		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -755,6 +766,9 @@ card style:
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -765,19 +779,18 @@ card style:
 		
 card style:
 	secondary_rule_name5:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			795
+		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
-		bottom:			825
-		z index:		20
+		bottom:			{if card.type == "Warship" then "725" else "825"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		white
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
@@ -796,10 +809,10 @@ card style:
 	secondary_rule_text5:
 		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			825
+		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
-		z index:		20
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -810,6 +823,9 @@ card style:
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: 3
 			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -820,19 +836,18 @@ card style:
 
 card style:
 	primary_rule_name6:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			700
+		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
-		bottom:			730
-		z index:		20
+		bottom:			{if card.type == "Warship" then "630" else "730"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		yellow
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
@@ -850,10 +865,10 @@ card style:
 card style:
 	primary_rule_text6:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else "730"}
+		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else "795"}
-		z index:		20
+		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -864,6 +879,9 @@ card style:
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -874,19 +892,18 @@ card style:
 		
 card style:
 	secondary_rule_name6:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			795
+		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
-		bottom:			825
-		z index:		20
+		bottom:			{if card.type == "Warship" then "725" else "825"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		white
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
@@ -905,10 +922,10 @@ card style:
 	secondary_rule_text6:
 		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			825
+		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
-		z index:		20
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -919,6 +936,9 @@ card style:
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: 0
 			shadow displacement y: 3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -927,25 +947,23 @@ card style:
 		line height hard max:	1.3
 		line height line max:	1.6
 
-
 card style:
 	primary_rule_name7:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			700
+		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
-		bottom:			730
-		z index:		20
+		bottom:			{if card.type == "Warship" then "630" else "730"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		yellow
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
-			shadow displacement x: -3
-			shadow displacement y: 0
+			shadow displacement x: 0
+			shadow displacement y: -3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
@@ -960,10 +978,10 @@ card style:
 card style:
 	primary_rule_text7:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else "730"}
+		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else "795"}
-		z index:		20
+		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -972,8 +990,11 @@ card style:
 			scale down to:	16
 			color:		white
 			shadow color:	black
-			shadow displacement x: -3
-			shadow displacement y: 0
+			shadow displacement x: 0
+			shadow displacement y: -3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -984,22 +1005,21 @@ card style:
 		
 card style:
 	secondary_rule_name7:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			795
+		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
-		bottom:			825
-		z index:		20
+		bottom:			{if card.type == "Warship" then "725" else "825"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		white
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
-			shadow displacement x: -3
-			shadow displacement y: 0
+			shadow displacement x: 0
+			shadow displacement y: -3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
@@ -1015,10 +1035,10 @@ card style:
 	secondary_rule_text7:
 		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			825
+		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
-		z index:		20
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -1027,8 +1047,11 @@ card style:
 			scale down to:	16
 			color:		white
 			shadow color:	rgb(0,0,0)
-			shadow displacement x: -3
-			shadow displacement y: 0
+			shadow displacement x: 0
+			shadow displacement y: -3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1039,22 +1062,21 @@ card style:
 
 card style:
 	primary_rule_name8:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			700
+		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
-		bottom:			730
-		z index:		20
+		bottom:			{if card.type == "Warship" then "630" else "730"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		yellow
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
+			shadow displacement x: -3
+			shadow displacement y: 0
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
@@ -1069,10 +1091,10 @@ card style:
 card style:
 	primary_rule_text8:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else "730"}
+		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else "795"}
-		z index:		20
+		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -1081,8 +1103,11 @@ card style:
 			scale down to:	16
 			color:		white
 			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
+			shadow displacement x: -3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1093,22 +1118,21 @@ card style:
 		
 card style:
 	secondary_rule_name8:
-		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			795
+		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
-		bottom:			825
-		z index:		20
+		bottom:			{if card.type == "Warship" then "725" else "825"}
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
 			size:		34
 			scale down to:	24
-			color:		white
+			color:		{if card.type == "Warship" then "white" else "yellow"}
 			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
+			shadow displacement x: -3
+			shadow displacement y: 0
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
@@ -1124,10 +1148,10 @@ card style:
 	secondary_rule_text8:
 		visible:		{if card.type == "Counter" then "false" else "true"}
 		left:			{if card.type == "Counter" then "760" else "40"}
-		top:			825
+		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
-		z index:		20
+		z index:		21
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -1136,8 +1160,11 @@ card style:
 			scale down to:	16
 			color:		white
 			shadow color:	rgb(0,0,0)
-			shadow displacement x: 0
-			shadow displacement y: -3
+			shadow displacement x: -3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
