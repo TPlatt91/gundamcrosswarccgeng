@@ -1,4 +1,4 @@
-﻿mse version:	2.0.0
+mse version:	2.0.0
 game:			GundamCrossWarCCG
 short name:		GCW
 full name:		GundamCrossWarCCG
@@ -309,8 +309,8 @@ card style:
 
 card style:
 	card_number:
-		left:			540
-		top:			1012
+		left:			530
+		bottom:			1040
 		width:			300
 		height:			20
 		z index:		20
