@@ -460,12 +460,12 @@ extra card style:
 
 card style:
 	primary_rule_name2:
-		left:			{if card.type == "Counter" or card.type == "Crew" then "760" else "40"}
-		top:			{if card.type == "Warship" then "600" else "700"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "630" else "730"}
+		left:			{card_style.primary_rule_name.left}
+		top:			{card_style.primary_rule_name.top}
+		width:			{card_style.primary_rule_name.width}
+		bottom:			{card_style.primary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.primary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -488,12 +488,12 @@ card style:
 
 card style:
 	primary_rule_text2:
-		left:			40
-		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "730" else if card.type=="Warship" then "630" else "730"}
-		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
+		left:			{card_style.primary_rule_text.left}
+		top:			{card_style.primary_rule_text.top}
+		width:			{card_style.primary_rule_text.width}
+		bottom:			{card_style.primary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.primary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -516,12 +516,12 @@ card style:
 		
 card style:
 	secondary_rule_name2:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
-		top:			{if card.type == "Warship" then "695" else "795"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "725" else "825"}
+		left:			{card_style.secondary_rule_name.left}
+		top:			{card_style.secondary_rule_name.top}
+		width:			{card_style.secondary_rule_name.width}
+		bottom:			{card_style.secondary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -544,13 +544,12 @@ card style:
 		
 card style:
 	secondary_rule_text2:
-		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
-		top:			{if card.type == "Warship" then "725" else "825"}
-		width:			590
-		bottom:			885
+		left:			{card_style.secondary_rule_text.left}
+		top:			{card_style.secondary_rule_text.top}
+		width:			{card_style.secondary_rule_text.width}
+		bottom:			{card_style.secondary_rule_text.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -573,13 +572,13 @@ card style:
 
 card style:
 	tertiary_rule_name2:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			605
-		width:			590
-		bottom:			635
+		visible:		{card_style.tertiary_rule_name.visible}
+		left:			{card_style.tertiary_rule_name.left}
+		top:			{card_style.tertiary_rule_name.top}
+		width:			{card_style.tertiary_rule_name.width}
+		bottom:			{card_style.tertiary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -602,13 +601,13 @@ card style:
 
 card style:
 	tertiary_rule_text2:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			635
-		width:			590
-		bottom:			700
+		visible:		{card_style.tertiary_rule_text.visible}
+		left:			{card_style.tertiary_rule_text.left}
+		top:			{card_style.tertiary_rule_text.top}
+		width:			{card_style.tertiary_rule_text.width}
+		bottom:			{card_style.tertiary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -632,12 +631,12 @@ card style:
 
 card style:
 	primary_rule_name3:
-		left:			{if card.type == "Counter" or card.type == "Crew" then "760" else "40"}
-		top:			{if card.type == "Warship" then "600" else "700"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "630" else "730"}
+		left:			{card_style.primary_rule_name.left}
+		top:			{card_style.primary_rule_name.top}
+		width:			{card_style.primary_rule_name.width}
+		bottom:			{card_style.primary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.primary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -660,12 +659,12 @@ card style:
 
 card style:
 	primary_rule_text3:
-		left:			40
-		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "730" else if card.type=="Warship" then "630" else "730"}
-		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
+		left:			{card_style.primary_rule_text.left}
+		top:			{card_style.primary_rule_text.top}
+		width:			{card_style.primary_rule_text.width}
+		bottom:			{card_style.primary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.primary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -688,12 +687,12 @@ card style:
 		
 card style:
 	secondary_rule_name3:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
-		top:			{if card.type == "Warship" then "695" else "795"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "725" else "825"}
+		left:			{card_style.secondary_rule_name.left}
+		top:			{card_style.secondary_rule_name.top}
+		width:			{card_style.secondary_rule_name.width}
+		bottom:			{card_style.secondary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -716,13 +715,12 @@ card style:
 		
 card style:
 	secondary_rule_text3:
-		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
-		top:			{if card.type == "Warship" then "725" else "825"}
-		width:			590
-		bottom:			885
+		left:			{card_style.secondary_rule_text.left}
+		top:			{card_style.secondary_rule_text.top}
+		width:			{card_style.secondary_rule_text.width}
+		bottom:			{card_style.secondary_rule_text.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -745,13 +743,13 @@ card style:
 
 card style:
 	tertiary_rule_name3:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			605
-		width:			590
-		bottom:			635
+		visible:		{card_style.tertiary_rule_name.visible}
+		left:			{card_style.tertiary_rule_name.left}
+		top:			{card_style.tertiary_rule_name.top}
+		width:			{card_style.tertiary_rule_name.width}
+		bottom:			{card_style.tertiary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -774,13 +772,13 @@ card style:
 
 card style:
 	tertiary_rule_text3:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			635
-		width:			590
-		bottom:			700
+		visible:		{card_style.tertiary_rule_text.visible}
+		left:			{card_style.tertiary_rule_text.left}
+		top:			{card_style.tertiary_rule_text.top}
+		width:			{card_style.tertiary_rule_text.width}
+		bottom:			{card_style.tertiary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -804,12 +802,12 @@ card style:
 
 card style:
 	primary_rule_name4:
-		left:			{if card.type == "Counter" or card.type == "Crew" then "760" else "40"}
-		top:			{if card.type == "Warship" then "600" else "700"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "630" else "730"}
+		left:			{card_style.primary_rule_name.left}
+		top:			{card_style.primary_rule_name.top}
+		width:			{card_style.primary_rule_name.width}
+		bottom:			{card_style.primary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.primary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -832,12 +830,12 @@ card style:
 
 card style:
 	primary_rule_text4:
-		left:			40
-		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "730" else if card.type=="Warship" then "630" else "730"}
-		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
+		left:			{card_style.primary_rule_text.left}
+		top:			{card_style.primary_rule_text.top}
+		width:			{card_style.primary_rule_text.width}
+		bottom:			{card_style.primary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.primary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -860,12 +858,12 @@ card style:
 		
 card style:
 	secondary_rule_name4:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
-		top:			{if card.type == "Warship" then "695" else "795"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "725" else "825"}
+		left:			{card_style.secondary_rule_name.left}
+		top:			{card_style.secondary_rule_name.top}
+		width:			{card_style.secondary_rule_name.width}
+		bottom:			{card_style.secondary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -888,13 +886,12 @@ card style:
 		
 card style:
 	secondary_rule_text4:
-		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
-		top:			{if card.type == "Warship" then "725" else "825"}
-		width:			590
-		bottom:			885
+		left:			{card_style.secondary_rule_text.left}
+		top:			{card_style.secondary_rule_text.top}
+		width:			{card_style.secondary_rule_text.width}
+		bottom:			{card_style.secondary_rule_text.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -917,13 +914,13 @@ card style:
 
 card style:
 	tertiary_rule_name4:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			605
-		width:			590
-		bottom:			635
+		visible:		{card_style.tertiary_rule_name.visible}
+		left:			{card_style.tertiary_rule_name.left}
+		top:			{card_style.tertiary_rule_name.top}
+		width:			{card_style.tertiary_rule_name.width}
+		bottom:			{card_style.tertiary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -946,13 +943,13 @@ card style:
 
 card style:
 	tertiary_rule_text4:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			635
-		width:			590
-		bottom:			700
+		visible:		{card_style.tertiary_rule_text.visible}
+		left:			{card_style.tertiary_rule_text.left}
+		top:			{card_style.tertiary_rule_text.top}
+		width:			{card_style.tertiary_rule_text.width}
+		bottom:			{card_style.tertiary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -975,12 +972,12 @@ card style:
 
 card style:
 	primary_rule_name5:
-		left:			{if card.type == "Counter" or card.type == "Crew" then "760" else "40"}
-		top:			{if card.type == "Warship" then "600" else "700"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "630" else "730"}
+		left:			{card_style.primary_rule_name.left}
+		top:			{card_style.primary_rule_name.top}
+		width:			{card_style.primary_rule_name.width}
+		bottom:			{card_style.primary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.primary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -1003,12 +1000,12 @@ card style:
 
 card style:
 	primary_rule_text5:
-		left:			40
-		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "730" else if card.type=="Warship" then "630" else "730"}
-		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
+		left:			{card_style.primary_rule_text.left}
+		top:			{card_style.primary_rule_text.top}
+		width:			{card_style.primary_rule_text.width}
+		bottom:			{card_style.primary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.primary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1031,12 +1028,12 @@ card style:
 		
 card style:
 	secondary_rule_name5:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
-		top:			{if card.type == "Warship" then "695" else "795"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "725" else "825"}
+		left:			{card_style.secondary_rule_name.left}
+		top:			{card_style.secondary_rule_name.top}
+		width:			{card_style.secondary_rule_name.width}
+		bottom:			{card_style.secondary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1059,13 +1056,12 @@ card style:
 		
 card style:
 	secondary_rule_text5:
-		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
-		top:			{if card.type == "Warship" then "725" else "825"}
-		width:			590
-		bottom:			885
+		left:			{card_style.secondary_rule_text.left}
+		top:			{card_style.secondary_rule_text.top}
+		width:			{card_style.secondary_rule_text.width}
+		bottom:			{card_style.secondary_rule_text.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1088,13 +1084,13 @@ card style:
 
 card style:
 	tertiary_rule_name5:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			605
-		width:			590
-		bottom:			635
+		visible:		{card_style.tertiary_rule_name.visible}
+		left:			{card_style.tertiary_rule_name.left}
+		top:			{card_style.tertiary_rule_name.top}
+		width:			{card_style.tertiary_rule_name.width}
+		bottom:			{card_style.tertiary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -1117,13 +1113,13 @@ card style:
 
 card style:
 	tertiary_rule_text5:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			635
-		width:			590
-		bottom:			700
+		visible:		{card_style.tertiary_rule_text.visible}
+		left:			{card_style.tertiary_rule_text.left}
+		top:			{card_style.tertiary_rule_text.top}
+		width:			{card_style.tertiary_rule_text.width}
+		bottom:			{card_style.tertiary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1147,12 +1143,12 @@ card style:
 
 card style:
 	primary_rule_name6:
-		left:			{if card.type == "Counter" or card.type == "Crew" then "760" else "40"}
-		top:			{if card.type == "Warship" then "600" else "700"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "630" else "730"}
+		left:			{card_style.primary_rule_name.left}
+		top:			{card_style.primary_rule_name.top}
+		width:			{card_style.primary_rule_name.width}
+		bottom:			{card_style.primary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.primary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -1175,12 +1171,12 @@ card style:
 
 card style:
 	primary_rule_text6:
-		left:			40
-		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "730" else if card.type=="Warship" then "630" else "730"}
-		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
+		left:			{card_style.primary_rule_text.left}
+		top:			{card_style.primary_rule_text.top}
+		width:			{card_style.primary_rule_text.width}
+		bottom:			{card_style.primary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.primary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1203,12 +1199,12 @@ card style:
 		
 card style:
 	secondary_rule_name6:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
-		top:			{if card.type == "Warship" then "695" else "795"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "725" else "825"}
+		left:			{card_style.secondary_rule_name.left}
+		top:			{card_style.secondary_rule_name.top}
+		width:			{card_style.secondary_rule_name.width}
+		bottom:			{card_style.secondary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1231,13 +1227,12 @@ card style:
 		
 card style:
 	secondary_rule_text6:
-		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
-		top:			{if card.type == "Warship" then "725" else "825"}
-		width:			590
-		bottom:			885
+		left:			{card_style.secondary_rule_text.left}
+		top:			{card_style.secondary_rule_text.top}
+		width:			{card_style.secondary_rule_text.width}
+		bottom:			{card_style.secondary_rule_text.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1260,13 +1255,13 @@ card style:
 
 card style:
 	tertiary_rule_name6:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			605
-		width:			590
-		bottom:			635
+		visible:		{card_style.tertiary_rule_name.visible}
+		left:			{card_style.tertiary_rule_name.left}
+		top:			{card_style.tertiary_rule_name.top}
+		width:			{card_style.tertiary_rule_name.width}
+		bottom:			{card_style.tertiary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -1289,13 +1284,13 @@ card style:
 
 card style:
 	tertiary_rule_text6:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			635
-		width:			590
-		bottom:			700
+		visible:		{card_style.tertiary_rule_text.visible}
+		left:			{card_style.tertiary_rule_text.left}
+		top:			{card_style.tertiary_rule_text.top}
+		width:			{card_style.tertiary_rule_text.width}
+		bottom:			{card_style.tertiary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1319,12 +1314,12 @@ card style:
 
 card style:
 	primary_rule_name7:
-		left:			{if card.type == "Counter" or card.type == "Crew" then "760" else "40"}
-		top:			{if card.type == "Warship" then "600" else "700"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "630" else "730"}
+		left:			{card_style.primary_rule_name.left}
+		top:			{card_style.primary_rule_name.top}
+		width:			{card_style.primary_rule_name.width}
+		bottom:			{card_style.primary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.primary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -1347,12 +1342,12 @@ card style:
 
 card style:
 	primary_rule_text7:
-		left:			40
-		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "730" else if card.type=="Warship" then "630" else "730"}
-		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
+		left:			{card_style.primary_rule_text.left}
+		top:			{card_style.primary_rule_text.top}
+		width:			{card_style.primary_rule_text.width}
+		bottom:			{card_style.primary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.primary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1375,12 +1370,12 @@ card style:
 		
 card style:
 	secondary_rule_name7:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
-		top:			{if card.type == "Warship" then "695" else "795"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "725" else "825"}
+		left:			{card_style.secondary_rule_name.left}
+		top:			{card_style.secondary_rule_name.top}
+		width:			{card_style.secondary_rule_name.width}
+		bottom:			{card_style.secondary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1403,13 +1398,12 @@ card style:
 		
 card style:
 	secondary_rule_text7:
-		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
-		top:			{if card.type == "Warship" then "725" else "825"}
-		width:			590
-		bottom:			885
+		left:			{card_style.secondary_rule_text.left}
+		top:			{card_style.secondary_rule_text.top}
+		width:			{card_style.secondary_rule_text.width}
+		bottom:			{card_style.secondary_rule_text.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1432,13 +1426,13 @@ card style:
 
 card style:
 	tertiary_rule_name7:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			605
-		width:			590
-		bottom:			635
+		visible:		{card_style.tertiary_rule_name.visible}
+		left:			{card_style.tertiary_rule_name.left}
+		top:			{card_style.tertiary_rule_name.top}
+		width:			{card_style.tertiary_rule_name.width}
+		bottom:			{card_style.tertiary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -1461,13 +1455,13 @@ card style:
 
 card style:
 	tertiary_rule_text7:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			635
-		width:			590
-		bottom:			700
+		visible:		{card_style.tertiary_rule_text.visible}
+		left:			{card_style.tertiary_rule_text.left}
+		top:			{card_style.tertiary_rule_text.top}
+		width:			{card_style.tertiary_rule_text.width}
+		bottom:			{card_style.tertiary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1491,12 +1485,12 @@ card style:
 
 card style:
 	primary_rule_name8:
-		left:			{if card.type == "Counter" or card.type == "Crew" then "760" else "40"}
-		top:			{if card.type == "Warship" then "600" else "700"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "630" else "730"}
+		left:			{card_style.primary_rule_name.left}
+		top:			{card_style.primary_rule_name.top}
+		width:			{card_style.primary_rule_name.width}
+		bottom:			{card_style.primary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.primary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -1519,12 +1513,12 @@ card style:
 
 card style:
 	primary_rule_text8:
-		left:			40
-		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "730" else if card.type=="Warship" then "630" else "730"}
-		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
+		left:			{card_style.primary_rule_text.left}
+		top:			{card_style.primary_rule_text.top}
+		width:			{card_style.primary_rule_text.width}
+		bottom:			{card_style.primary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.primary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1547,12 +1541,12 @@ card style:
 		
 card style:
 	secondary_rule_name8:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
-		top:			{if card.type == "Warship" then "695" else "795"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "725" else "825"}
+		left:			{card_style.secondary_rule_name.left}
+		top:			{card_style.secondary_rule_name.top}
+		width:			{card_style.secondary_rule_name.width}
+		bottom:			{card_style.secondary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1575,13 +1569,12 @@ card style:
 		
 card style:
 	secondary_rule_text8:
-		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
-		top:			{if card.type == "Warship" then "725" else "825"}
-		width:			590
-		bottom:			885
+		left:			{card_style.secondary_rule_text.left}
+		top:			{card_style.secondary_rule_text.top}
+		width:			{card_style.secondary_rule_text.width}
+		bottom:			{card_style.secondary_rule_text.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1604,13 +1597,13 @@ card style:
 
 card style:
 	tertiary_rule_name8:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			605
-		width:			590
-		bottom:			635
+		visible:		{card_style.tertiary_rule_name.visible}
+		left:			{card_style.tertiary_rule_name.left}
+		top:			{card_style.tertiary_rule_name.top}
+		width:			{card_style.tertiary_rule_name.width}
+		bottom:			{card_style.tertiary_rule_name.bottom}
 		z index:		21
-		alignment:		left middle
+		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
 			name:		Sketh Chalk
 			italic name:	MPlantin-Italic
@@ -1633,13 +1626,13 @@ card style:
 
 card style:
 	tertiary_rule_text8:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			635
-		width:			590
-		bottom:			700
+		visible:		{card_style.tertiary_rule_text.visible}
+		left:			{card_style.tertiary_rule_text.left}
+		top:			{card_style.tertiary_rule_text.top}
+		width:			{card_style.tertiary_rule_text.width}
+		bottom:			{card_style.tertiary_rule_text.bottom}
 		z index:		21
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
