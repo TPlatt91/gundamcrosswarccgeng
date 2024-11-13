@@ -136,7 +136,7 @@ card style:
 
 card style:
 	primary_rule_name:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" then "760" else "40"}
 		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "630" else "730"}
@@ -165,9 +165,9 @@ card style:
 card style:
 	primary_rule_text:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
+		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -192,7 +192,7 @@ card style:
 		
 card style:
 	secondary_rule_name:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" then "760" else "40"}
 		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "725" else "825"}
@@ -221,7 +221,7 @@ card style:
 card style:
 	secondary_rule_text:
 		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" then "760" else "40"}
 		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
@@ -451,9 +451,9 @@ card style:
 card style:
 	primary_rule_text2:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
+		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -564,9 +564,9 @@ card style:
 card style:
 	primary_rule_text3:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
+		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -677,9 +677,9 @@ card style:
 card style:
 	primary_rule_text4:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
+		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -790,9 +790,9 @@ card style:
 card style:
 	primary_rule_text5:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
+		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter" or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -903,9 +903,9 @@ card style:
 card style:
 	primary_rule_text6:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
+		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -1016,9 +1016,9 @@ card style:
 card style:
 	primary_rule_text7:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
+		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
 		z index:		21
 		alignment:		left middle
 		font:
@@ -1129,9 +1129,9 @@ card style:
 card style:
 	primary_rule_text8:
 		left:			40
-		top:			{if card.type == "Counter" then "769" else if card.type=="Warship" then "630" else "730"}
+		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
 		z index:		21
 		alignment:		left middle
 		font:
