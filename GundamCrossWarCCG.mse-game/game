@@ -25,7 +25,7 @@ init script:
 	defaultcolor := {
 			if input == "Pilot" then ""
 		else	if input == "Armament" then ""
-		else	"blue"
+		else	"Blue"
 	}
 
 ####################### Card Field Definitions
@@ -143,24 +143,32 @@ card field:
 
 card field:
 	type:				text
+	name:				tertiary_rule_name
+	show statistics:		false
+	multi line:			true
+	description:			name of third ability
+
+card field:
+	type:				text
 	name:				primary_rule_text
 	show statistics:		false
 	multi line:			true
-	description:			The rules text for the card
+	description:			The rules text for the card. Flavor Text for Crew.
 
 card field:
 	type:				text
 	name:				secondary_rule_text
 	show statistics:		false
 	multi line:			true
-	description:			The rules text of the card
+	description:			The rules text of the card.
 
 card field:
 	type:				text
-	name:				flavor-text
+	name:				tertiary_rule_text
 	show statistics:		false
 	multi line:			true
-	description:			The flavor text for the card
+	description:			The rules text of the card
+
 
 ####################### PT
 
@@ -269,7 +277,6 @@ card field:
 	card list visible: false
 	default: card.primary_rule_text
 
-
 card field:
 	type:				text
 	name:				secondary_rule_name2
@@ -293,6 +300,26 @@ card field:
 
 card field:
 	type:				text
+	name:				tertiary_rule_name2
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_name
+
+card field:
+	type:				text
+	name:				tertiary_rule_text2
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_text
+
+card field:
+	type:				text
 	name:				primary_rule_name3
 	identifying: false
 	editable: 			false
@@ -311,7 +338,6 @@ card field:
 	card list visible: false
 	default: card.primary_rule_text
 
-
 card field:
 	type:				text
 	name:				secondary_rule_name3
@@ -320,7 +346,6 @@ card field:
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
-
 
 card field:
 	type:				text
@@ -332,6 +357,26 @@ card field:
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				tertiary_rule_name3
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_name
+
+card field:
+	type:				text
+	name:				tertiary_rule_text3
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_text
 
 card field:
 	type:				text
@@ -353,7 +398,6 @@ card field:
 	card list visible: false
 	default: card.primary_rule_text
 
-
 card field:
 	type:				text
 	name:				secondary_rule_name4
@@ -363,6 +407,25 @@ card field:
 	card list visible: false
 	default: card.secondary_rule_name
 
+card field:
+	type:				text
+	name:				tertiary_rule_name4
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_name
+
+card field:
+	type:				text
+	name:				tertiary_rule_text4
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_text
 
 card field:
 	type:				text
@@ -395,7 +458,6 @@ card field:
 	card list visible: false
 	default: card.primary_rule_text
 
-
 card field:
 	type:				text
 	name:				secondary_rule_name5
@@ -404,7 +466,6 @@ card field:
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
-
 
 card field:
 	type:				text
@@ -416,6 +477,26 @@ card field:
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				tertiary_rule_name5
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_name
+
+card field:
+	type:				text
+	name:				tertiary_rule_text5
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_text
 
 card field:
 	type:				text
@@ -437,6 +518,25 @@ card field:
 	card list visible: false
 	default: card.primary_rule_text
 
+card field:
+	type:				text
+	name:				tertiary_rule_name6
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_name
+
+card field:
+	type:				text
+	name:				tertiary_rule_text6
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_text
 
 card field:
 	type:				text
@@ -446,7 +546,6 @@ card field:
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
-
 
 card field:
 	type:				text
@@ -458,6 +557,26 @@ card field:
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				tertiary_rule_name7
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_name
+
+card field:
+	type:				text
+	name:				tertiary_rule_text7
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_text
 
 card field:
 	type:				text
@@ -521,7 +640,6 @@ card field:
 	card list visible: false
 	default: card.primary_rule_text
 
-
 card field:
 	type:				text
 	name:				secondary_rule_name8
@@ -530,7 +648,6 @@ card field:
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_name
-
 
 card field:
 	type:				text
@@ -542,3 +659,23 @@ card field:
 	show statistics: false
 	card list visible: false
 	default: card.secondary_rule_text
+
+card field:
+	type:				text
+	name:				tertiary_rule_name8
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_name
+
+card field:
+	type:				text
+	name:				tertiary_rule_text8
+	show statistics:		false
+	multi line:			true
+	identifying: false
+	editable: 			false
+	show statistics: false
+	card list visible: false
+	default: card.tertiary_rule_text
