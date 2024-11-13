@@ -49,7 +49,7 @@ card style:
 		z index: 		2
 		popup style:		in place
 		render style:		image
-		image:			{ if card.type == "Pilot" or card.type == "Armament" then input + ".png" else if card.multicolor != "" then card.multicolor + input + ".png" else if card.color == "" then "Blue" + input + ".png" else card.color + input + ".png"}
+		image:			{ if card.type == "Pilot" or card.type == "Armament" then input + ".png" else if card.multicolor != "" then card.multicolor + input + ".png" else card.color + input + ".png"}
 
 card style:
 	size:
