@@ -15,7 +15,11 @@ card width:		750
 card height:	1046
 card dpi:		600
 
-	
+
+init script:
+	primaryruleleft := 	{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
+
+
 ####################### Card Field Looks
 
 card style:
@@ -136,7 +140,7 @@ card style:
 
 card style:
 	primary_rule_name:
-		left:			{if card.type == "Counter" or card.type == "Event" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
 		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "630" else "730"}
@@ -167,9 +171,9 @@ card style:
 		left:			40
 		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
-		z index:		21
-		alignment:		left middle
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
+		z index:		22
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -192,11 +196,11 @@ card style:
 		
 card style:
 	secondary_rule_name:
-		left:			{if card.type == "Counter" or card.type == "Event" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
 		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "725" else "825"}
-		z index:		21
+		z index:		22
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -221,11 +225,11 @@ card style:
 card style:
 	secondary_rule_text:
 		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" or card.type == "Event" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
 		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
-		z index:		21
+		z index:		22
 		alignment:		left middle
 		font:
 			name:		Futura BdCn BT
@@ -239,31 +243,6 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-
-
-
-card style:
-	flavor-text:
-		visible: false
-		left:			40
-		top:			885
-		width:			590
-		bottom:			945
-		z index:		20
-		alignment:		left middle
-		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
-			size:		20
-			scale down to:	16
-			color:		black
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -422,7 +401,7 @@ extra card style:
 
 card style:
 	primary_rule_name2:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
 		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "630" else "730"}
@@ -453,9 +432,9 @@ card style:
 		left:			40
 		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
 		z index:		21
-		alignment:		left middle
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -478,7 +457,7 @@ card style:
 		
 card style:
 	secondary_rule_name2:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
 		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "725" else "825"}
@@ -507,7 +486,7 @@ card style:
 card style:
 	secondary_rule_text2:
 		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
 		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
@@ -535,7 +514,7 @@ card style:
 
 card style:
 	primary_rule_name3:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
 		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "630" else "730"}
@@ -566,9 +545,9 @@ card style:
 		left:			40
 		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
 		z index:		21
-		alignment:		left middle
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -591,7 +570,7 @@ card style:
 		
 card style:
 	secondary_rule_name3:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
 		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "725" else "825"}
@@ -620,7 +599,7 @@ card style:
 card style:
 	secondary_rule_text3:
 		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
 		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
@@ -648,7 +627,7 @@ card style:
 
 card style:
 	primary_rule_name4:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
 		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "630" else "730"}
@@ -679,9 +658,9 @@ card style:
 		left:			40
 		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
 		z index:		21
-		alignment:		left middle
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -704,7 +683,7 @@ card style:
 		
 card style:
 	secondary_rule_name4:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
 		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "725" else "825"}
@@ -733,7 +712,7 @@ card style:
 card style:
 	secondary_rule_text4:
 		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
 		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
@@ -761,7 +740,7 @@ card style:
 
 card style:
 	primary_rule_name5:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
 		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "630" else "730"}
@@ -792,9 +771,9 @@ card style:
 		left:			40
 		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter" or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
 		z index:		21
-		alignment:		left middle
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -817,7 +796,7 @@ card style:
 		
 card style:
 	secondary_rule_name5:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
 		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "725" else "825"}
@@ -846,7 +825,7 @@ card style:
 card style:
 	secondary_rule_text5:
 		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
 		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
@@ -874,7 +853,7 @@ card style:
 
 card style:
 	primary_rule_name6:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
 		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "630" else "730"}
@@ -905,9 +884,9 @@ card style:
 		left:			40
 		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
 		z index:		21
-		alignment:		left middle
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -930,7 +909,7 @@ card style:
 		
 card style:
 	secondary_rule_name6:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
 		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "725" else "825"}
@@ -959,7 +938,7 @@ card style:
 card style:
 	secondary_rule_text6:
 		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
 		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
@@ -987,7 +966,7 @@ card style:
 
 card style:
 	primary_rule_name7:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
 		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "630" else "730"}
@@ -1018,9 +997,9 @@ card style:
 		left:			40
 		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
 		z index:		21
-		alignment:		left middle
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1043,7 +1022,7 @@ card style:
 		
 card style:
 	secondary_rule_name7:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
 		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "725" else "825"}
@@ -1072,7 +1051,7 @@ card style:
 card style:
 	secondary_rule_text7:
 		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
 		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
@@ -1100,7 +1079,7 @@ card style:
 
 card style:
 	primary_rule_name8:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
 		top:			{if card.type == "Warship" then "600" else "700"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "630" else "730"}
@@ -1131,9 +1110,9 @@ card style:
 		left:			40
 		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "700" else if card.type=="Warship" then "630" else "730"}
 		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else "795"}
+		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
 		z index:		21
-		alignment:		left middle
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
 		font:
 			name:		Futura BdCn BT
 			italic name:	MPlantin-Italic
@@ -1156,7 +1135,7 @@ card style:
 		
 card style:
 	secondary_rule_name8:
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
 		top:			{if card.type == "Warship" then "695" else "795"}
 		width:			590
 		bottom:			{if card.type == "Warship" then "725" else "825"}
@@ -1185,7 +1164,7 @@ card style:
 card style:
 	secondary_rule_text8:
 		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" then "760" else "40"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
 		top:			{if card.type == "Warship" then "725" else "825"}
 		width:			590
 		bottom:			885
