@@ -30,8 +30,12 @@ symbol:
 	image: YellowCastCost.png
 	image font size: 50
 symbol:
-	code: (0)
+	code: ()
 	image: ColorlessCastCost.png
+	image font size: 50
+symbol:
+	code: (0)
+	image: ColorlessCastCost0.png
 	image font size: 50
 symbol:
 	code: (1)
@@ -90,3 +94,4 @@ insert symbol menu:
 		item: (7)
 		item: (8)
 		item: (9)
+		item: ()
