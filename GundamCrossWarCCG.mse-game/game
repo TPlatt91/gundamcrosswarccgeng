@@ -94,12 +94,12 @@ card field:
 	type:			choice
 	name:			type
 	choice:			Unit
-	choice:			Pilot
-	choice:			Armament
-	choice:			Crew
 	choice:			Event
 	choice:			Counter
+	choice:			Crew
 	choice:			Warship
+	choice:			Pilot
+	choice:			Armament
 	description:		The type and layout of the card.
 	card list visible:	true
 	card list column:	4
@@ -206,6 +206,13 @@ card field:
 	position hint:			210
 	description:			Illustrator of this card, the default value can be changed on the 'set info' tab
 	show statistics:		false
+
+card field:
+	type:				text
+	name:				illustrator2
+	icon:				stats/illustrator.png
+	default:			card.illustrator
+	editable:			false
 	
 
 card field:
@@ -226,8 +233,13 @@ card field:
 
 card field:
 	type:				text
-	name:				destiny_season
+	name:				season
 	description:			Set Name
+
+card field:
+	type:				text
+	name:				topnote
+	description:			extra line
 
 card field:
 	type:				text

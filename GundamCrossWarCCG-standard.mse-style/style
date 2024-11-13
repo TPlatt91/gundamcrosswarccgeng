@@ -111,9 +111,9 @@ card style:
 
 card style:
 	name:
-		left:			275
-		top:			40
-		width:			350
+		left:			265
+		top:			35
+		width:			418
 		height:			30
 		z index:		21
 		alignment:		left middle shrink-overflow
@@ -278,8 +278,8 @@ card style:
 card style:
 	power:
 		visible: {if card.type == "Unit" or card.type == "Pilot" or card.type == "Armament" or card.type =="Warship" then "true" else "false"}
-		left:			{ if card.type == "Warship" then "443" else "38"}
-		top:			{ if card.type == "Warship" then "905" else "900"}
+		left:			{ if card.type == "Warship" then "455" else "39"}
+		top:			{ if card.type == "Warship" then "910" else "900"}
 		width:			{ if card.type == "Warship" then "100" else "117"}
 		height:			{ if card.type == "Warship" then "85" else "105"}
 		alignment:		center middle
@@ -293,10 +293,10 @@ card style:
 card style:
 	toughness:
 		visible: {if card.type == "Unit" or card.type == "Pilot" or card.type == "Armament" or card.type =="Warship" then "true" else "false"}
-		left:			{ if card.type == "Warship" then "585" else "591"}
-		top:			{ if card.type == "Warship" then "905" else "900"}
-		width:			{ if card.type == "Warship" then "120" else "117"}
-		height:			{ if card.type == "Warship" then "85" else "105"}
+		left:			594
+		top:			900
+		width:			117
+		height:			105
 		alignment:		center middle
 		z index:		22
 		font:
@@ -338,30 +338,57 @@ card style:
 			color:				white
 
 card style:
-	illustrator:
-		left:			{ if card.type == "Warship" then "30" else "210"}
+	season:
+		left:			{ if card.type == "Warship" then "30" else "180"}
 		top:			1020
 		width:			300
 		height:			20
 		z index:		20
 		alignment:		left middle
 		font:
-			name:				Futura BdCn BT
+			name:				Typomondo Bold
 			size:				18
 			color:				white
 
 card style:
-	destiny_season:
-		left:			{ if card.type == "Warship" then "30" else "210"}
+	topnote:
+		left:			{ if card.type == "Warship" then "30" else "180"}
 		top:			995
 		width:			300
 		height:			25
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:				Futura BdCn BT
+			name:				Typomondo Bold
 			size:				18
 			color:				white
+card style:
+	illustrator:
+		right:			720
+		bottom:			695
+		width:			300
+		height:			20
+		z index:		21
+		angle:			270
+		alignment:		right middle shrink-overflow
+		font:
+			name:				MarquesFree-Outline
+			size:				12
+			color:				White
+card style:
+	illustrator2:
+		right:			720
+		bottom:			695
+		width:			300
+		height:			20
+		z index:		20
+		angle:			270
+		alignment:		right middle shrink-overflow
+		font:
+			name:				MarquesFree-Regular
+			size:				12
+			color:				black
+
 		
 		
 
