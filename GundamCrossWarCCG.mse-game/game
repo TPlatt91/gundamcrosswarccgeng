@@ -23,8 +23,10 @@ init script:
 		else	"MediumUnit"
 	}
 	defaultcolor := {
+		card.multicolor
 			if input == "Pilot" then ""
 		else	if input == "Armament" then ""
+		else 	if input == "Crew" and card.multicolor != "" then ""
 		else	"Blue"
 	}
 
