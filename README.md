@@ -1,4 +1,5 @@
 Errors:
+* Collectors Number way too large, too wide Font
 
 Problems:
 * Swapping card type after swapping to multicolor throws an error.
