@@ -11,6 +11,15 @@ horizontal space: -5
 
 ##### Abilities
 symbol:
+	code: (token)
+	image: AbilityToken.png
+	image font size: 30
+symbol:
+	code: (bridge)
+	image: AbilityBridge.png
+	image font size: 30
+
+symbol:
 	code: (uwa)
 	image: AbilityUnderWatersurpriseAttack.png
 	image font size: 30
@@ -658,4 +667,6 @@ insert symbol menu:
 				item: (7to8)
 				item: (7to9)
 				item: (8to9)
+	item: (token)
+	item: (bridge)
 	item: (warship)
