@@ -2,9 +2,10 @@ Bugs/fixes:
 * Swapping card type after swapping to multicolor throws an error.
 
 Features Missing
-*
-*
-
+* Collection/Promo Style:
+	* Unit
+	* Crew
+	* Warship
 
 Resolved: 
 * Card Layouts v2

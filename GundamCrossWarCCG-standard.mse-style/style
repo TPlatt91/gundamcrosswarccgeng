@@ -1086,8 +1086,8 @@ card style:
 		line height hard max:	1.3
 		line height line max:	1.6
 
-card style5:
-	tertiary_rule_name:
+card style:
+	tertiary_rule_name5:
 		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
 		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
 		top:			605
@@ -1115,8 +1115,8 @@ card style5:
 		line height hard max:	1.3
 		line height line max:	1.6
 
-card style5:
-	tertiary_rule_text:
+card style:
+	tertiary_rule_text5:
 		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
 		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
 		top:			635
