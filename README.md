@@ -2,7 +2,8 @@ Bugs/fixes:
 * Swapping card type after swapping to multicolor throws an error.
 
 Features Missing
-
+*
+*
 
 
 Resolved: 
