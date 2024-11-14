@@ -1,12 +1,12 @@
 Errors:
-
+* DO NOT try to change type of multicolor cards, can result in crash, despite options being disabled.
 
 Problems:
 
 
 
 Missing Features:
-
+* Autosort (2.0)
 
 
 Alternate Styles:
