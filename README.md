@@ -26,7 +26,7 @@ Alternate Styles:
 Version 0.9.1
 
 Collectors Number way too large, too wide Font
-* -> Other font, new position, shrunk.
+* > Other font, new position, shrunk.
 
 Artist / Illus: Text is not readable due to font selection
 * > New Font with backdrop blur (Covid19, in the GundamCrossWars.fonts folder)
