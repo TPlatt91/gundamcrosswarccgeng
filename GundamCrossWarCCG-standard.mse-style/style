@@ -232,28 +232,50 @@ card style:
 			shadow displacement y: 2
 		symbol font:		
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-
+card style:
+	secondary_rule_name:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("sn")}
+		z index:		22
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			shadow color:	black
+			shadow displacement x: 2
+			shadow displacement y: 2
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-
+card style:
+	tertiary_rule_name:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("tn")}
+		z index:		22
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			shadow color:	black
+			shadow displacement x: 2
+			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
 card style:
 	primary_rule_text:
 		left:			{commonstart()}
@@ -275,43 +297,6 @@ card style:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-		
-card style:
-	secondary_rule_name:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("sn")}
-		z index:		22
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-		
 card style:
 	secondary_rule_text:
 		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
@@ -332,44 +317,6 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-
-
-card style:
-	tertiary_rule_name:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("tn")}
-		z index:		22
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-
 card style:
 	tertiary_rule_text:
 		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
@@ -377,7 +324,7 @@ card style:
 		height:			{cardtextheight("text3")}
 		bottom:			{textbtms("tt")}
 		z index:		22
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle shrink-overflow"}
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
@@ -391,13 +338,6 @@ card style:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
 			scale down to:	15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
 
 
 ####################### ATK / DEF
@@ -549,1189 +489,914 @@ extra card style:
 		visible:		{ card.pt != "" }
 
 
-####################### Dropsadows
+####################### Dropshadows
 
+### Layer 2
 card style:
 	primary_rule_name2:
-		left:			{card_style.primary_rule_name.left}
-		top:			{card_style.primary_rule_name.top}
-		width:			{card_style.primary_rule_name.width}
-		bottom:			{card_style.primary_rule_name.bottom}
+		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
+		height:			{cardtextheight("name")}
+		width:			{commonwidth()}
+		bottom:			{textbtms("pn")}
 		z index:		21
-		alignment:		{card_style.primary_rule_name.alignment}
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_name3:
-		left:			{card_style.primary_rule_name.left}
-		top:			{card_style.primary_rule_name.top}
-		width:			{card_style.primary_rule_name.width}
-		bottom:			{card_style.primary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_name4:
-		left:			{card_style.primary_rule_name.left}
-		top:			{card_style.primary_rule_name.top}
-		width:			{card_style.primary_rule_name.width}
-		bottom:			{card_style.primary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: -2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_name5:
-		font:
-		left:			{card_style.primary_rule_name.left}
-		top:			{card_style.primary_rule_name.top}
-		width:			{card_style.primary_rule_name.width}
-		bottom:			{card_style.primary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_name6:
-		left:			{card_style.primary_rule_name.left}
-		top:			{card_style.primary_rule_name.top}
-		width:			{card_style.primary_rule_name.width}
-		bottom:			{card_style.primary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -3
-			shadow displacement y: 0
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_name7:
-		left:			{card_style.primary_rule_name.left}
-		top:			{card_style.primary_rule_name.top}
-		width:			{card_style.primary_rule_name.width}
-		bottom:			{card_style.primary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_name8:
-		left:			{card_style.primary_rule_name.left}
-		top:			{card_style.primary_rule_name.top}
-		width:			{card_style.primary_rule_name.width}
-		bottom:			{card_style.primary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_text2:
-		left:			{card_style.primary_rule_text.left}
-		top:			{card_style.primary_rule_text.top}
-		width:			{card_style.primary_rule_text.width}
-		bottom:			{card_style.primary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_text3:
-		left:			{card_style.primary_rule_text.left}
-		top:			{card_style.primary_rule_text.top}
-		width:			{card_style.primary_rule_text.width}
-		bottom:			{card_style.primary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: -2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_text4:
-		left:			{card_style.primary_rule_text.left}
-		top:			{card_style.primary_rule_text.top}
-		width:			{card_style.primary_rule_text.width}
-		bottom:			{card_style.primary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: -2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_text5:
-		font:
-		left:			{card_style.primary_rule_text.left}
-		top:			{card_style.primary_rule_text.top}
-		width:			{card_style.primary_rule_text.width}
-		bottom:			{card_style.primary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_text6:
-		left:			{card_style.primary_rule_text.left}
-		top:			{card_style.primary_rule_text.top}
-		width:			{card_style.primary_rule_text.width}
-		bottom:			{card_style.primary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -3
-			shadow displacement y: 0
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_text7:
-		left:			{card_style.primary_rule_text.left}
-		top:			{card_style.primary_rule_text.top}
-		width:			{card_style.primary_rule_text.width}
-		bottom:			{card_style.primary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	primary_rule_text8:
-		left:			{card_style.primary_rule_text.left}
-		top:			{card_style.primary_rule_text.top}
-		width:			{card_style.primary_rule_text.width}
-		bottom:			{card_style.primary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.primary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-
+		
 card style:
 	secondary_rule_name2:
-		left:			{card_style.secondary_rule_name.left}
-		top:			{card_style.secondary_rule_name.top}
-		width:			{card_style.secondary_rule_name.width}
-		bottom:			{card_style.secondary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_name.alignment}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("sn")}
+		z index:		88
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_name3:
-		left:			{card_style.secondary_rule_name.left}
-		top:			{card_style.secondary_rule_name.top}
-		width:			{card_style.secondary_rule_name.width}
-		bottom:			{card_style.secondary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_name4:
-		left:			{card_style.secondary_rule_name.left}
-		top:			{card_style.secondary_rule_name.top}
-		width:			{card_style.secondary_rule_name.width}
-		bottom:			{card_style.secondary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: -2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_name5:
-		font:
-		left:			{card_style.secondary_rule_name.left}
-		top:			{card_style.secondary_rule_name.top}
-		width:			{card_style.secondary_rule_name.width}
-		bottom:			{card_style.secondary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_name6:
-		left:			{card_style.secondary_rule_name.left}
-		top:			{card_style.secondary_rule_name.top}
-		width:			{card_style.secondary_rule_name.width}
-		bottom:			{card_style.secondary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -3
-			shadow displacement y: 0
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_name7:
-		left:			{card_style.secondary_rule_name.left}
-		top:			{card_style.secondary_rule_name.top}
-		width:			{card_style.secondary_rule_name.width}
-		bottom:			{card_style.secondary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_name8:
-		left:			{card_style.secondary_rule_name.left}
-		top:			{card_style.secondary_rule_name.top}
-		width:			{card_style.secondary_rule_name.width}
-		bottom:			{card_style.secondary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_text2:
-		left:			{card_style.secondary_rule_text.left}
-		top:			{card_style.secondary_rule_text.top}
-		width:			{card_style.secondary_rule_text.width}
-		bottom:			{card_style.secondary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_text3:
-		left:			{card_style.secondary_rule_text.left}
-		top:			{card_style.secondary_rule_text.top}
-		width:			{card_style.secondary_rule_text.width}
-		bottom:			{card_style.secondary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: -2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_text4:
-		left:			{card_style.secondary_rule_text.left}
-		top:			{card_style.secondary_rule_text.top}
-		width:			{card_style.secondary_rule_text.width}
-		bottom:			{card_style.secondary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: -2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_text5:
-		font:
-		left:			{card_style.secondary_rule_text.left}
-		top:			{card_style.secondary_rule_text.top}
-		width:			{card_style.secondary_rule_text.width}
-		bottom:			{card_style.secondary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_text6:
-		left:			{card_style.secondary_rule_text.left}
-		top:			{card_style.secondary_rule_text.top}
-		width:			{card_style.secondary_rule_text.width}
-		bottom:			{card_style.secondary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -3
-			shadow displacement y: 0
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_text7:
-		left:			{card_style.secondary_rule_text.left}
-		top:			{card_style.secondary_rule_text.top}
-		width:			{card_style.secondary_rule_text.width}
-		bottom:			{card_style.secondary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	secondary_rule_text8:
-		left:			{card_style.secondary_rule_text.left}
-		top:			{card_style.secondary_rule_text.top}
-		width:			{card_style.secondary_rule_text.width}
-		bottom:			{card_style.secondary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.secondary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-
 card style:
 	tertiary_rule_name2:
-		left:			{card_style.tertiary_rule_name.left}
-		top:			{card_style.tertiary_rule_name.top}
-		width:			{card_style.tertiary_rule_name.width}
-		bottom:			{card_style.tertiary_rule_name.bottom}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("tn")}
 		z index:		21
-		alignment:		{card_style.tertiary_rule_name.alignment}
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	tertiary_rule_name3:
-		left:			{card_style.tertiary_rule_name.left}
-		top:			{card_style.tertiary_rule_name.top}
-		width:			{card_style.tertiary_rule_name.width}
-		bottom:			{card_style.tertiary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.tertiary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
 card style:
-	tertiary_rule_name4:
-		left:			{card_style.tertiary_rule_name.left}
-		top:			{card_style.tertiary_rule_name.top}
-		width:			{card_style.tertiary_rule_name.width}
-		bottom:			{card_style.tertiary_rule_name.bottom}
+	primary_rule_text2:
+		left:			{commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text1")}
+		bottom:			{textbtms("pt")}
 		z index:		21
-		alignment:		{card_style.tertiary_rule_name.alignment}
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		white
 			shadow color:	black
-			shadow displacement x: -2
+			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
+
 card style:
-	tertiary_rule_name5:
-		font:
-		left:			{card_style.tertiary_rule_name.left}
-		top:			{card_style.tertiary_rule_name.top}
-		width:			{card_style.tertiary_rule_name.width}
-		bottom:			{card_style.tertiary_rule_name.bottom}
+	secondary_rule_text2:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text2")}
+		bottom:			{cardtextbtm()}
 		z index:		21
-		alignment:		{card_style.tertiary_rule_name.alignment}
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		white
 			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:		
+			shadow displacement x: 2
+			shadow displacement y: -2
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	tertiary_rule_name6:
-		left:			{card_style.tertiary_rule_name.left}
-		top:			{card_style.tertiary_rule_name.top}
-		width:			{card_style.tertiary_rule_name.width}
-		bottom:			{card_style.tertiary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.tertiary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -3
-			shadow displacement y: 0
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	tertiary_rule_name7:
-		left:			{card_style.tertiary_rule_name.left}
-		top:			{card_style.tertiary_rule_name.top}
-		width:			{card_style.tertiary_rule_name.width}
-		bottom:			{card_style.tertiary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.tertiary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	tertiary_rule_name8:
-		left:			{card_style.tertiary_rule_name.left}
-		top:			{card_style.tertiary_rule_name.top}
-		width:			{card_style.tertiary_rule_name.width}
-		bottom:			{card_style.tertiary_rule_name.bottom}
-		z index:		21
-		alignment:		{card_style.tertiary_rule_name.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
 card style:
 	tertiary_rule_text2:
-		left:			{card_style.tertiary_rule_text.left}
-		top:			{card_style.tertiary_rule_text.top}
-		width:			{card_style.tertiary_rule_text.width}
-		bottom:			{card_style.tertiary_rule_text.bottom}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text3")}
+		bottom:			{textbtms("tt")}
 		z index:		21
-		alignment:		{card_style.tertiary_rule_text.alignment}
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 35
-			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
-card style:
-	tertiary_rule_text3:
-		left:			{card_style.tertiary_rule_text.left}
-		top:			{card_style.tertiary_rule_text.top}
-		width:			{card_style.tertiary_rule_text.width}
-		bottom:			{card_style.tertiary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.tertiary_rule_text.alignment}
-		font:
-			name:		Futura BdCn BT
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		white
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
+
+### Layer 3
 card style:
-	tertiary_rule_text4:
-		left:			{card_style.tertiary_rule_text.left}
-		top:			{card_style.tertiary_rule_text.top}
-		width:			{card_style.tertiary_rule_text.width}
-		bottom:			{card_style.tertiary_rule_text.bottom}
+	primary_rule_name3:
+		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
+		height:			{cardtextheight("name")}
+		width:			{commonwidth()}
+		bottom:			{textbtms("pn")}
 		z index:		21
-		alignment:		{card_style.tertiary_rule_text.alignment}
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+		
+card style:
+	secondary_rule_name3:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("sn")}
+		z index:		88
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_name3:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("tn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	primary_rule_text3:
+		left:			{commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text1")}
+		bottom:			{textbtms("pt")}
+		z index:		21
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+card style:
+	secondary_rule_text3:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text2")}
+		bottom:			{cardtextbtm()}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_text3:
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text3")}
+		bottom:			{textbtms("tt")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: 2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+### Layer 4
+card style:
+	primary_rule_name4:
+		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
+		height:			{cardtextheight("name")}
+		width:			{commonwidth()}
+		bottom:			{textbtms("pn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: -2
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
+		
 card style:
-	tertiary_rule_text5:
-		font:
-		left:			{card_style.tertiary_rule_text.left}
-		top:			{card_style.tertiary_rule_text.top}
-		width:			{card_style.tertiary_rule_text.width}
-		bottom:			{card_style.tertiary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.tertiary_rule_text.alignment}
+	secondary_rule_name4:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("sn")}
+		z index:		88
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: -2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_name4:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("tn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: -2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	primary_rule_text4:
+		left:			{commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text1")}
+		bottom:			{textbtms("pt")}
+		z index:		21
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: -2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+card style:
+	secondary_rule_text4:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text2")}
+		bottom:			{cardtextbtm()}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: -2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_text4:
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text3")}
+		bottom:			{textbtms("tt")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: -2
+			shadow displacement y: -2
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+### Layer 5
+card style:
+	primary_rule_name5:
+		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
+		height:			{cardtextheight("name")}
+		width:			{commonwidth()}
+		bottom:			{textbtms("pn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
+		
+card style:
+	secondary_rule_name5:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("sn")}
+		z index:		88
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_name5:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("tn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	primary_rule_text5:
+		left:			{commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text1")}
+		bottom:			{textbtms("pt")}
+		z index:		21
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+card style:
+	secondary_rule_text5:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text2")}
+		bottom:			{cardtextbtm()}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_text5:
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text3")}
+		bottom:			{textbtms("tt")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+### Layer 6
+card style:
+	primary_rule_name6:
+		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
+		height:			{cardtextheight("name")}
+		width:			{commonwidth()}
+		bottom:			{textbtms("pn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+		
+card style:
+	secondary_rule_name6:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("sn")}
+		z index:		88
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_name6:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("tn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	primary_rule_text6:
+		left:			{commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text1")}
+		bottom:			{textbtms("pt")}
+		z index:		21
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+card style:
+	secondary_rule_text6:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text2")}
+		bottom:			{cardtextbtm()}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 3
+			shadow displacement y: 0
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
 card style:
 	tertiary_rule_text6:
-		left:			{card_style.tertiary_rule_text.left}
-		top:			{card_style.tertiary_rule_text.top}
-		width:			{card_style.tertiary_rule_text.width}
-		bottom:			{card_style.tertiary_rule_text.bottom}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text3")}
+		bottom:			{textbtms("tt")}
 		z index:		21
-		alignment:		{card_style.tertiary_rule_text.alignment}
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		white
 			shadow color:	black
-			shadow displacement x: -3
+			shadow displacement x: 3
 			shadow displacement y: 0
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
+
+### Layer 7
 card style:
-	tertiary_rule_text7:
-		left:			{card_style.tertiary_rule_text.left}
-		top:			{card_style.tertiary_rule_text.top}
-		width:			{card_style.tertiary_rule_text.width}
-		bottom:			{card_style.tertiary_rule_text.bottom}
+	primary_rule_name7:
+		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
+		height:			{cardtextheight("name")}
+		width:			{commonwidth()}
+		bottom:			{textbtms("pn")}
 		z index:		21
-		alignment:		{card_style.tertiary_rule_text.alignment}
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
+		
 card style:
-	tertiary_rule_text8:
-		left:			{card_style.tertiary_rule_text.left}
-		top:			{card_style.tertiary_rule_text.top}
-		width:			{card_style.tertiary_rule_text.width}
-		bottom:			{card_style.tertiary_rule_text.bottom}
-		z index:		21
-		alignment:		{card_style.tertiary_rule_text.alignment}
+	secondary_rule_name7:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("sn")}
+		z index:		88
+		alignment:		left middle shrink-overflow
 		font:
 			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: 3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_name7:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("tn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: 3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	primary_rule_text7:
+		left:			{commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text1")}
+		bottom:			{textbtms("pt")}
+		z index:		21
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: 3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+card style:
+	secondary_rule_text7:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text2")}
+		bottom:			{cardtextbtm()}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: 3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_text7:
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text3")}
+		bottom:			{textbtms("tt")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: 3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+### Layer 8
+card style:
+	primary_rule_name8:
+		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
+		height:			{cardtextheight("name")}
+		width:			{commonwidth()}
+		bottom:			{textbtms("pn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: -3
-		symbol font:		
+		symbol font:
 			name: GundamCrossWarCCG-Abilities
-			size: 35
+			size: 25
 			scale down to: 15
-		padding left:		6
-		padding right:		5
-		line height hard:	1.2
-		line height line:	1.5
-		line height soft:	0.9
-		line height hard max:	1.3
-		line height line max:	1.6
+		
+card style:
+	secondary_rule_name8:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("sn")}
+		z index:		88
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: -3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_name8:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("tn")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: -3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	primary_rule_text8:
+		left:			{commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text1")}
+		bottom:			{textbtms("pt")}
+		z index:		21
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: -3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+
+card style:
+	secondary_rule_text8:
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text2")}
+		bottom:			{cardtextbtm()}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: -3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
+card style:
+	tertiary_rule_text8:
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text3")}
+		bottom:			{textbtms("tt")}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Futura BdCn BT
+			size:		20
+			scale down to:	11
+			max stretch:	0.3
+			color:		white
+			shadow color:	black
+			shadow displacement x: 0
+			shadow displacement y: -3
+		symbol font:
+			name: GundamCrossWarCCG-Abilities
+			size: 25
+			scale down to: 15
