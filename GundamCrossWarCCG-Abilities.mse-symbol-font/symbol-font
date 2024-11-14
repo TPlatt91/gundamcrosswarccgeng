@@ -18,7 +18,14 @@ symbol:
 	code: (bridge)
 	image: AbilityBridge.png
 	image font size: 30
-
+symbol:
+	code: ())
+	image: AbilityEndcap.png
+	image font size: 30
+symbol:
+	code: (()
+	image: AbilityOpener.png
+	image font size: 30
 symbol:
 	code: (uwa)
 	image: AbilityUnderWatersurpriseAttack.png
@@ -580,6 +587,8 @@ insert symbol menu:
 		item: (zeon)
 	item:
 		name: Ability Numbers
+		item:	(()
+		item:	())
 		item:
 			name: Number
 			item: (a1)
