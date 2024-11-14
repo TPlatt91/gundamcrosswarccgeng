@@ -3,6 +3,7 @@ Errors:
 
 Problems:
 * Scaling of the tertiary line is problematic - something seems to not work there properly
+* 2ND RULE TEXT FIELD, WILL AT TIMES SHADOW OR COPY A YELLOW TEXT WHEN INSERTING AN ABILITY FONT.
 
 Missing Features:
 * Unit ATK/DEF have Unit Colors
