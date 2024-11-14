@@ -299,7 +299,7 @@ card style:
 			scale down to: 10
 card style:
 	secondary_rule_text:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
 		width:			{commonwidth()}
 		height:			{cardtextheight("text2")}
 		bottom:			{cardtextbtm()}
