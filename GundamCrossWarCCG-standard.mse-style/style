@@ -233,7 +233,7 @@ card style:
 		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	secondary_rule_name:
 		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
@@ -254,10 +254,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_name:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("name")}
 		bottom:			{textbtms("tn")}
@@ -275,7 +275,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	primary_rule_text:
 		left:			{commonstart()}
@@ -296,10 +296,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	secondary_rule_text:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("text2")}
 		bottom:			{cardtextbtm()}
@@ -512,7 +512,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 		
 card style:
 	secondary_rule_name2:
@@ -534,10 +534,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_name2:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("name")}
 		bottom:			{textbtms("tn")}
@@ -555,7 +555,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	primary_rule_text2:
 		left:			{commonstart()}
@@ -576,7 +576,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 card style:
 	secondary_rule_text2:
@@ -598,10 +598,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_text2:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("text3")}
 		bottom:			{textbtms("tt")}
@@ -619,7 +619,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 ### Layer 3
 card style:
@@ -642,7 +642,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 		
 card style:
 	secondary_rule_name3:
@@ -664,10 +664,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_name3:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("name")}
 		bottom:			{textbtms("tn")}
@@ -685,7 +685,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	primary_rule_text3:
 		left:			{commonstart()}
@@ -706,7 +706,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 card style:
 	secondary_rule_text3:
@@ -728,10 +728,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_text3:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("text3")}
 		bottom:			{textbtms("tt")}
@@ -749,7 +749,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 ### Layer 4
 card style:
@@ -772,7 +772,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 		
 card style:
 	secondary_rule_name4:
@@ -794,10 +794,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_name4:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("name")}
 		bottom:			{textbtms("tn")}
@@ -815,7 +815,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	primary_rule_text4:
 		left:			{commonstart()}
@@ -836,7 +836,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 card style:
 	secondary_rule_text4:
@@ -858,10 +858,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_text4:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("text3")}
 		bottom:			{textbtms("tt")}
@@ -879,7 +879,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 ### Layer 5
 card style:
@@ -902,7 +902,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 		
 card style:
 	secondary_rule_name5:
@@ -924,10 +924,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_name5:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("name")}
 		bottom:			{textbtms("tn")}
@@ -945,7 +945,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	primary_rule_text5:
 		left:			{commonstart()}
@@ -966,7 +966,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 card style:
 	secondary_rule_text5:
@@ -988,10 +988,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_text5:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("text3")}
 		bottom:			{textbtms("tt")}
@@ -1009,7 +1009,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 ### Layer 6
 card style:
@@ -1032,7 +1032,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 		
 card style:
 	secondary_rule_name6:
@@ -1054,10 +1054,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_name6:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("name")}
 		bottom:			{textbtms("tn")}
@@ -1075,7 +1075,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	primary_rule_text6:
 		left:			{commonstart()}
@@ -1096,7 +1096,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 card style:
 	secondary_rule_text6:
@@ -1118,10 +1118,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_text6:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("text3")}
 		bottom:			{textbtms("tt")}
@@ -1139,7 +1139,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 ### Layer 7
 card style:
@@ -1162,7 +1162,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 		
 card style:
 	secondary_rule_name7:
@@ -1184,10 +1184,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_name7:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("name")}
 		bottom:			{textbtms("tn")}
@@ -1205,7 +1205,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	primary_rule_text7:
 		left:			{commonstart()}
@@ -1226,7 +1226,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 card style:
 	secondary_rule_text7:
@@ -1248,10 +1248,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_text7:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("text3")}
 		bottom:			{textbtms("tt")}
@@ -1269,7 +1269,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 ### Layer 8
 card style:
@@ -1292,7 +1292,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 		
 card style:
 	secondary_rule_name8:
@@ -1314,10 +1314,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_name8:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("name")}
 		bottom:			{textbtms("tn")}
@@ -1335,7 +1335,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	primary_rule_text8:
 		left:			{commonstart()}
@@ -1356,7 +1356,7 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 
 card style:
 	secondary_rule_text8:
@@ -1378,10 +1378,10 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10
 card style:
 	tertiary_rule_text8:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
 		width:			{commonwidth()}
 		height:			{cardtextheight("text3")}
 		bottom:			{textbtms("tt")}
@@ -1399,4 +1399,4 @@ card style:
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
-			scale down to: 15
+			scale down to: 10

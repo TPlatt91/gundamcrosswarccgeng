@@ -2,8 +2,8 @@ Errors:
 
 
 Problems:
-* Scaling of the tertiary line is problematic - something seems to not work there properly
-* 2ND RULE TEXT FIELD, WILL AT TIMES SHADOW OR COPY A YELLOW TEXT WHEN INSERTING AN ABILITY FONT.
+
+
 
 Missing Features:
 * Unit ATK/DEF have Unit Colors
@@ -24,6 +24,11 @@ Alternate Styles:
 
 
 ==========================================================
+Version 0.9.2
+
+2nd Yellow dropshadows and bad alignment of dropshadows, tertiary Rule misaligned.
+* > Re-written dropshadows from 0.
+
 Version 0.9.1
 
 Collectors Number way too large, too wide Font
