@@ -17,8 +17,83 @@ card dpi:	600
 
 
 init script:
-	primaryruleleft := 	{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" then "760" else "40"}
+	commonstart	:=	{"30"}
+	commonhide	:=	{"760"}
+	commonwidth	:=	{"585"}	
+	cardtextbtm	:= 	{case card.type of
+					"Unit":		"870",
+					"Event":	"940",
+					"Counter":	"940",
+					"Crew":		"870",
+					"Warship":	"900",
+					"Pilot":	"870",
+					"Armament":	"870",
+					else:		"885"
+				}
+	cardtextheight	:=	{case input of
+					"name": 		"30",
+					"text1": case card.type of
+						"Unit":		"60",
+						"Event":	"210",
+						"Counter":	"171",
+						"Crew":		case card.multicolor of
+								"":	"120",
+								else:	"60",
+						"Warship":	"60",
+						"Pilot":	"60",
+						"Armament":	"60",
+						else:		"60",
+					"text2": case card.type of
+						"Unit":		"60",
+						"Event":	"0",
+						"Counter":	"0",
+						"Crew":	case card.multicolor of
+								"":	"0",
+								else:	"60",
+						"Warship":	"90",
+						"Pilot":	"60",
+						"Armament":	"60",
+						else:		"0",
+					"text3": case card.type of
+						"Unit":		"60",
+						"Event":	"0",
+						"Counter":	"0",
+						"Crew":		"0",
+						"Warship":	"0",
+						"Pilot":	"60",
+						"Armament":	"60",
+						else:		"0",
+					else: "0"
+				}
+	textbtms	:=	{case input of
+					"tn":	"630",
+					"tt":	"690",
+					"pn":	"720",
+					"pt": case card.type of
+						"Unit":		"780",
+						"Event":	cardtextbtm(),
+						"Counter":	cardtextbtm(),
+						"Crew":	case card.multicolor of
+							"":	cardtextbtm(),
+							else:	"780",
+						"Warship":	"780",
+						"Pilot":	"780",
+						"Armament":	"780",
+						else:		"60",
+					"sn":	case card.type of
+						"Unit":		"810",
+						"Event":	"810",
+						"Counter":	"810",
+						"Crew":		"810",
+						"Warship":	"810",
+						"Pilot":	"810",
+						"Armament":	"810",
+						else:		"60",
+					"st":	cardtextbtm(),
+					else:	cardtextbtm()
+				}
 
+	
 
 ####################### Card Field Looks
 
@@ -34,7 +109,7 @@ card style:
 		visible:		{if card.type == "Pilot" or card.type== "Armament" then "false" else "true"}
 card style:
 	multicolor:
-		left:			{if card.type=="Crew" then "686" else "760"}
+		left:			{if card.type=="Crew" then "686" else commonhide()}
 		top:			55
 		width:			150
 		alignment:		right
@@ -80,7 +155,7 @@ card style:
 
 card style:
 	casting cost:
-		left:			{if card.type == "Crew" or card.type == "Armament" or card.type == "Pilot" then "760" else "20"}
+		left:			{if card.type == "Crew" or card.type == "Armament" or card.type == "Pilot" then commonhide() else "20"}
 		top:			15
 		width:			150
 		height:			55
@@ -98,7 +173,7 @@ card style:
 
 card style:
 	counter_cost:
-		left:			{if card.type == "Counter" then "142" else "760"}
+		left:			{if card.type == "Counter" then "142" else commonhide()}
 		top:			723
 		width:			144
 		height:			42
@@ -140,24 +215,25 @@ card style:
 
 card style:
 	primary_rule_name:
-		left:			{if card.type == "Counter" or card.type == "Crew" then "760" else "40"}
-		top:			{if card.type == "Warship" then "600" else "700"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "630" else "730"}
-		z index:		21
-		alignment:		left middle
+		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
+		height:			{cardtextheight("name")}
+		width:			{commonwidth()}
+		bottom:			{textbtms("pn")}
+		z index:		22
+		alignment:		left middle shrink-overflow
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -168,24 +244,25 @@ card style:
 
 card style:
 	primary_rule_text:
-		left:			40
-		top:			{if card.type == "Counter"  then "769" else if card.type == "Event" then "730" else if card.type=="Warship" then "630" else "730"}
-		width:			590
-		bottom:			{if card.type == "Counter"  or card.type == "Event" then "954" else if card.type=="Warship" then "695" else if card.type == "Crew" and card.multicolor == "" then "885" else "795"}
+		left:			{commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text1")}
+		bottom:			{textbtms("pt")}
 		z index:		22
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -196,24 +273,25 @@ card style:
 		
 card style:
 	secondary_rule_name:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then "760" else "40"}
-		top:			{if card.type == "Warship" then "695" else "795"}
-		width:			590
-		bottom:			{if card.type == "Warship" then "725" else "825"}
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("sn")}
 		z index:		22
-		alignment:		left middle
+		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -224,22 +302,21 @@ card style:
 		
 card style:
 	secondary_rule_text:
-		visible:		{if card.type == "Counter" then "false" else "true"}
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then "760" else "40"}
-		top:			{if card.type == "Warship" then "725" else "825"}
-		width:			590
-		bottom:			885
+		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text2")}
+		bottom:			{cardtextbtm()}
 		z index:		22
-		alignment:		left middle
+		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: 2
 			shadow displacement y: 2
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
@@ -254,25 +331,25 @@ card style:
 
 card style:
 	tertiary_rule_name:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			605
-		width:			590
-		bottom:			635
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
+		width:			{commonwidth()}
+		height:			{cardtextheight("name")}
+		bottom:			{textbtms("tn")}
 		z index:		22
-		alignment:		left middle
+		alignment:		left middle shrink-overflow
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		rgb(186,171,4)
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -283,25 +360,26 @@ card style:
 
 card style:
 	tertiary_rule_text:
-		visible:		{if card.type == "Pilot" or card.type == "Armament" then "true" else "false"}
-		left:			{if card.type == "Pilot" or card.type == "Armament" then "40" else "760"}
-		top:			635
-		width:			590
-		bottom:			700
+		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
+		width:			{commonwidth()}
+		height:			{cardtextheight("text3")}
+		bottom:			{textbtms("tt")}
 		z index:		22
-		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle"}
+		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: 2
+			max stretch:	0.3
+
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to:	15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -325,7 +403,7 @@ card style:
 		font:
 			name:		Typomoderno bold
 			size:		{ if card.type == "Warship" then "35" else "55"}
-			scale down to:	16
+			scale down to:	11
 			color:		{ if card.type == "Warship" then "white" else "black"}
 
 card style:
@@ -340,7 +418,7 @@ card style:
 		font:
 			name:		Typomoderno bold
 			size:		55
-			scale down to:	16
+			scale down to:	11
 			color:		{ if card.type == "Warship" then "white" else "black"}
 
 
@@ -352,11 +430,12 @@ card style:
 		width:			350
 		height:			23
 		z index:		30
-		alignment:		center middle
+		alignment:		center middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Covid19
 			size:		20
 			color:		black
+			max stretch:	0.3
 
 
 
@@ -364,15 +443,15 @@ card style:
 
 card style:
 	card_number:
-		left:			{ if card.type == "Warship" then "440" else "530"}
-		bottom:			1040
-		width:			300
+		left:			{ if card.type == "Warship" then "440" else "535"}
+		bottom:			1046
+		width:			80
 		height:			20
 		z index:		20
-		alignment:		left middle
+		alignment:		left middle shrink overflow
 		font:
-			name:				Futura BdCn BT
-			size:				18
+			name:				Covid19
+			size:				12
 			color:				white
 
 card style:
@@ -410,7 +489,7 @@ card style:
 		angle:			270
 		alignment:		right middle shrink-overflow
 		font:
-			name:				MarquesFree-Outline
+			name:				Covid19
 			size:				12
 			color:				White
 card style:
@@ -423,9 +502,14 @@ card style:
 		angle:			270
 		alignment:		right middle shrink-overflow
 		font:
-			name:				MarquesFree-Regular
+			name:				Covid19
 			size:				12
 			color:				black
+			shadow color:			black
+			shadow displacement x:		0
+			shadow displacement y:		0
+			shadow blur:			10
+
 
 		
 		
@@ -467,17 +551,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: 2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -495,17 +580,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: 2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -523,17 +609,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: 2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -551,17 +638,19 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
+			scale down to:	11
 			color:		white
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: -2
 			shadow displacement y: 2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -580,17 +669,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		rgb(186,171,4)
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: 2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -609,17 +699,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: 2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -638,17 +729,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -666,17 +758,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -694,17 +787,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -722,17 +816,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -751,17 +846,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		rgb(186,171,4)
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -780,17 +876,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -809,17 +906,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -837,17 +935,19 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
+
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -865,17 +965,19 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -893,17 +995,19 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
+
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: -2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -922,17 +1026,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		rgb(186,171,4)
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -951,17 +1056,19 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
+
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: -2
 			shadow displacement y: -2
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -979,17 +1086,19 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1007,17 +1116,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1035,17 +1145,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1063,17 +1174,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: 3
 			shadow displacement y: 0
-		symbol font:
+			max stretch:	0.3
+		symbol font:		
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1092,14 +1204,14 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		rgb(186,171,4)
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
@@ -1121,17 +1233,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1150,17 +1263,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1178,17 +1292,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1206,17 +1321,19 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1234,17 +1351,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: 0
 			shadow displacement y: 3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1263,17 +1381,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		rgb(186,171,4)
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1292,17 +1411,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: 3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1321,17 +1441,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: -3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1349,17 +1470,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: -3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1377,17 +1499,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: -3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1405,17 +1528,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: 0
 			shadow displacement y: -3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1434,17 +1558,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		rgb(186,171,4)
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: -3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1463,17 +1588,19 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
+
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: -3
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1492,17 +1619,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -3
 			shadow displacement y: 0
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1520,17 +1648,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: -3
 			shadow displacement y: 0
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1548,17 +1677,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
 			shadow color:	black
 			shadow displacement x: -3
 			shadow displacement y: 0
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1576,17 +1706,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	rgb(0,0,0)
 			shadow displacement x: -3
 			shadow displacement y: 0
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1597,7 +1728,6 @@ card style:
 
 card style:
 	tertiary_rule_name8:
-		visible:		{card_style.tertiary_rule_name.visible}
 		left:			{card_style.tertiary_rule_name.left}
 		top:			{card_style.tertiary_rule_name.top}
 		width:			{card_style.tertiary_rule_name.width}
@@ -1605,17 +1735,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Sketh Chalk
-			italic name:	MPlantin-Italic
-			size:		34
-			scale down to:	24
+			name:		Covid19
+			size:		20
+			scale down to:	11
 			color:		rgb(186,171,4)
 			shadow color:	black
 			shadow displacement x: -3
 			shadow displacement y: 0
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 35
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2
@@ -1634,17 +1765,18 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Futura BdCn BT
-			italic name:	MPlantin-Italic
+			name:		Covid19
 			size:		20
-			scale down to:	16
+			scale down to:	11
 			color:		white
 			shadow color:	black
 			shadow displacement x: -3
 			shadow displacement y: 0
+			max stretch:	0.3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
+			scale down to: 15
 		padding left:		6
 		padding right:		5
 		line height hard:	1.2

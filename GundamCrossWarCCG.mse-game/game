@@ -34,6 +34,22 @@ init script:
 			if input == "Warship" then "Warship"
 		else	"Common"
 	}
+	cardcounter := {
+	set.Set_Code + "-"
+	}
+
+####################### Set Field Definitions
+
+set field:
+	type: text
+	name: Set Name
+	identifying: true
+
+set field:
+	type: text
+	name: Set Code
+	identifying: true
+
 
 ####################### Card Field Definitions
 
@@ -125,6 +141,7 @@ card field:
 		enabled: {card.multicolor==""}
 	choice:	
 		name:	Crew
+		enabled: {card.multicolor==""}
 	choice:	
 		name:	Warship
 		enabled: {card.multicolor==""}
@@ -267,14 +284,23 @@ card field:
 	type:		choice
 	name:		size
 	choice:		SmallUnit
+		enabled: {card.type=="Unit"}
 	choice:		MediumUnit
+		enabled: {card.type=="Unit"}
 	choice:		LargeUnit
+		enabled: {card.type=="Unit"}
 	choice:		Pilot
+		enabled: {card.type=="Pilot"}
 	choice:		Crew
+		enabled: {card.type=="Crew"}
 	choice:		Event
+		enabled: {card.type=="Event"}
 	choice:		Counter
+		enabled: {card.type=="Counter"}
 	choice:		Armament
+		enabled: {card.type=="Armament"}
 	choice:		Warship
+		enabled: {card.type=="Warship"}
 	default:	defaultsize(card.type)
 	description:	Type of the Unit
 	
@@ -283,6 +309,8 @@ card field:
 	type:				text
 	name:				season
 	description:			Set Name
+	default:			set.Set_Name
+	editable:			false
 
 card field:
 	type:				text
@@ -292,6 +320,7 @@ card field:
 card field:
 	type:				text
 	name:				card_number
+	default:			cardcounter()
 	description:			Card Number
 
 

@@ -1,10 +1,8 @@
 Errors:
-* Collectors Number way too large, too wide Font
+
 
 Problems:
-TRAIT BOX DOES NOT SCALE WITH TEXT, SEE NEW FOLDER BT01 --> EXAMPLES
-ARTIST / ILLUS: TEXT IS NOT READABLE DUE TO FONT SELECTION
-TEXT BOXES OVERLAP SOME RINGS, EVEN WITH LINE BREAKS AND SPACES INSERTED
+* Scaling of the tertiary line is problematic - something seems to not work there properly
 
 Missing Features:
 * Unit ATK/DEF have Unit Colors
@@ -23,8 +21,25 @@ Alternate Styles:
 
 	* Transparent-Frame Unit (BT06-077) - Note: White ATK/DEF strength text
 
+
 ==========================================================
-Resolved: 
+Version 0.9.1
+
+Collectors Number way too large, too wide Font
+* -> Other font, new position, shrunk.
+
+Artist / Illus: Text is not readable due to font selection
+* > New Font with backdrop blur (Covid19, in the GundamCrossWars.fonts folder)
+
+Text Boxes overlap some rings, even with line breaks and spaces inserted
+* > Bottom edge realigned, font allowed to downsize to 12
+
+Trait Box does not scale with text
+* > Trait now shrinks width of text to conform to box 
+
+==========================================================
+
+Resolved (0.9): 
 * Card Layouts v2
 * Set Name needs to start *more left* (Warship-style on non circled, at the ATK circle for Units/Pilot/Crew)
 * Illustrator at right edge, above Size/type marker, Top to bottom, Aligned at Bottom corner, Black text, white aurora
