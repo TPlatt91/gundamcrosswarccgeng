@@ -29,6 +29,11 @@ init script:
 		else 	if input == "Crew" and card.multicolor != "" then ""
 		else	"Blue"
 	}
+	defaultrarity := {
+		card.type
+			if input == "Warship" then "Warship"
+		else	"Common"
+	}
 
 ####################### Card Field Definitions
 
@@ -145,13 +150,18 @@ card field:
 	type:		choice
 	name:		rarity
 	choice:		Common
+		enabled: {card.type!="Warship"}
 	choice:		Rare
+		enabled: {card.type!="Warship"}
 	choice:		DoubleRare
+		enabled: {card.type!="Warship"}
 	choice:		CrossRare
 	choice:		SpecialRare
 	choice:		Promo
-	choice:		Warship
-#	default:	Common
+	choice:	
+		name:	Warship
+		enabled: {card.type=="Warship"}
+	default:	defaultrarity(card.type)
 	description:	The rarity of the card.
 
 ####################### Text box
@@ -254,8 +264,8 @@ card field:
 	
 
 card field:
-	type:				choice
-	name:				size
+	type:		choice
+	name:		size
 	choice:		SmallUnit
 	choice:		MediumUnit
 	choice:		LargeUnit
@@ -266,7 +276,7 @@ card field:
 	choice:		Armament
 	choice:		Warship
 	default:	defaultsize(card.type)
-	description:			Type of the Unit
+	description:	Type of the Unit
 	
 
 card field:

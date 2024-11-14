@@ -11,9 +11,9 @@ depends on:	GundamCrossWarCCG-Cost.mse-symbol-font 2023-12-04
 depends on:	GundamCrossWarCCG-Counter.mse-symbol-font 2023-12-04
 depends on:	GundamCrossWarCCG-Abilities.mse-symbol-font 2023-12-04
 
-card width:		750
+card width:	750
 card height:	1046
-card dpi:		600
+card dpi:	600
 
 
 init script:
@@ -80,7 +80,7 @@ card style:
 
 card style:
 	casting cost:
-		left:			20
+		left:			{if card.type == "Crew" or card.type == "Armament" or card.type == "Pilot" then "760" else "20"}
 		top:			15
 		width:			150
 		height:			55
