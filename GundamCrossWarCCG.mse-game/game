@@ -173,7 +173,12 @@ card field:
 	choice:		DoubleRare
 		enabled: {card.type!="Warship"}
 	choice:		CrossRare
+		enabled: {card.type!="Warship"}
 	choice:		SpecialRare
+		enabled: {card.type!="Warship"}
+	choice:		CollectionCommon
+	choice:		CollectionCrossRare
+	choice:		CollectionSpecialRare
 	choice:		Promo
 	choice:	
 		name:	Warship
