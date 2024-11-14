@@ -6,9 +6,6 @@ Problems:
 
 
 Missing Features:
-* Unit ATK/DEF have Unit Colors
-* Warship Circles lack text
-* Flavortext has variant of card-color (much lighter / card colored dropshadow)
 
 
 
@@ -24,6 +21,13 @@ Alternate Styles:
 
 
 ==========================================================
+Version 0.9.3
+Flavortext has variant of card-color (much lighter / card colored dropshadow) & Unit ATK/DEF have Unit Colors
+* > implemented
+
+Warship Circles lack text
+* > implemented
+
 Version 0.9.2
 
 2nd Yellow dropshadows and bad alignment of dropshadows, tertiary Rule misaligned.

@@ -66,31 +66,61 @@ init script:
 					else: "0"
 				}
 	textbtms	:=	{case input of
-					"tn":	"630",
-					"tt":	"690",
-					"pn":	"720",
-					"pt": case card.type of
-						"Unit":		"780",
-						"Event":	cardtextbtm(),
-						"Counter":	cardtextbtm(),
-						"Crew":	case card.multicolor of
-							"":	cardtextbtm(),
-							else:	"780",
-						"Warship":	"780",
-						"Pilot":	"780",
-						"Armament":	"780",
-						else:		"60",
-					"sn":	case card.type of
-						"Unit":		"810",
-						"Event":	"810",
-						"Counter":	"810",
-						"Crew":		"810",
-						"Warship":	"810",
-						"Pilot":	"810",
-						"Armament":	"810",
-						else:		"60",
-					"st":	cardtextbtm(),
-					else:	cardtextbtm()
+				"tn":	"630",
+				"tt":	"690",
+				"pn":	"720",
+				"pt": case card.type of
+					"Unit":		"780",
+					"Event":	cardtextbtm(),
+					"Counter":	cardtextbtm(),
+					"Crew":	case card.multicolor of
+						"":	cardtextbtm(),
+						else:	"780",
+					"Warship":	"780",
+					"Pilot":	"780",
+					"Armament":	"780",
+					else:		"60",
+				"sn":	case card.type of
+					"Unit":		"810",
+					"Event":	"810",
+					"Counter":	"810",
+					"Crew":		"810",
+					"Warship":	"810",
+					"Pilot":	"810",
+					"Armament":	"810",
+					else:		"60",
+				"st":	cardtextbtm(),
+				else:	cardtextbtm()
+				}
+	cardcoloring	:= 	{case input of
+				"pt": case card.type of
+					"Warship": "white",
+					"Unit": case card.color of
+						"Blue": "rgb(50,100,200)",
+						"Green": "rgb(25,150,25)",
+						"Yellow": "rgb(200,100,50)",
+						"Red": "rgb(200,25,25)",
+						else: "black",
+					else: "black",
+				"text": case card.type of
+					"Warship": "white",
+					"Crew": case card.color of
+						"Blue": "rgb(75,125,200)",
+						"Green": "rgb(50,150,50)",
+						"Yellow": "rgb(200,125,75)",
+						"Red": "rgb(200,75,75)",
+						"Black": "rgb(100,100,100)",
+						else: "white"
+					else: "white",
+				"shadow": case card.type of
+					"Crew": case card.color of
+						"Blue": "rgb(0,50,100)",
+						"Green": "rgb(0,75,0)",
+						"Yellow": "rgb(100,50,0)",
+						"Red": "rgb(100,25,25)",
+						else: "rgb(0,0,0)",
+					else: "black",
+				else: "white"
 				}
 
 	
@@ -289,8 +319,8 @@ card style:
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		white
-			shadow color:	black
+			color:		{ cardcoloring("text") }
+			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: 2
 			shadow displacement y: 2
 		symbol font:
@@ -355,7 +385,7 @@ card style:
 			name:		Typomoderno bold
 			size:		{ if card.type == "Warship" then "35" else "55"}
 			scale down to:	11
-			color:		{ if card.type == "Warship" then "white" else "black"}
+			color:		{ cardcoloring("pt") }
 
 card style:
 	toughness:
@@ -370,7 +400,7 @@ card style:
 			name:		Typomoderno bold
 			size:		55
 			scale down to:	11
-			color:		{ if card.type == "Warship" then "white" else "black"}
+			color:		{ cardcoloring("pt") }
 
 
 card style:
@@ -394,7 +424,7 @@ card style:
 
 card style:
 	card_number:
-		left:			{ if card.type == "Warship" then "440" else "535"}
+		left:			{ if card.type == "Warship" then "445" else "535"}
 		bottom:			1046
 		width:			80
 		height:			20
@@ -569,8 +599,8 @@ card style:
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		white
-			shadow color:	black
+			color:		{ cardcoloring("text") }
+			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: 2
 			shadow displacement y: -2
 		symbol font:
@@ -699,8 +729,8 @@ card style:
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		white
-			shadow color:	black
+			color:		{ cardcoloring("text") }
+			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: -2
 			shadow displacement y: 2
 		symbol font:
@@ -829,8 +859,8 @@ card style:
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		white
-			shadow color:	black
+			color:		{ cardcoloring("text") }
+			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: -2
 			shadow displacement y: -2
 		symbol font:
@@ -959,8 +989,8 @@ card style:
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		white
-			shadow color:	black
+			color:		{ cardcoloring("text") }
+			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: 3
 			shadow displacement y: 0
 		symbol font:
@@ -1089,8 +1119,8 @@ card style:
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		white
-			shadow color:	black
+			color:		{ cardcoloring("text") }
+			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: 3
 			shadow displacement y: 0
 		symbol font:
@@ -1219,8 +1249,8 @@ card style:
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		white
-			shadow color:	black
+			color:		{ cardcoloring("text") }
+			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: 0
 			shadow displacement y: 3
 		symbol font:
@@ -1349,8 +1379,8 @@ card style:
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
-			color:		white
-			shadow color:	black
+			color:		{ cardcoloring("text") }
+			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: 0
 			shadow displacement y: -3
 		symbol font:
