@@ -6,6 +6,7 @@ Problems:
 
 
 Missing Features:
+* collection rarity for 4* and regular rarity for 5*
 * Autosort (2.0)
 
 
