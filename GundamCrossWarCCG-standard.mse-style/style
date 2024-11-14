@@ -222,7 +222,7 @@ card style:
 		z index:		22
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -251,7 +251,7 @@ card style:
 		z index:		22
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -280,7 +280,7 @@ card style:
 		z index:		22
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -309,7 +309,7 @@ card style:
 		z index:		22
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -338,7 +338,7 @@ card style:
 		z index:		22
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		rgb(186,171,4)
@@ -367,7 +367,7 @@ card style:
 		z index:		22
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle" else "left middle shrink-overflow"}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -551,7 +551,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -580,7 +580,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -609,7 +609,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -638,7 +638,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			scale down to:	11
@@ -669,7 +669,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		rgb(186,171,4)
@@ -699,7 +699,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -729,7 +729,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -758,7 +758,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -787,7 +787,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -816,7 +816,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -846,7 +846,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		rgb(186,171,4)
@@ -876,7 +876,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -906,7 +906,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -935,7 +935,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 
 			size:		20
 			scale down to:	11
@@ -965,7 +965,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 
 			size:		20
 			scale down to:	11
@@ -995,7 +995,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 
 			size:		20
 			scale down to:	11
@@ -1026,7 +1026,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		rgb(186,171,4)
@@ -1056,7 +1056,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 
 			size:		20
 			scale down to:	11
@@ -1086,7 +1086,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 
 			size:		20
 			scale down to:	11
@@ -1116,7 +1116,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1145,7 +1145,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -1174,7 +1174,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1204,7 +1204,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		rgb(186,171,4)
@@ -1233,7 +1233,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1263,7 +1263,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -1292,7 +1292,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1321,7 +1321,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 
 			size:		20
 			scale down to:	11
@@ -1351,7 +1351,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1381,7 +1381,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		rgb(186,171,4)
@@ -1411,7 +1411,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1441,7 +1441,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -1470,7 +1470,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1499,7 +1499,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -1528,7 +1528,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1558,7 +1558,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		rgb(186,171,4)
@@ -1588,7 +1588,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 
 			size:		20
 			scale down to:	11
@@ -1619,7 +1619,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -1648,7 +1648,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.primary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1677,7 +1677,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
@@ -1706,7 +1706,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.secondary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
@@ -1735,7 +1735,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_name.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		rgb(186,171,4)
@@ -1765,7 +1765,7 @@ card style:
 		z index:		21
 		alignment:		{card_style.tertiary_rule_text.alignment}
 		font:
-			name:		Covid19
+			name:		Futura BdCn BT
 			size:		20
 			scale down to:	11
 			color:		white
