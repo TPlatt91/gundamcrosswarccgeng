@@ -227,7 +227,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Slant
+			name:		NewZelek
 			size:		45
 			scale down to:	25
 			color:		black

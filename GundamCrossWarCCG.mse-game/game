@@ -34,8 +34,10 @@ init script:
 			if input == "Warship" then "Warship"
 		else	"Common"
 	}
-	cardcounter := {
-	set.Set_Code + "-"
+
+	cardsort	:= {""}
+	cardcounter	:= {
+	set.Set_Code + "-" + cardsort() + if contains(card.rarity, match: "Collection") then "-CR"
 	}
 
 ####################### Set Field Definitions
@@ -177,8 +179,11 @@ card field:
 	choice:		SpecialRare
 		enabled: {card.type!="Warship"}
 	choice:		CollectionCommon
+		enabled: {card.type=="Crew"}
 	choice:		CollectionCrossRare
+		enabled: {card.type=="Unit"}
 	choice:		CollectionSpecialRare
+		enabled: {card.type=="Unit"}
 	choice:		Promo
 	choice:	
 		name:	Warship
@@ -271,7 +276,7 @@ card field:
 card field:
 	type:			text
 	name:			illustrator
-	icon:			stats/illustrator.png
+#	icon:			stats/illustrator.png
 	position hint:		210
 	description:		Illustrator of this card
 	show statistics:	false
