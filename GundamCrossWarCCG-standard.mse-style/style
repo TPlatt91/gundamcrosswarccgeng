@@ -193,7 +193,7 @@ card style:
 		alignment:		left middle
 		visible:		{if card.type == "Pilot" or card.type == "Crew" or card.type == "Armament" then "false" else "true"}
 		font:
-			name:		Marques Free Regular
+			name:		Plavsky Condensed
 			size:		30
 			scale down to:	20
 			color:		white
@@ -211,7 +211,7 @@ card style:
 		alignment:		left middle
 		visible:		{if card.type == "Counter" then "true" else "false"}
 		font:
-			name:		Marques Free Regular
+			name:		Plavsky Condensed
 			size:		30
 			color:		black
 		symbol font:
@@ -221,15 +221,15 @@ card style:
 card style:
 	name:
 		left:			265
-		top:			35
+		top:			25
 		width:			418
-		height:			30
+		height:			50
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		NewZelek
-			size:		45
-			scale down to:	25
+			name:		Amuro Italic
+			size:		26
+			scale down to:	22
 			color:		black
 
 card style:
@@ -252,7 +252,7 @@ card style:
 		z index:		22
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -273,7 +273,7 @@ card style:
 		z index:		22
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -294,7 +294,7 @@ card style:
 		z index:		22
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -315,7 +315,7 @@ card style:
 		z index:		22
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -336,7 +336,7 @@ card style:
 		z index:		22
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -356,7 +356,7 @@ card style:
 		z index:		22
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -444,7 +444,7 @@ card style:
 		z index:		20
 		alignment:		left middle
 		font:
-			name:				Typomondo Bold
+			name:				Covid19
 			size:				18
 			color:				white
 
@@ -457,7 +457,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:				Typomondo Bold
+			name:				Covid19
 			size:				18
 			color:				white
 card style:
@@ -531,7 +531,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -553,7 +553,7 @@ card style:
 		z index:		88
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -574,7 +574,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -595,7 +595,7 @@ card style:
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -617,7 +617,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -638,7 +638,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -661,7 +661,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -683,7 +683,7 @@ card style:
 		z index:		88
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -704,7 +704,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -725,7 +725,7 @@ card style:
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -747,7 +747,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -768,7 +768,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -791,7 +791,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -813,7 +813,7 @@ card style:
 		z index:		88
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -834,7 +834,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -855,7 +855,7 @@ card style:
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -877,7 +877,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -898,7 +898,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -921,7 +921,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -943,7 +943,7 @@ card style:
 		z index:		88
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -964,7 +964,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -985,7 +985,7 @@ card style:
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1007,7 +1007,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1028,7 +1028,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1051,7 +1051,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1073,7 +1073,7 @@ card style:
 		z index:		88
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1094,7 +1094,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1115,7 +1115,7 @@ card style:
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1137,7 +1137,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1158,7 +1158,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1181,7 +1181,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1203,7 +1203,7 @@ card style:
 		z index:		88
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1224,7 +1224,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1245,7 +1245,7 @@ card style:
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1267,7 +1267,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1288,7 +1288,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1311,7 +1311,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1333,7 +1333,7 @@ card style:
 		z index:		88
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1354,7 +1354,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1375,7 +1375,7 @@ card style:
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1397,7 +1397,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
@@ -1418,7 +1418,7 @@ card style:
 		z index:		21
 		alignment:		left middle shrink-overflow
 		font:
-			name:		Futura BdCn BT
+			name:		Plavsky
 			size:		20
 			scale down to:	11
 			max stretch:	0.3
