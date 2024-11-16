@@ -30,67 +30,17 @@ init script:
 					"Armament":	"870",
 					else:		"885"
 				}
-	cardtextheight	:=	{case input of
-					"name": 		"30",
-					"text1": case card.type of
-						"Unit":		"60",
-						"Event":	"210",
-						"Counter":	"171",
-						"Crew":		case card.multicolor of
-								"":	"120",
-								else:	"60",
-						"Warship":	"60",
-						"Pilot":	"60",
-						"Armament":	"60",
-						else:		"60",
-					"text2": case card.type of
-						"Unit":		"60",
-						"Event":	"0",
-						"Counter":	"0",
-						"Crew":	case card.multicolor of
-								"":	"0",
-								else:	"60",
-						"Warship":	"90",
-						"Pilot":	"60",
-						"Armament":	"60",
-						else:		"0",
-					"text3": case card.type of
-						"Unit":		"60",
-						"Event":	"0",
-						"Counter":	"0",
-						"Crew":		"0",
-						"Warship":	"0",
-						"Pilot":	"60",
-						"Armament":	"60",
-						else:		"0",
-					else: "0"
-				}
-	textbtms	:=	{case input of
-				"tn":	"630",
-				"tt":	"690",
-				"pn":	"720",
-				"pt": case card.type of
-					"Unit":		"780",
-					"Event":	cardtextbtm(),
-					"Counter":	cardtextbtm(),
-					"Crew":	case card.multicolor of
-						"":	cardtextbtm(),
-						else:	"780",
-					"Warship":	"780",
-					"Pilot":	"780",
-					"Armament":	"780",
-					else:		"60",
-				"sn":	case card.type of
-					"Unit":		"810",
-					"Event":	"810",
-					"Counter":	"810",
-					"Crew":		"810",
-					"Warship":	"810",
-					"Pilot":	"810",
-					"Armament":	"810",
-					else:		"60",
-				"st":	cardtextbtm(),
-				else:	cardtextbtm()
+	cardtextheight	:=	{case card.type of
+					"Unit":		"270",
+					"Event":	"240",
+					"Counter":	"171",
+					"Crew":		case card.multicolor of
+							"":	"120",
+							else:	"60",
+					"Warship":	"270",
+					"Pilot":	"300",
+					"Armament":	"300",
+					else:		"180"
 				}
 	cardcoloring	:= 	{case input of
 				"pt": case card.type of
@@ -244,74 +194,11 @@ card style:
 ####################### Text box
 
 card style:
-	primary_rule_name:
-		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
-		height:			{cardtextheight("name")}
-		width:			{commonwidth()}
-		bottom:			{textbtms("pn")}
-		z index:		22
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: 2
-		symbol font:		
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	secondary_rule_name:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("sn")}
-		z index:		22
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_name:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("tn")}
-		z index:		22
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(186,171,4)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
 	primary_rule_text:
 		left:			{commonstart()}
 		width:			{commonwidth()}
-		height:			{cardtextheight("text1")}
-		bottom:			{textbtms("pt")}
+		height:			{cardtextheight()}
+		bottom:			{cardtextbtm()}
 		z index:		22
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
@@ -327,47 +214,6 @@ card style:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
 			scale down to: 10
-card style:
-	secondary_rule_text:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("text2")}
-		bottom:			{cardtextbtm()}
-		z index:		22
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-card style:
-	tertiary_rule_text:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("text3")}
-		bottom:			{textbtms("tt")}
-		z index:		22
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to:	15
 
 
 ####################### ATK / DEF
@@ -520,78 +366,12 @@ extra card style:
 
 
 ####################### Dropshadows
-
-### Layer 2
-card style:
-	primary_rule_name2:
-		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
-		height:			{cardtextheight("name")}
-		width:			{commonwidth()}
-		bottom:			{textbtms("pn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-		
-card style:
-	secondary_rule_name2:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("sn")}
-		z index:		88
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_name2:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("tn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
 card style:
 	primary_rule_text2:
 		left:			{commonstart()}
 		width:			{commonwidth()}
 		height:			{cardtextheight("text1")}
-		bottom:			{textbtms("pt")}
+		bottom:			{cardtextbtm()}
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
@@ -603,115 +383,6 @@ card style:
 			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: 2
 			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-card style:
-	secondary_rule_text2:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("text2")}
-		bottom:			{cardtextbtm()}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_text2:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("text3")}
-		bottom:			{textbtms("tt")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 2
-			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-### Layer 3
-card style:
-	primary_rule_name3:
-		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
-		height:			{cardtextheight("name")}
-		width:			{commonwidth()}
-		bottom:			{textbtms("pn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-		
-card style:
-	secondary_rule_name3:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("sn")}
-		z index:		88
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_name3:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("tn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
@@ -721,7 +392,7 @@ card style:
 		left:			{commonstart()}
 		width:			{commonwidth()}
 		height:			{cardtextheight("text1")}
-		bottom:			{textbtms("pt")}
+		bottom:			{cardtextbtm()}
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
@@ -733,115 +404,6 @@ card style:
 			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: -2
 			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-card style:
-	secondary_rule_text3:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("text2")}
-		bottom:			{cardtextbtm()}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_text3:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("text3")}
-		bottom:			{textbtms("tt")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: 2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-### Layer 4
-card style:
-	primary_rule_name4:
-		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
-		height:			{cardtextheight("name")}
-		width:			{commonwidth()}
-		bottom:			{textbtms("pn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-		
-card style:
-	secondary_rule_name4:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("sn")}
-		z index:		88
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_name4:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("tn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: -2
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
@@ -851,7 +413,7 @@ card style:
 		left:			{commonstart()}
 		width:			{commonwidth()}
 		height:			{cardtextheight("text1")}
-		bottom:			{textbtms("pt")}
+		bottom:			{cardtextbtm()}
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
@@ -863,115 +425,6 @@ card style:
 			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: -2
 			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-card style:
-	secondary_rule_text4:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("text2")}
-		bottom:			{cardtextbtm()}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_text4:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("text3")}
-		bottom:			{textbtms("tt")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: -2
-			shadow displacement y: -2
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-### Layer 5
-card style:
-	primary_rule_name5:
-		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
-		height:			{cardtextheight("name")}
-		width:			{commonwidth()}
-		bottom:			{textbtms("pn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-		
-card style:
-	secondary_rule_name5:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("sn")}
-		z index:		88
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_name5:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("tn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
@@ -981,7 +434,7 @@ card style:
 		left:			{commonstart()}
 		width:			{commonwidth()}
 		height:			{cardtextheight("text1")}
-		bottom:			{textbtms("pt")}
+		bottom:			{cardtextbtm()}
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
@@ -991,115 +444,6 @@ card style:
 			max stretch:	0.3
 			color:		{ cardcoloring("text") }
 			shadow color:	{ cardcoloring("shadow") }
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-card style:
-	secondary_rule_text5:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("text2")}
-		bottom:			{cardtextbtm()}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_text5:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("text3")}
-		bottom:			{textbtms("tt")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-### Layer 6
-card style:
-	primary_rule_name6:
-		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
-		height:			{cardtextheight("name")}
-		width:			{commonwidth()}
-		bottom:			{textbtms("pn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-		
-card style:
-	secondary_rule_name6:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("sn")}
-		z index:		88
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_name6:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("tn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
 			shadow displacement x: 3
 			shadow displacement y: 0
 		symbol font:
@@ -1111,7 +455,7 @@ card style:
 		left:			{commonstart()}
 		width:			{commonwidth()}
 		height:			{cardtextheight("text1")}
-		bottom:			{textbtms("pt")}
+		bottom:			{cardtextbtm()}
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
@@ -1123,115 +467,6 @@ card style:
 			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: 3
 			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-card style:
-	secondary_rule_text6:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("text2")}
-		bottom:			{cardtextbtm()}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_text6:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("text3")}
-		bottom:			{textbtms("tt")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 3
-			shadow displacement y: 0
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-### Layer 7
-card style:
-	primary_rule_name7:
-		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
-		height:			{cardtextheight("name")}
-		width:			{commonwidth()}
-		bottom:			{textbtms("pn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-		
-card style:
-	secondary_rule_name7:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("sn")}
-		z index:		88
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_name7:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("tn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
@@ -1241,7 +476,7 @@ card style:
 		left:			{commonstart()}
 		width:			{commonwidth()}
 		height:			{cardtextheight("text1")}
-		bottom:			{textbtms("pt")}
+		bottom:			{cardtextbtm()}
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
@@ -1253,115 +488,6 @@ card style:
 			shadow color:	{ cardcoloring("shadow") }
 			shadow displacement x: 0
 			shadow displacement y: 3
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-card style:
-	secondary_rule_text7:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("text2")}
-		bottom:			{cardtextbtm()}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_text7:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("text3")}
-		bottom:			{textbtms("tt")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: 3
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-### Layer 8
-card style:
-	primary_rule_name8:
-		left:			{if card.type == "Counter" or card.type == "Crew" then commonhide() else commonstart()}
-		height:			{cardtextheight("name")}
-		width:			{commonwidth()}
-		bottom:			{textbtms("pn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-		
-card style:
-	secondary_rule_name8:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == "" then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("sn")}
-		z index:		88
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_name8:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("name")}
-		bottom:			{textbtms("tn")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		{if card.type == "Warship" then "white" else "rgb(188,181,8)"}
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
 		symbol font:
 			name: GundamCrossWarCCG-Abilities
 			size: 25
@@ -1371,7 +497,7 @@ card style:
 		left:			{commonstart()}
 		width:			{commonwidth()}
 		height:			{cardtextheight("text1")}
-		bottom:			{textbtms("pt")}
+		bottom:			{cardtextbtm()}
 		z index:		21
 		alignment:		{if card.type == "Crew" and card.multicolor == "" then "center middle shrink-overflow" else "left middle shrink-overflow"}
 		font:
@@ -1381,49 +507,6 @@ card style:
 			max stretch:	0.3
 			color:		{ cardcoloring("text") }
 			shadow color:	{ cardcoloring("shadow") }
-			shadow displacement x: 0
-			shadow displacement y: -3
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-
-card style:
-	secondary_rule_text8:
-		left:			{if card.type == "Counter" or card.type == "Event" or card.type == "Crew" and card.multicolor == ""then commonhide() else commonstart()}
-		width:			{commonwidth()}
-		height:			{cardtextheight("text2")}
-		bottom:			{cardtextbtm()}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
-			shadow displacement x: 0
-			shadow displacement y: -3
-		symbol font:
-			name: GundamCrossWarCCG-Abilities
-			size: 25
-			scale down to: 10
-card style:
-	tertiary_rule_text8:
-		left:			{if card.type == "Pilot" or card.type == "Armament" then commonstart() else commonhide() }
-		width:			{commonwidth()}
-		height:			{cardtextheight("text3")}
-		bottom:			{textbtms("tt")}
-		z index:		21
-		alignment:		left middle shrink-overflow
-		font:
-			name:		Plavsky
-			size:		20
-			scale down to:	11
-			max stretch:	0.3
-			color:		white
-			shadow color:	black
 			shadow displacement x: 0
 			shadow displacement y: -3
 		symbol font:
