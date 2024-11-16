@@ -200,40 +200,10 @@ card field:
 
 card field:
 	type:				text
-	name:				primary_rule_name
-	description:			Name of first ability
-	
-card field:
-	type:				text
-	name:				secondary_rule_name
-	description:			Name of second ability
-
-card field:
-	type:				text
-	name:				tertiary_rule_name
-	show statistics:		false
-	description:			name of third ability
-
-card field:
-	type:				text
 	name:				primary_rule_text
 	show statistics:		false
 	multi line:			true
 	description:			The rules text for the card. Flavor Text for Crew.
-
-card field:
-	type:				text
-	name:				secondary_rule_text
-	show statistics:		false
-	multi line:			true
-	description:			The rules text of the card.
-
-card field:
-	type:				text
-	name:				tertiary_rule_text
-	show statistics:		false
-	multi line:			true
-	description:			The rules text of the card
 
 
 ####################### PT

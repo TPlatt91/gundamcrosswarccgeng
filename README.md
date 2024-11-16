@@ -6,30 +6,38 @@ Problems:
 
 
 Missing Features:
-* collection rarity for 4* and regular rarity for 5*
-* Autosort (2.0)
+
+* Autosort & automated card number based on sorting: color (U-G-Y-B-R) > Type (Unit-Event-Counter-Crew-Warship-Pilot-Armament) > 
 
 
 Alternate Styles:
 * Units exist with *mid* and *max* line styles with no ryme or reason - most noticeable difference: the group of small lines on the left you see on crew cards.
 * 3 different Collection/Promo/Rare Style:
+	* CR-Goldframe Unit (BT06-097-CR / PR-U040) - Note: Colored ATK/DEF text; Golden circles around ATK/DEF; gold lines, bottom and title bar.
+	* CR-Goldframe Crew (BT01-148-CR / PR-C007 to PR-C012) - Note: Shares Goldframe Unit's gold lines, bottom and title bar. No Bottom Color field. Quote as *calligraphy* part of the image.
+
 	* No-Top-Corner Unit (PR-T001 / PR-U001 to PR-U039) - Identical to normal Unit, but no "top corner"
-
-	* Goldframe Unit (BT06-097-CR / PR-U040) - Note: Colored ATK/DEF text; Golden circles around ATK/DEF; gold lines, bottom and title bar.
-	* Goldframe Crew (BT01-148-CR / PR-C007 to PR-C012) - Note: Shares Goldframe Unit's gold lines, bottom and title bar. No Bottom Color field. Quote as *calligraphy*.
-
 	* Transparent-Frame Unit (BT06-077) - Note: White ATK/DEF strength text
 
 
 ==========================================================
-Version 0.9.3
+
+== Version 0.9.5 ==
+
+* > collection rarity for 1* & 4* and regular rarity for 5*
+* > rarity locked for Crew
+
+
+
+== Version 0.9.3 ==
+
 Flavortext has variant of card-color (much lighter / card colored dropshadow) & Unit ATK/DEF have Unit Colors
 * > implemented
 
 Warship Circles lack text
 * > implemented
 
-Version 0.9.2
+== Version 0.9.2 ==
 
 2nd Yellow dropshadows and bad alignment of dropshadows, tertiary Rule misaligned.
 * > Re-written dropshadows from 0.
