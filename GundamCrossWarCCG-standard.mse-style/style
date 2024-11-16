@@ -17,9 +17,9 @@ card dpi:	600
 
 
 init script:
-	commonstart	:=	{ if card.type == "Crew" then "135" else "30"}
+	commonstart	:=	{ if card.type == "Crew" and card.multicolor =="" then "135" else "35"}
 	commonhide	:=	{"760"}
-	commonwidth	:=	{if card.type == "Crew" then "480" else "585"}	
+	commonwidth	:=	{ if card.type == "Crew" and card.multicolor =="" then "480" else "580"}	
 	cardtextbtm	:= 	{case card.type of
 					"Unit":		"870",
 					"Event":	"940",
