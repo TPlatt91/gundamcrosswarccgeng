@@ -9,6 +9,36 @@ image font size: 15
 scale text: true
 horizontal space: -5
 
+##### Timings
+symbol:
+	code: (YT)
+	image: TimingYourTurn.png
+	image font size: 30
+symbol:
+	code: (OT)
+	image: TimingOpponentsTurn.png
+	image font size: 30
+symbol:
+	code: (dispatched)
+	image: TimingDispatched.png
+	image font size: 30
+symbol:
+	code: (attacking)
+	image: TimingAttacking.png
+	image font size: 30
+symbol:
+	code: (destroyed)
+	image: TimingDestroyed.png
+	image font size: 30
+symbol:
+	code: (attackends)
+	image: TimingAttackEnds.png
+	image font size: 30
+symbol:
+	code: (startingmain)
+	image: TimingStartingMain.png
+	image font size: 30
+
 ##### Abilities
 symbol:
 	code: (token)
@@ -525,6 +555,15 @@ symbol:
 ##############################################################
 # Insert-symbol menu
 insert symbol menu:
+	item:
+		name: Timings
+		item: (YT)
+		item: (OT)
+		item: (dispatched)
+		item: (attacking)
+		item: (destroyed)
+		item: (attackends)
+		item: (startingmain)
 	item:
 		name: Abilities
 		item: (armedintervention)

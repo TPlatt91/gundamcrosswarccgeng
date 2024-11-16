@@ -337,35 +337,6 @@ card field:
 
 ####################### Dropshadows
 
-card field:
-	type:			text
-	name:		primary_rule_name2
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.primary_rule_name
-
-card field:
-	type:			text
-	name:		secondary_rule_name2
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.secondary_rule_name
-
-card field:
-	type:			text
-	name:		tertiary_rule_name2
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible:	false
-	default:	card.tertiary_rule_name
 
 card field:
 	type:			text
@@ -378,62 +349,6 @@ card field:
 	show statistics: 	false
 	card list visible: 	false
 	default: 	card.primary_rule_text
-
-card field:
-	type:			text
-	name:		secondary_rule_text2
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible: 	false
-	default: 	card.secondary_rule_text
-
-card field:
-	type:			text
-	name:		tertiary_rule_text2
-	show statistics:	false
-	save value:		false
-	multi line:		true
-	identifying:		false
-	editable:		false
-	show statistics:	false
-	card list visible:	false
-	default: 	card.tertiary_rule_text
-
-
-card field:
-	type:			text
-	name:		primary_rule_name3
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.primary_rule_name
-
-card field:
-	type:			text
-	name:		secondary_rule_name3
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.secondary_rule_name
-
-card field:
-	type:			text
-	name:		tertiary_rule_name3
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible:	false
-	default:	card.tertiary_rule_name
-
 card field:
 	type:			text
 	name:		primary_rule_text3
@@ -445,62 +360,6 @@ card field:
 	show statistics: 	false
 	card list visible: 	false
 	default: 	card.primary_rule_text
-
-card field:
-	type:			text
-	name:		secondary_rule_text3
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible: 	false
-	default: 	card.secondary_rule_text
-
-card field:
-	type:			text
-	name:		tertiary_rule_text3
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying:		false
-	editable:		false
-	show statistics:	false
-	card list visible:	false
-	default: 	card.tertiary_rule_text
-
-
-card field:
-	type:			text
-	name:		primary_rule_name4
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.primary_rule_name
-
-card field:
-	type:			text
-	name:		secondary_rule_name4
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.secondary_rule_name
-
-card field:
-	type:			text
-	name:		tertiary_rule_name4
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible:	false
-	default:	card.tertiary_rule_name
-
 card field:
 	type:			text
 	name:		primary_rule_text4
@@ -512,62 +371,6 @@ card field:
 	show statistics: 	false
 	card list visible: 	false
 	default: 	card.primary_rule_text
-
-card field:
-	type:			text
-	name:		secondary_rule_text4
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible: 	false
-	default: 	card.secondary_rule_text
-
-card field:
-	type:			text
-	name:		tertiary_rule_text4
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying:		false
-	editable:		false
-	show statistics:	false
-	card list visible:	false
-	default: 	card.tertiary_rule_text
-
-
-card field:
-	type:			text
-	name:		primary_rule_name5
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.primary_rule_name
-
-card field:
-	type:			text
-	name:		secondary_rule_name5
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.secondary_rule_name
-
-card field:
-	type:			text
-	name:		tertiary_rule_name5
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible:	false
-	default:	card.tertiary_rule_name
-
 card field:
 	type:			text
 	name:		primary_rule_text5
@@ -579,61 +382,6 @@ card field:
 	show statistics: 	false
 	card list visible: 	false
 	default: 	card.primary_rule_text
-
-card field:
-	type:			text
-	name:		secondary_rule_text5
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible: 	false
-	default: 	card.secondary_rule_text
-
-card field:
-	type:			text
-	name:		tertiary_rule_text5
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying:		false
-	editable:		false
-	show statistics:	false
-	card list visible:	false
-	default: 	card.tertiary_rule_text
-
-card field:
-	type:			text
-	name:		primary_rule_name6
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.primary_rule_name
-
-card field:
-	type:			text
-	name:		secondary_rule_name6
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.secondary_rule_name
-
-card field:
-	type:			text
-	name:		tertiary_rule_name6
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible:	false
-	default:	card.tertiary_rule_name
-
 card field:
 	type:			text
 	name:		primary_rule_text6
@@ -645,62 +393,6 @@ card field:
 	show statistics: 	false
 	card list visible: 	false
 	default: 	card.primary_rule_text
-
-card field:
-	type:			text
-	name:		secondary_rule_text6
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible: 	false
-	default: 	card.secondary_rule_text
-
-card field:
-	type:			text
-	name:		tertiary_rule_text6
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying:		false
-	editable:		false
-	show statistics:	false
-	card list visible:	false
-	default: 	card.tertiary_rule_text
-
-
-card field:
-	type:			text
-	name:		primary_rule_name7
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.primary_rule_name
-
-card field:
-	type:			text
-	name:		secondary_rule_name7
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.secondary_rule_name
-
-card field:
-	type:			text
-	name:		tertiary_rule_name7
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible:	false
-	default:	card.tertiary_rule_name
-
 card field:
 	type:			text
 	name:		primary_rule_text7
@@ -712,62 +404,6 @@ card field:
 	show statistics: 	false
 	card list visible: 	false
 	default: 	card.primary_rule_text
-
-card field:
-	type:			text
-	name:		secondary_rule_text7
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible: 	false
-	default: 	card.secondary_rule_text
-
-card field:
-	type:			text
-	name:		tertiary_rule_text7
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying:		false
-	editable:		false
-	show statistics:	false
-	card list visible:	false
-	default: 	card.tertiary_rule_text
-
-
-card field:
-	type:			text
-	name:		primary_rule_name8
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.primary_rule_name
-
-card field:
-	type:			text
-	name:		secondary_rule_name8
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics: 	false
-	card list visible: 	false
-	default: 	card.secondary_rule_name
-
-card field:
-	type:			text
-	name:		tertiary_rule_name8
-	save value:		false
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible:	false
-	default:	card.tertiary_rule_name
-
 card field:
 	type:			text
 	name:		primary_rule_text8
@@ -779,27 +415,3 @@ card field:
 	show statistics: 	false
 	card list visible: 	false
 	default: 	card.primary_rule_text
-
-card field:
-	type:			text
-	name:		secondary_rule_text8
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying: 		false
-	editable: 		false
-	show statistics:	false
-	card list visible: 	false
-	default: 	card.secondary_rule_text
-
-card field:
-	type:			text
-	name:		tertiary_rule_text8
-	save value:		false
-	show statistics:	false
-	multi line:		true
-	identifying:		false
-	editable:		false
-	show statistics:	false
-	card list visible:	false
-	default: 	card.tertiary_rule_text
