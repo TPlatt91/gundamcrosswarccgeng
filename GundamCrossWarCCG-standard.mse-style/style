@@ -253,7 +253,7 @@ card style:
 card style:
 	characteristic:
 		left:			{ if card.type=="Warship" then "100" else "200"}
-		visible:		true
+		visible:		{ if card.type!="Event" or card.type!="Counter" then "true" else "false"}
 		top:			962
 		width:			350
 		height:			23
