@@ -253,7 +253,7 @@ card style:
 card style:
 	characteristic:
 		left:			200
-		visible:		{if card.type=="Unit" or card.type == "Pilot" then "true" else "false"}
+		visible:		true
 		top:			962
 		width:			350
 		height:			23
