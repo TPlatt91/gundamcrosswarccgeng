@@ -17,6 +17,7 @@ card dpi:	600
 
 
 init script:
+	Image		:=	{ if contains(card.rarity, match: "Collection") then "CR" + if card.type == "Pilot" or card.type == "Armament" then input + ".png" else if card.multicolor != "" then card.multicolor + input + ".png" else card.color + input + ".png"else if card.type == "Pilot" or card.type == "Armament" then input + ".png" else if card.multicolor != "" then card.multicolor + input + ".png" else card.color + input + ".png"}
 	commonstart	:=	{ if card.type == "Crew" and card.multicolor =="" then "135" else "35"}
 	commonhide	:=	{"760"}
 	commonwidth	:=	{ if card.type == "Crew" and card.multicolor =="" then "480" else "580"}	
@@ -108,7 +109,7 @@ card style:
 		z index: 		2
 		popup style:		in place
 		render style:		image
-		image:			{ if card.type == "Pilot" or card.type == "Armament" then input + ".png" else if card.multicolor != "" then card.multicolor + input + ".png" else card.color + input + ".png"}
+		image:			{Image()}
 
 card style:
 	size:
@@ -185,11 +186,11 @@ card style:
 card style:
 	image:
 		left:			0
-		top:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Warship" then "0" else if card.type == "Armament" then "149" else if card.type == "Event" then "120" else if card.type == "Counter" then "120" else if card.type == "Crew" then "149" else "79"}
+		top:			{if card.type == "Unit" or card.type == "Pilot" or card.type == "Warship" then "0" else if card.type == "Armament" then "149" else if card.type == "Event" then "120" else if card.type == "Counter" then "120" else if card.type == "Crew" and contains(card.rarity, match: "Fullart") then "0" else if card.type == "Crew" and contains(card.rarity, match: "Collection") then "155" else if card.type == "Crew" then "149" else "79"}
 		width:			750
-		height:			{if card.type == "Unit" then "954" else if card.type == "Pilot" then "954" else if card.type == "Armament" then "805" else if card.type == "Event" then "541" else if card.type == "Counter" then "541" else if card.type == "Crew" then "580" else if card.type == "Warship" then "954" else  "526"}
+		height:			{if card.type == "Unit" then "954" else if card.type == "Pilot" then "954" else if card.type == "Armament" then "805" else if card.type == "Event" then "541" else if card.type == "Counter" then "541" else if card.type == "Crew" and contains(card.rarity, match: "Fullart") then "954" else if card.type == "Crew" and contains(card.rarity, match: "Collection") then "799" else if card.type == "Crew" then "580" else if card.type == "Warship" then "954" else  "526"}
 		z index:		11
-		mask:			{card.type +"mask.png"}
+		mask:			{ if contains(card.rarity, match: "Collection") then "CR" + card.type +"mask.png" else card.type +"mask.png"}
 
 ####################### Text box
 
