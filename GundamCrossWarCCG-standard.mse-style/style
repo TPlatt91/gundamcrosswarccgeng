@@ -252,7 +252,7 @@ card style:
 
 card style:
 	characteristic:
-		left:			200
+		left:			{ if card.type=="Warship" then "100" else "200"}
 		visible:		true
 		top:			962
 		width:			350
