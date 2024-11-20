@@ -1,5 +1,5 @@
 Errors:
-* DO NOT try to change type of multicolor cards, can result in crash, despite options being disabled.
+
 
 Problems:
 
@@ -7,20 +7,30 @@ Problems:
 
 Missing Features:
 
-* Autosort & automated card number based on sorting: color (U-G-Y-B-R) > Type (Unit-Event-Counter-Crew-Warship-Pilot-Armament) > 
 
 
 Alternate Styles:
 * Units exist with *mid* and *max* line styles with no ryme or reason - most noticeable difference: the group of small lines on the left you see on crew cards.
-* 3 different Collection/Promo/Rare Style:
-	* CR-Goldframe Unit (BT06-097-CR / PR-U040) - Note: Colored ATK/DEF text; Golden circles around ATK/DEF; gold lines, bottom and title bar.
-	* CR-Goldframe Crew (BT01-148-CR / PR-C007 to PR-C012) - Note: Shares Goldframe Unit's gold lines, bottom and title bar. No Bottom Color field. Quote as *calligraphy* part of the image.
-
+* Alternate Styles:
 	* No-Top-Corner Unit (PR-T001 / PR-U001 to PR-U039) - Identical to normal Unit, but no "top corner"
 	* Transparent-Frame Unit (BT06-077) - Note: White ATK/DEF strength text
 
 
 ==========================================================
+
+== Version 1.0 ==
+
+* Autosort & automated card number based on sorting: color (U-G-Y-B-R) > Type (Unit-Event-Counter-Crew-Warship-Pilot-Armament) > Name
+* CR cards copy their *base card's* number
+
+
+== Version 0.9.9 ==
+
+CR automatically implements Gold-frames
+	* CR-Goldframe Unit (BT06-097-CR / PR-U040) - Note: Colored ATK/DEF text; Golden circles around ATK/DEF; gold lines, bottom and title bar.
+	* CR-Goldframe Pilot (As unit, but black text.
+	* CR-Goldframe Crew (BT01-148-CR / PR-C007 to PR-C012) - Note: Shares Goldframe Unit's gold lines, bottom and title bar. No Bottom Color field, but complete top color field
+
 
 == Version 0.9.5 ==
 

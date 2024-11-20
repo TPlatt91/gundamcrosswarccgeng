@@ -35,10 +35,76 @@ init script:
 		else	"Common"
 	}
 
-	cardsort	:= {""}
-	cardcounter	:= {
-	set.Set_Code + "-" + cardsort() + if contains(card.rarity, match: "Collection") then "-CR"
+
+	type_sort := { case card.type of
+			"Unit": "1",
+			"Event": "2",
+			"Counter": "3",
+			"Crew": "4",
+			"Warship": "5",
+			"Pilot": "6",
+			else: "7"
 	}
+
+	color_sort := { case card.color of 
+			"Blue": "A",
+			"Green": "B",
+			"Yellow": "C",
+			"Black": "D",
+			"Red": "E",
+			else: "F"
+	}
+
+	is_collection	:= { contains(card.rarity, match: "Collection") }
+
+	name_sort	:= { card.name + if is_collection() then  "-CR" }
+	sortingorder	:= { color_sort() + type_sort() + converted_costs() + name_sort() }
+	
+	convert		:= {  	conv := to_text(input) 
+				color := number_of_items(in: break_text(match:"u|b|y|r|g", conv)) or else 0
+				number := break_text(match:"1|2|3|4|5|6|7|8|9", conv).0 or else 0
+				sum := to_int(color) + to_int(number)
+				if sum<10 then "0" + sum else sum
+	}
+	converted_costs	:= { 	case card.type of
+					"Counter": convert(card.counter_cost),
+					"Crew": 0,
+					"Pilot": 0,
+					"Armament":0,
+					else: convert(card.casting_cost)
+	}
+	
+	pos_of_card := { if is_collection() then coll_pos_of_card() else base_pos_of_card() }
+
+	coll_pos_of_card:= {	standards_position := position(
+					of: card
+					in: set
+					order_by: {sortingorder()}
+				) - 1
+				collectors_position := position(
+					of: card
+					in: set
+					order_by: {sortingorder()}
+					filter: { is_collection() }
+				)
+				standards_position - collectors_position + 1
+	}
+
+	base_pos_of_card := {
+			position(
+			of: card
+			in: set
+			filter: { not is_collection() }
+			order_by: {sortingorder()}
+			) + 1
+	}
+
+	cardsort	:= { 	pos:=pos_of_card()
+				if pos<=9 then "00" + pos
+				else if pos>=9 and pos<=99 then "0" + pos
+				else "" + pos
+	}
+	cardcounter	:= { set.Set_Code + "-" + cardsort() + if is_collection() then "-CR" }
 
 ####################### Set Field Definitions
 
@@ -69,6 +135,7 @@ card field:
 card field:
 	type:				text
 	name:				casting cost
+	
 	card list visible:		true
 	multi line:			true
 	card list column:		5
@@ -117,15 +184,25 @@ card field:
 	card list visible:	false
 	choice:
 	choice:		BlueGreen
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	choice:		BlueYellow
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	choice:		BlueBlack
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	choice:		BlueRed
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	choice:		GreenYellow
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	choice:		GreenBlack
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	choice:		GreenRed
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	choice:		YellowBlack
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	choice:		YellowRed
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	choice:		BlackRed
+		enabled: {not(contains(card.rarity, match: "Collection"))}
 	description:		Multicolor Crew
 	script: 	if card.type == "Crew" then value else ""
 
@@ -137,22 +214,22 @@ card field:
 		enabled: {card.multicolor==""}
 	choice:	
 		name:	Event
-		enabled: {card.multicolor==""}
+		enabled: {card.multicolor=="" and not(contains(card.rarity, match: "Collection"))}
 	choice:	
 		name:	Counter
-		enabled: {card.multicolor==""}
+		enabled: {card.multicolor=="" and not(contains(card.rarity, match: "Collection"))}
 	choice:	
 		name:	Crew
 		enabled: {card.multicolor==""}
 	choice:	
 		name:	Warship
-		enabled: {card.multicolor==""}
+		enabled: {card.multicolor=="" and not(contains(card.rarity, match: "Collection"))}
 	choice:	
 		name:	Pilot
 		enabled: {card.multicolor==""}
 	choice:	
 		name:	Armament
-		enabled: {card.multicolor==""}
+		enabled: {card.multicolor=="" and not(contains(card.rarity, match: "Collection"))}
 	description:		The type and layout of the card.
 	card list visible:	true
 	card list column:	4
@@ -301,8 +378,9 @@ card field:
 card field:
 	type:			text
 	name:			card_number
-	default:		cardcounter()
+	script:			cardcounter()
 	description:		Card Number
+	save value:		false
 
 
 ####################### Dropshadows

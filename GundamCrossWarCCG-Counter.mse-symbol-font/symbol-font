@@ -11,66 +11,63 @@ horizontal space: -15
 
 
 symbol:
-	code: (b)
+	code: b
 	image: BlackCounterCost.png
 	image font size: 178
 symbol:
-	code: (u)
+	code: u
 	image: BlueCounterCost.png
 	image font size: 178
 symbol:
-	code: (r)
+	code: r
 	image: RedCounterCost.png
 	image font size: 178
 symbol:
-	code: (y)
+	code: y
 	image: YellowCounterCost.png
 	image font size: 178
 symbol:
-	code: (g)
+	code: g
 	image: GreenCounterCost.png
 	image font size: 178
 symbol:
-	code: (0)
+	code: 0
 	image: ColorlessCounterCost0.png
 	image font size: 178
 symbol:
-	code: (1)
+	code: 1
 	image: ColorlessCounterCost1.png
 	image font size: 178
 symbol:
-	code: (2)
+	code: 2
 	image: ColorlessCounterCost2.png
 	image font size: 178
 symbol:
-	code: (3)
+	code: 3
 	image: ColorlessCounterCost3.png
 	image font size: 178
-
 symbol:
-	code: (4)
+	code: 4
 	image: ColorlessCounterCost4.png
 	image font size: 178
-
 symbol:
-	code: (5)
+	code: 5
 	image: ColorlessCounterCost5.png
 	image font size: 178
-
 symbol:
-	code: (6)
+	code: 6
 	image: ColorlessCounterCost6.png
 	image font size: 178
 symbol:
-	code: (7)
+	code: 7
 	image: ColorlessCounterCost7.png
 	image font size: 178
 symbol:
-	code: (8)
+	code: 8
 	image: ColorlessCounterCost8.png
 	image font size: 178
 symbol:
-	code: (9)
+	code: 9
 	image: ColorlessCounterCost9.png
 	image font size: 178
 
@@ -80,19 +77,18 @@ symbol:
 insert symbol menu:
 	item:
 		name: Counters
-		item: (activation)
-		item: (b)
-		item: (r)
-		item: (u)
-		item: (g)
-		item: (y)
-		item: (0)
-		item: (1)
-		item: (2)
-		item: (3)
-		item: (4)
-		item: (5)
-		item: (6)
-		item: (7)
-		item: (8)
-		item: (9)
+		item: b
+		item: r
+		item: u
+		item: g
+		item: y
+		item: 0
+		item: 1
+		item: 2
+		item: 3
+		item: 4
+		item: 5
+		item: 6
+		item: 7
+		item: 8
+		item: 9

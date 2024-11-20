@@ -143,6 +143,7 @@ card style:
 		z index:		22
 		alignment:		left middle
 		visible:		{if card.type == "Pilot" or card.type == "Crew" or card.type == "Armament" then "false" else "true"}
+		always symbol:		true
 		font:
 			name:		Plavsky Condensed
 			size:		30
@@ -160,6 +161,7 @@ card style:
 		height:			42
 		z index:		25
 		alignment:		left middle
+		always symbol:		true
 		visible:		{if card.type == "Counter" then "true" else "false"}
 		font:
 			name:		Plavsky Condensed
@@ -254,9 +256,9 @@ card style:
 	characteristic:
 		left:			{ if card.type=="Warship" then "100" else "200"}
 		visible:		{ if card.type!="Event" or card.type!="Counter" then "true" else "false"}
-		top:			962
+		top:			956
 		width:			350
-		height:			23
+		height:			32
 		z index:		30
 		alignment:		center middle shrink-overflow
 		font:
