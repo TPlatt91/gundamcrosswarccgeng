@@ -64,13 +64,13 @@ init script:
 				color := number_of_items(in: break_text(match:"u|b|y|r|g", conv)) or else 0
 				number := break_text(match:"1|2|3|4|5|6|7|8|9", conv).0 or else 0
 				sum := to_int(color) + to_int(number)
-				if sum<10 then "0" + sum else sum
+				if sum==0 then "00" else if sum<10 then "0" + sum else sum
 	}
 	converted_costs	:= { 	case card.type of
 					"Counter": convert(card.counter_cost),
-					"Crew": 0,
-					"Pilot": 0,
-					"Armament":0,
+					"Crew": "00",
+					"Pilot": "00",
+					"Armament":"00",
 					else: convert(card.casting_cost)
 	}
 	
