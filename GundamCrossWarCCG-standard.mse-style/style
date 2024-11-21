@@ -294,7 +294,7 @@ card style:
 		alignment:		left middle
 		font:
 			name:				Covid19
-			size:				18
+			size:				16
 			color:				white
 
 card style:
@@ -307,13 +307,13 @@ card style:
 		alignment:		left middle shrink-overflow
 		font:
 			name:				Covid19
-			size:				18
+			size:				16
 			color:				white
 card style:
 	illustrator:
-		right:			720
-		bottom:			695
-		width:			300
+		right:			723
+		bottom:			700
+		width:			435
 		height:			20
 		z index:		21
 		angle:			270
@@ -324,9 +324,9 @@ card style:
 			color:				White
 card style:
 	illustrator2:
-		right:			720
-		bottom:			695
-		width:			300
+		right:			723
+		bottom:			700
+		width:			435
 		height:			20
 		z index:		20
 		angle:			270
