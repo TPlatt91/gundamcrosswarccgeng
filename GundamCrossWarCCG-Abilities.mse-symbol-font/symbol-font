@@ -208,7 +208,7 @@ symbol:
 	image font size: 30
 symbol:
 	code: (redwolves)
-	image: AbilityCRedWolves.png
+	image: AbilityRedWolves.png
 	image font size: 30
 symbol:
 	code: (neozeon)
