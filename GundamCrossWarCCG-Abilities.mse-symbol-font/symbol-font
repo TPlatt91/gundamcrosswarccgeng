@@ -203,6 +203,14 @@ symbol:
 	image: AbilityCrossboneVanguard.png
 	image font size: 30
 symbol:
+	code: (noisyfairy)
+	image: AbilityNoisyFairy.png
+	image font size: 30
+symbol:
+	code: (redwolves)
+	image: AbilityCRedWolves.png
+	image font size: 30
+symbol:
 	code: (neozeon)
 	image: AbilityNeoZeon.png
 	image font size: 30
@@ -626,7 +634,9 @@ insert symbol menu:
 		item: (londobell)
 		item: (mazellaattack)
 		item: (neozeon)
+		item: (noisyfairy)
 		item: (operationmeteor)
+		item: (redwolves)
 		item: (zaku)
 		item: (zeon)
 	item:
