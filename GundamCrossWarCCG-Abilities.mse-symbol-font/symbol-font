@@ -203,6 +203,10 @@ symbol:
 	image: AbilityCrossboneVanguard.png
 	image font size: 30
 symbol:
+	code: (neozeon)
+	image: AbilityNeoZeon.png
+	image font size: 30
+symbol:
 	code: (delazfleet)
 	image: AbilityDelazFleet.png
 	image font size: 30
@@ -621,6 +625,7 @@ insert symbol menu:
 		item: (gunpla)
 		item: (londobell)
 		item: (mazellaattack)
+		item: (neozeon)
 		item: (operationmeteor)
 		item: (zaku)
 		item: (zeon)
