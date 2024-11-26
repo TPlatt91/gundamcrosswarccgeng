@@ -2,6 +2,7 @@ Errors:
 
 
 Problems:
+Need to add "NEO ZEON" to the compatability symbol font.
 
 
 
