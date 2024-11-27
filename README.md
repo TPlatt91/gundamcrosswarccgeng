@@ -1,23 +1,24 @@
 Errors:
 
 
-Problems:
-Need to add "NEO ZEON" to the compatability symbol font.
+Missing 
 
+==== Alternate Style - Error cards ====
 
+* Some Units exist with *mid* and *max* line styles with no ryme or reason - most noticeable difference: the group of small lines on the left you see on crew cards.
 
-Missing Features:
+==== Alternate Styles - "Fullart" ====
 
+* No-Top-Corner Unit (PR-T001 / PR-U001 to PR-U039) - Identical to normal Unit, but no "top corner"
+* Transparent-Frame Unit (BT06-077) - Note: White ATK/DEF strength text
 
-
-Alternate Styles:
-* Units exist with *mid* and *max* line styles with no ryme or reason - most noticeable difference: the group of small lines on the left you see on crew cards.
-* Alternate Styles:
-	* No-Top-Corner Unit (PR-T001 / PR-U001 to PR-U039) - Identical to normal Unit, but no "top corner"
-	* Transparent-Frame Unit (BT06-077) - Note: White ATK/DEF strength text
-
+* (erroniously made) "Fullart" Unit CR style, currently not used (but in folders)
 
 ==========================================================
+
+== 1.0.1 ==
+
+Neo Zeon, Red Wolves, Noisy Fairy Compatibility added
 
 == Version 1.0 ==
 
