@@ -270,6 +270,18 @@ symbol:
 	code: (zeon)
 	image: AbilityZeon.png
 	image font size: 30
+symbol:
+	code: (dom)
+	image: AbilityDom.png
+	image font size: 30
+symbol:
+	code: (gjallerhorn)
+	image: AbilityGjallerhorn.png
+	image font size: 30
+symbol:
+	code: (tekkadan)
+	image: AbilityTekkadan.png
+	image font size: 30
 
 ##### Ability Numbers
 
@@ -622,11 +634,13 @@ insert symbol menu:
 		item: (aeug)
 		item: (amphibious)
 		item: (crossbonevanguard)
+		item: (dom)
 		item: (delazfleet)
 		item: (federation)
 		item: (frostbrothers)
 		item: (gearadoga)
 		item: (ginn)
+		item: (gjallerhorn)
 		item: (graze)
 		item: (groundtype)
 		item: (gundam)
@@ -637,6 +651,7 @@ insert symbol menu:
 		item: (noisyfairy)
 		item: (operationmeteor)
 		item: (redwolves)
+		item: (tekkadan)
 		item: (zaku)
 		item: (zeon)
 	item:

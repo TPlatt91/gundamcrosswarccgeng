@@ -134,6 +134,16 @@ card field:
 
 card field:
 	type:				text
+	name:				full_name
+	identifying:			false
+	card list visible:		false
+	card list column:		1000
+	editable:			false
+	save value:			false
+	script:				card.card_number +" "+ card.name
+
+card field:
+	type:				text
 	name:				casting cost
 	
 	card list visible:		true

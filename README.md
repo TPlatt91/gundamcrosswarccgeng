@@ -1,3 +1,8 @@
+=== Export String ===
+
+{card.card_number} {card.name}.png
+
+
 Errors:
 
 
