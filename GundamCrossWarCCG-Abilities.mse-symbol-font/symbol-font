@@ -5,7 +5,7 @@ depends on:
 	package: GundamCrossWarCCG.mse-game
 	version: 2023-12-04
 
-image font size: 15
+image font size: 30
 scale text: true
 horizontal space: -5
 
@@ -13,566 +13,583 @@ horizontal space: -5
 symbol:
 	code: (YT)
 	image: TimingYourTurn.png
-	image font size: 30
 symbol:
 	code: (OT)
 	image: TimingOpponentsTurn.png
-	image font size: 30
 symbol:
 	code: (dispatched)
 	image: TimingDispatched.png
-	image font size: 30
 symbol:
 	code: (attacking)
 	image: TimingAttacking.png
-	image font size: 30
 symbol:
 	code: (destroyed)
 	image: TimingDestroyed.png
-	image font size: 30
 symbol:
 	code: (attackends)
 	image: TimingAttackEnds.png
-	image font size: 30
+
 symbol:
 	code: (startingmain)
 	image: TimingStartingMain.png
-	image font size: 30
+
 
 ##### Abilities
 symbol:
 	code: (token)
 	image: AbilityToken.png
-	image font size: 30
+
 symbol:
 	code: (bridge)
 	image: AbilityBridge.png
-	image font size: 30
+
 symbol:
 	code: ())
 	image: AbilityEndcap.png
-	image font size: 30
+
 symbol:
 	code: (()
 	image: AbilityOpener.png
-	image font size: 30
+
 symbol:
 	code: (uwa)
 	image: AbilityUnderWatersurpriseAttack.png
-	image font size: 30
+
 symbol:
 	code: (zeonghead)
 	image: AbilityZeongHead.png
-	image font size: 30
+
 symbol:
 	code: (transform)
 	image: AbilityTransform.png
-	image font size: 30
+
 symbol:
 	code: (suppression)
 	image: AbilitySuppression.png
-	image font size: 30
+
 symbol:
 	code: (dragoon)
 	image: AbilitySuperDragoon.png
-	image font size: 30
+
 symbol:
 	code: (scramble)
 	image: AbilityScramble.png
-	image font size: 30
+
 symbol:
 	code: (sabotage)
 	image: AbilitySabotage.png
-	image font size: 30
+
 symbol:
 	code: (rosebit)
 	image: AbilityRoseBit.png
-	image font size: 30
+
 symbol:
 	code: (reflectorbit)
 	image: AbilityReflectorBit.png
-	image font size: 30
+
 symbol:
 	code: (raid)
 	image: AbilityRaid.png
-	image font size: 30
+
 symbol:
 	code: (operation)
 	image: AbilityOperation.png
-	image font size: 30
+
 symbol:
 	code: (oggo)
 	image: AbilityOggo.png
-	image font size: 30
+
 symbol:
 	code: (morale)
 	image: AbilityMorale.png
-	image font size: 30
+
 symbol:
 	code: (ma)
 	image: AbilityMA.png
-	image font size: 30
+
 symbol:
 	code: (lastdefense)
 	image: AbilityLastDefense.png
-	image font size: 30
+
 symbol:
 	code: (largefunnelbits)
 	image: AbilityLargeFunnelBits.png
-	image font size: 30
+
 symbol:
 	code: (largefunnel)
 	image: AbilityLargeFunnel.png
-	image font size: 30
+
 symbol:
 	code: (invade)
 	image: AbilityInvade.png
-	image font size: 30
+
 symbol:
 	code: (intercept)
 	image: AbilityIntercept.png
-	image font size: 30
+
 symbol:
 	code: (guard)
 	image: AbilityGuard.png
-	image font size: 30
+
 symbol:
 	code: (funnel)
 	image: AbilityFunnel.png
-	image font size: 30
+
 symbol:
 	code: (finfunnel)
 	image: AbilityFinFunnel.png
-	image font size: 30
+
 symbol:
 	code: (customfunnel)
 	image: AbilityCustomFunnel.png
-	image font size: 30
+
 symbol:
 	code: (counterattack)
 	image: AbilityCounterattack.png
-	image font size: 30
+
 symbol:
 	code: (counter)
 	image: AbilityCounter.png
-	image font size: 30
+
 symbol:
 	code: (control)
 	image: AbilityControl.png
-	image font size: 30
+
 symbol:
 	code: (compatibility)
 	image: AbilityCompatibility.png
-	image font size: 30
+
 symbol:
 	code: (bug)
 	image: AbilityBug.png
-	image font size: 30
+
 symbol:
 	code: (bit)
 	image: AbilityBit.png
-	image font size: 30
+
 symbol:
 	code: (bombard)
 	image: AbilityBombard.png
-	image font size: 30
+
 symbol:
 	code: (armor)
 	image: AbilityArmor.png
-	image font size: 30
+
 symbol:
 	code: (armedintervention)
 	image: AbilityArmedIntervention.png
-	image font size: 30
+
 symbol:
 	code: (warship)
 	image: AbilityStarship.png
-	image font size: 30
+
 
 ##### Ability Keywords
 symbol:
 	code: (aeug)
 	image: AbilityAEUG.png
-	image font size: 30
+
 symbol:
 	code: (amphibious)
 	image: AbilityAmphibious.png
-	image font size: 30
+
 symbol:
 	code: (crossbonevanguard)
 	image: AbilityCrossboneVanguard.png
-	image font size: 30
+
 symbol:
 	code: (noisyfairy)
 	image: AbilityNoisyFairy.png
-	image font size: 30
+
 symbol:
 	code: (redwolves)
 	image: AbilityRedWolves.png
-	image font size: 30
+
 symbol:
 	code: (neozeon)
 	image: AbilityNeoZeon.png
-	image font size: 30
+
 symbol:
 	code: (delazfleet)
 	image: AbilityDelazFleet.png
-	image font size: 30
+
 symbol:
 	code: (federation)
 	image: AbilityFederation.png
-	image font size: 30
+
 symbol:
 	code: (frostbrothers)
 	image: AbilityFrostBrothers.png
-	image font size: 30
+
 symbol:
 	code: (gearadoga)
 	image: AbilityGearaDoga.png
-	image font size: 30
+
 symbol:
 	code: (ginn)
 	image: AbilityGinn.png
-	image font size: 30
+
 symbol:
 	code: (graze)
 	image: AbilityGraze.png
-	image font size: 30
+
 symbol:
 	code: (groundtype)
 	image: AbilityGroundType.png
-	image font size: 30
+
 symbol:
 	code: (gundam)
 	image: AbilityGundam.png
-	image font size: 30
+
 symbol:
 	code: (gunpla)
 	image: AbilityGunpla.png
-	image font size: 30
+
 symbol:
 	code: (londobell)
 	image: AbilityLondoBell.png
-	image font size: 30
+
 symbol:
-	code: (mazellaattack)
+	code: (magellaattack)
 	image: AbilityMazellaAttack.png
-	image font size: 30
+
 symbol:
 	code: (operationmeteor)
 	image: AbilityOpMeteor.png
-	image font size: 30
+
+symbol:
+	code: (oz)
+	image: AbilityOz.png
+
 symbol:
 	code: (zaku)
 	image: AbilityZaku.png
-	image font size: 30
+
 symbol:
 	code: (zeon)
 	image: AbilityZeon.png
-	image font size: 30
+
 symbol:
 	code: (dom)
 	image: AbilityDom.png
-	image font size: 30
+
 symbol:
 	code: (gjallarhorn)
 	image: AbilityGjallerhorn.png
-	image font size: 30
+
 symbol:
 	code: (tekkadan)
 	image: AbilityTekkadan.png
-	image font size: 30
+
+symbol:
+	code: (titans)
+	image: AbilityTitans.png
+
+symbol:
+	code: (zaft)
+	image: AbilityZaft.png
+
+symbol:
+	code: (celestialbeing)
+	image: AbilityCelestialBeing.png
+
+symbol:
+	code: (turbines)
+	image: AbilityTurbines.png
+
 
 ##### Ability Numbers
 
 symbol:
 	code: (a1)
 	image: Ability1.png
-	image font size: 30
+
 symbol:
 	code: (a1)
 	image: Ability1.png
-	image font size: 30
+
 symbol:
 	code: (a2)
 	image: Ability2.png
-	image font size: 30
+
 symbol:
 	code: (a3)
 	image: Ability3.png
-	image font size: 30
+
 symbol:
 	code: (a4)
 	image: Ability4.png
-	image font size: 30
+
 symbol:
 	code: (a5)
 	image: Ability5.png
-	image font size: 30
+
 symbol:
 	code: (a6)
 	image: Ability6.png
-	image font size: 30
+
 symbol:
 	code: (a7)
 	image: Ability7.png
-	image font size: 30
+
 symbol:
 	code: (a8)
 	image: Ability8.png
-	image font size: 30
+
 symbol:
 	code: (a9)
 	image: Ability9.png
-	image font size: 30
+
 symbol:
 	code: (ax)
 	image: AbilityX.png
-	image font size: 30
+
 symbol:
 	code: (+1)
 	image: Ability+1.png
-	image font size: 30
+
 symbol:
 	code: (+2)
 	image: Ability+2.png
-	image font size: 30
+
 symbol:
 	code: (+3)
 	image: Ability+3.png
-	image font size: 30
+
 symbol:
 	code: (+4)
 	image: Ability+4.png
-	image font size: 30
+
 symbol:
 	code: (+5)
 	image: Ability+5.png
-	image font size: 30
+
 symbol:
 	code: (+6)
 	image: Ability+6.png
-	image font size: 30
+
 symbol:
 	code: (+7)
 	image: Ability+7.png
-	image font size: 30
+
 symbol:
 	code: (+8)
 	image: Ability+8.png
-	image font size: 30
+
 symbol:
 	code: (+9)
 	image: Ability+9.png
-	image font size: 30
+
 symbol:
 	code: (+x)
 	image: Ability+X.png
-	image font size: 30
+
 
 ##### AbilityColors
 symbol:
 	code: (blue)
 	image: AbilityBlue.png
-	image font size: 30
+
 symbol:
 	code: (black)
 	image: AbilityBlack.png
-	image font size: 30
+
 symbol:
 	code: (red)
 	image: AbilityRed.png
-	image font size: 30
+
 symbol:
 	code: (yellow)
 	image: AbilityYellow.png
-	image font size: 30
+
 symbol:
 	code: (green)
 	image: AbilityGreen.png
-	image font size: 30
+
 
 ##### AbilityRanges
 symbol:
 	code: (0to1)
 	image: Ability0to1.png
-	image font size: 30
+
 symbol:
 	code: (0to2)
 	image: Ability0to2.png
-	image font size: 30
+
 symbol:
 	code: (0to3)
 	image: Ability0to3.png
-	image font size: 30
+
 symbol:
 	code: (0to4)
 	image: Ability0to4.png
-	image font size: 30
+
 symbol:
 	code: (0to5)
 	image: Ability0to5.png
-	image font size: 30
+
 symbol:
 	code: (0to6)
 	image: Ability0to6.png
-	image font size: 30
+
 symbol:
 	code: (0to7)
 	image: Ability0to7.png
-	image font size: 30
+
 symbol:
 	code: (0to8)
 	image: Ability0to8.png
-	image font size: 30
+
 symbol:
 	code: (0to9)
 	image: Ability0to9.png
-	image font size: 30
+
 symbol:
 	code: (1to2)
 	image: Ability1to2.png
-	image font size: 30
+
 symbol:
 	code: (1to3)
 	image: Ability1to3.png
-	image font size: 30
+
 symbol:
 	code: (1to4)
 	image: Ability1to4.png
-	image font size: 30
+
 symbol:
 	code: (1to5)
 	image: Ability1to5.png
-	image font size: 30
+
 symbol:
 	code: (1to6)
 	image: Ability1to6.png
-	image font size: 30
+
 symbol:
 	code: (1to7)
 	image: Ability1to7.png
-	image font size: 30
+
 symbol:
 	code: (1to8)
 	image: Ability1to8.png
-	image font size: 30
+
 symbol:
 	code: (1to9)
 	image: Ability1to9.png
-	image font size: 30
+
 symbol:
 	code: (2to3)
 	image: Ability2to3.png
-	image font size: 30
+
 symbol:
 	code: (2to4)
 	image: Ability2to4.png
-	image font size: 30
+
 symbol:
 	code: (2to5)
 	image: Ability2to5.png
-	image font size: 30
+
 symbol:
 	code: (2to6)
 	image: Ability2to6.png
-	image font size: 30
+
 symbol:
 	code: (2to7)
 	image: Ability2to7.png
-	image font size: 30
+
 symbol:
 	code: (2to8)
 	image: Ability2to8.png
-	image font size: 30
+
 symbol:
 	code: (2to9)
 	image: Ability2to9.png
-	image font size: 30
+
 symbol:
 	code: (3to4)
 	image: Ability3to4.png
-	image font size: 30
+
 symbol:
 	code: (3to5)
 	image: Ability3to5.png
-	image font size: 30
+
 symbol:
 	code: (3to6)
 	image: Ability3to6.png
-	image font size: 30
+
 symbol:
 	code: (3to7)
 	image: Ability3to7.png
-	image font size: 30
+
 symbol:
 	code: (3to8)
 	image: Ability3to8.png
-	image font size: 30
+
 symbol:
 	code: (3to8)
 	image: Ability3to9.png
-	image font size: 30
+
 symbol:
 	code: (4to5)
 	image: Ability4to5.png
-	image font size: 30
+
 symbol:
 	code: (4to6)
 	image: Ability4to6.png
-	image font size: 30
+
 symbol:
 	code: (4to7)
 	image: Ability4to7.png
-	image font size: 30
+
 symbol:
 	code: (4to8)
 	image: Ability4to8.png
-	image font size: 30
+
 symbol:
 	code: (4to9)
 	image: Ability4to9.png
-	image font size: 30
+
 symbol:
 	code: (5to6)
 	image: Ability5to6.png
-	image font size: 30
+
 symbol:
 	code: (5to7)
 	image: Ability5to7.png
-	image font size: 30
+
 symbol:
 	code: (5to8)
 	image: Ability5to8.png
-	image font size: 30
+
 symbol:
 	code: (5to9)
 	image: Ability5to9.png
-	image font size: 30
+
 symbol:
 	code: (6to7)
 	image: Ability6to7.png
-	image font size: 30
+
 symbol:
 	code: (6to8)
 	image: Ability6to8.png
-	image font size: 30
+
 symbol:
 	code: (6to9)
 	image: Ability6to9.png
-	image font size: 30
+
 symbol:
 	code: (7to8)
 	image: Ability7to8.png
-	image font size: 30
+
 symbol:
 	code: (7to9)
 	image: Ability7to9.png
-	image font size: 30
+
 symbol:
 	code: (8to9)
 	image: Ability8to9.png
-	image font size: 30
+symbol:
+	code: (+)
+	image: Ability+.png
 
 
 
@@ -631,8 +648,10 @@ insert symbol menu:
 		item: (yellow)
 	item:	
 		name: Compatibility
+		item: (+)
 		item: (aeug)
 		item: (amphibious)
+		item: (celestialbeing)
 		item: (crossbonevanguard)
 		item: (dom)
 		item: (delazfleet)
@@ -646,12 +665,16 @@ insert symbol menu:
 		item: (gundam)
 		item: (gunpla)
 		item: (londobell)
-		item: (mazellaattack)
+		item: (magellaattack)
 		item: (neozeon)
 		item: (noisyfairy)
 		item: (operationmeteor)
+		item: (oz)
 		item: (redwolves)
 		item: (tekkadan)
+		item: (titans)
+		item: (turbines)
+		item: (zaft)
 		item: (zaku)
 		item: (zeon)
 	item:
