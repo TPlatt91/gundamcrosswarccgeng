@@ -37,7 +37,7 @@ init script:
 					"Counter":	"171",
 					"Crew":		case card.multicolor of
 							"":	"120",
-							else:	"60",
+							else:	"140",
 					"Warship":	"270",
 					"Pilot":	"300",
 					"Armament":	"300",
