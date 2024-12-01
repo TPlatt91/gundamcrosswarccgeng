@@ -275,7 +275,7 @@ symbol:
 	image: AbilityDom.png
 	image font size: 30
 symbol:
-	code: (gjallerhorn)
+	code: (gjallarhorn)
 	image: AbilityGjallerhorn.png
 	image font size: 30
 symbol:
@@ -640,7 +640,7 @@ insert symbol menu:
 		item: (frostbrothers)
 		item: (gearadoga)
 		item: (ginn)
-		item: (gjallerhorn)
+		item: (gjallarhorn)
 		item: (graze)
 		item: (groundtype)
 		item: (gundam)
