@@ -58,7 +58,7 @@ init script:
 	is_collection	:= { contains(card.rarity, match: "Collection") }
 
 	name_sort	:= { card.name + if is_collection() then  "-CR" }
-	sortingorder	:= { color_sort() + type_sort() + converted_costs() + name_sort() }
+	sortingorder	:= { color_sort() + type_sort() + converted_costs() + " " + name_sort() }
 	
 	convert		:= {  	conv := to_text(input) 
 				color := number_of_items(in: break_text(match:"u|b|y|r|g", conv)) or else 0
