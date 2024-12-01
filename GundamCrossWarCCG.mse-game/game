@@ -52,7 +52,18 @@ init script:
 			"Yellow": "C",
 			"Black": "D",
 			"Red": "E",
-			else: "F"
+			else: case card.multicolor of
+				"BlueGreen": "G",
+				"BlueYellow": "H",
+				"BlueBlack": "I",
+				"BlueRed": "J",
+				"GreenYellow": "K",
+				"GreenBlack": "L",
+				"GreenRed": "M",
+				"YellowBlack": "N",
+				"YellowRed": "O",
+				"BlackRed": "P",
+				else: "X"
 	}
 
 	is_collection	:= { contains(card.rarity, match: "Collection") }
